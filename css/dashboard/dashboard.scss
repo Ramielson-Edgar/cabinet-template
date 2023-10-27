@@ -1,0 +1,760 @@
+@import "../templates/template.scss";
+
+.content.dashboard {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.buttons-container.dashboard {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.account-dashboard {
+    background: #f7f9ff;
+}
+
+.list.label {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: unset;
+}
+
+.list.label .list__item {
+    display: flex;
+    align-items: baseline;
+}
+
+.list.label .list__item:nth-child(odd) {
+    margin-right: 6px;
+}
+
+.list.label .list__item:nth-child(-n + 2) {
+    margin-bottom: 6px;
+}
+
+.label__text {
+    display: inline-block;
+    font-weight: 700;
+    font-size: var(--font-size-10);
+    line-height: 1.2;
+    text-transform: capitalize;
+
+    padding: 5px 12px;
+    border-radius: 100px;
+    background: transparent;
+}
+
+.label__text.label-cashback {
+    color: #523108;
+    background: #ffcd8f;
+}
+
+.label__text.label-copy-trade {
+    color: #0b5941;
+    background: #a8ffe3;
+}
+
+.label__text.label-ib {
+    color: var(--white);
+    background: var(--dark-800);
+}
+
+
+.account-card,
+.create-account {
+    overflow: hidden;
+    border-radius: 30px;
+    background: var(--white);
+}
+
+.account-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 30px 30px 60px 0px rgba(9, 19, 69, 0.08);
+}
+
+.account-card.allpips-trading .account-card__header {
+    background: var(--violet-900);
+}
+
+.account-card.allpips-demo .account-card__header {
+    background: var(--violet-500);
+}
+
+.account-card.mt4-trading .account-card__header {
+    background: #008DFF;
+}
+
+.account-card.mt4-demo .account-card__header {
+    background: var(--blue-500);
+}
+
+
+
+.account-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: center;
+
+    color: var(--white);
+
+    padding: 28px 28px 15px 28px;
+}
+
+.account-card .account-card__header .profile {
+    margin-right: 6px;
+    flex: 0 0 120px;
+}
+
+.list.label {
+    flex: 1 0 175px;
+}
+
+.account-card__header .name,
+.btn-button.account-setting .icon-setting {
+    margin-bottom: 6px;
+}
+
+.account-card__header .name {
+    font-size: 1.125rem;
+}
+
+.account-card__header .number {
+    font-size: var(--font-size-14);
+}
+
+.account-card__body {
+    padding: 28px;
+    margin-bottom: 0;
+}
+
+.account-card .btn-button.account-setting .icon-setting {
+    transform: rotate(90deg);
+    transition: transform 0.5s var(--transition) 0.1s;
+}
+
+.account-card .btn-button.account-setting:hover .icon-setting {
+    transform: rotate(180deg);
+}
+
+.btn-button.account-setting {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    color: var(--white);
+    text-transform: capitalize;
+}
+
+.btn-button.account-setting .text {
+    display: block;
+    font-size: var(--font-size-14);
+    text-align: right;
+}
+
+.account-card .account-card__body .inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.account-card .menu .list__item:not(:nth-last-child(-n + 2)),
+.account-card .account-card__body .inner:not(:last-child) {
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--dark-50);
+    margin-bottom: 13px;
+}
+
+.account-card .account-card__body .title,
+.account-card .account-card__body .text {
+    font-size: var(--font-size-14);
+    line-height: var(--line-height-24);
+    margin-bottom: 0;
+}
+
+.account-card .account-card__body .text {
+    text-transform: capitalize;
+}
+
+.account-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    width: 100%;
+}
+
+.account-card {
+    flex-basis: calc(100% / 3 - 10px);
+
+    transform: translateY(0);
+    box-shadow: 0 0 0 transparent;
+    transition: all 0.3s var(--transition);
+}
+
+.account-card:nth-child(-n + 3) {
+    margin-bottom: 20px;
+}
+
+
+.account-card .menu.is-active {
+    border-radius: 0%;
+    transform: translateY(0%);
+}
+
+.account-card .menu {
+    overflow: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    width: 100%;
+    height: 110%;
+
+    border-radius: 50%;
+    background: var(--white);
+
+    transform-origin: bottom center;
+    transform: translateY(100%);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.2) 0.2s;
+
+    z-index: 5;
+}
+
+.account-card .menu .list.manage-menu .icon {
+    width: 20px;
+    height: 20px;
+}
+
+.account-card .menu .btn-button.account-setting {
+    color: var(--white);
+}
+
+.account-card .menu .account-card__header {
+    justify-content: space-between;
+    padding: 28px 28px 15px 28px;
+}
+
+.account-card .menu .account-card__body {
+    padding: 28px;
+}
+
+.account-card .menu .wrapper {
+    flex: 1 0 auto;
+}
+
+.account-card .menu .btn-button.account-setting {
+    flex: 0 0 50px;
+    width: 50px;
+    height: auto;
+}
+
+.list.manage-menu {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.list.manage-menu .list__item {
+    flex-basis: calc(100% / 2 - 10px);
+}
+
+.list.manage-menu .list__item:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 15px;
+}
+
+.list.manage-menu .link {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.list.manage-menu .link .text {
+    font-size: var(--font-size-14);
+    color: var(--dark-800);
+    line-height: 1.1;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.list.manage-menu .link .text,
+.list.manage-menu .link svg {
+    margin-right: 10px;
+}
+
+.account-menu .link .icon-arrow,
+.list.manage-menu .link .icon-arrow {
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: opacity, transform 0.4s var(--transition) -0.15s;
+}
+
+.account-menu .link:hover .icon-arrow,
+.list.manage-menu .link:hover .icon-arrow {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.account-menu .link:hover .icon-arrow {
+    transform: translateX(10px);
+}
+
+.account-card.create-new {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 391px;
+    padding: 28px;
+}
+
+.account-card.create-new .account-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    flex: 1 0 70px;
+
+    color: var(--dark-800);
+    border-bottom: 1px solid var(--dark-50);
+}
+
+.account-card.create-new .account-card__header,
+.account-card.create-new .account-card__body {
+    padding: 0;
+}
+
+.account-card.create-new .title {
+    font-size: 1.5rem;
+}
+
+.account-card.create-new .text {
+    color: var(--dark-300);
+    font-size: var(--font-size-13);
+    line-height: 1.2;
+    text-align: left;
+}
+
+@keyframes pulse {
+    from {
+        opacity: 0.3;
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(2.5);
+    }
+}
+
+.account-card.create-new .link {
+    position: relative;
+    overflow: hidden;
+    @include center-flex("horizontal");
+    flex-grow: 1;
+
+    z-index: 1;
+}
+
+.account-card.create-new .link::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+
+    display: inline-block;
+    content: "";
+
+    width: 30px;
+    height: 30px;
+
+    opacity: 0.3;
+    border-radius: 50%;
+    background: var(--blue-500);
+    animation: 2s pulse ease-in 0s infinite;
+}
+
+.account-card.create-new .link:hover::before {
+    animation: none;
+}
+
+.account-card.create-new .link:hover .icon-plus .vertical,
+.account-card.create-new .link:hover .icon-plus .horizontal {
+    transform: translate(-50%, -50%);
+}
+
+.account-card.create-new .account-card__body .icon-plus {
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50%;
+    background: transparent;
+
+    z-index: 2;
+}
+
+.account-card.create-new .icon-plus .horizontal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-280%, -50%);
+
+    width: 25px;
+    height: 5px;
+
+    border-radius: 5px;
+    background: #363853;
+
+    transition: transform 0.5s var(--transition);
+    z-index: 4;
+}
+
+.account-card.create-new .icon-plus .vertical {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -280%);
+
+    width: 5px;
+    height: 25px;
+
+    border-radius: 5px;
+    background: #363853;
+
+    transition: transform 0.5s var(--transition) 0.2s;
+
+    z-index: 4;
+}
+
+.account-card.create-new .account-card__body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 5 0 auto;
+    flex-basis: 230px;
+}
+
+.account-card.create-new .account-card__body::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(70%);
+
+    display: inline-block;
+    content: "";
+
+    width: 72px;
+    height: 120px;
+
+    background: url("/icons/arrow-curve.svg");
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+.account-menu {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+
+.account-menu .title {
+    font-size: var(--font-size-30-18);
+    color: var(--dark-800);
+    margin-right: 120px;
+}
+
+.account-menu .title,
+.account-menu .link {
+    text-transform: capitalize;
+}
+
+.account-menu .link {
+    color: var(--red-500);
+    line-height: 1.5;
+}
+
+// test //
+
+.account-card__header.test {
+    display: flex;
+    justify-content: space-between;
+}
+
+.account-card__header.test .profile {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    flex: unset;
+}
+
+.account-card__header.test .profile .number {
+    line-height: 1.1;
+}
+
+.account-card__header.test .btn-group .btn-button {
+    flex: unset;
+}
+
+.account-card__header.test .btn-button.account-setting {
+    flex: unset;
+}
+
+
+
+.btn-group {
+    background: #FDD2D2;
+    border-radius: 100px;
+    margin-left: 10px;
+}
+
+.btn-group .btn-button {
+    position: relative;
+    font-size: var(--font-size-13);
+    line-height: var(--line-height-21);
+    font-weight: 600;
+    color: #FF3728;
+
+    text-transform: capitalize;
+    padding: 5px 10px;
+}
+
+.btn-group .btn-button .indicator {
+    position: absolute;
+    top: -15px;
+    left: 0;
+
+    width: 25px;
+    height: 25px;
+
+    text-align: center;
+    color: var(--white);
+    border-radius: 50%;
+    background: #FF3728;
+    border: 1px solid var(--white);
+}
+
+.btn-group .dropdown-menu {
+    opacity: 0;
+    display: block;
+
+    border: unset;
+    border-radius: 20px;
+    padding: 20px;
+
+    transform: translate3d(0px, -50px, 0px);
+    transition: all .4s var(--transition) 0s;
+    pointer-events: none;
+
+    z-index: 10;
+}
+
+.btn-group .dropdown-menu.show {
+
+    opacity: 1;
+    box-shadow: -16px 20px 50px -10px rgba(9, 19, 69, 0.3);
+}
+
+.btn-group .dropdown-menu .dropdown-menu__item:not(:last-child) {
+    margin-bottom: 6px;
+}
+
+.btn-group .dropdown-menu .dropdown-menu__item span {
+    font-size: 13px;
+}
+
+
+
+
+.account-feedback {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 16px 0;
+}
+
+.account-feedback .title {
+    font-size: 1.125rem;
+}
+
+.account-feedback .list.account-feedback .text,
+.account-feedback .list.account-feedback .title {
+    font-size: var(--font-size-14);
+    line-height: var(--line-height-21);
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+
+.account-feedback .list.account-feedback .text {
+    display: inline-block;
+    padding: 5px 30px;
+    background: var(--white);
+    border-radius: 100px;
+}
+
+.account-feedback .list.account-feedback .list__item {
+    display: flex;
+    align-items: center;
+    flex-basis: calc(100% / 2 - 10px);
+}
+
+.account-feedback .list.account-feedback .list__item:nth-child(-n + 2) {
+    margin-bottom: 10px;
+}
+
+.account-feedback .list.account-feedback .title {
+    margin-right: 20px;
+    flex: 1 0 auto;
+}
+
+.account-feedback .list.account-feedback .text {
+    flex: 0 0 auto;
+}
+
+
+.buttons-container.account-feedback .btn-green {
+    margin-right: 10px;
+}
+
+.account-feedback .list.account-feedback .list__item.dot::before {
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.account-feedback .list.account-feedback .list__item.allpips-live::before {
+    background: var(--violet-900);
+}
+
+.account-feedback .list.account-feedback .list__item.allpips-demo::before {
+    background: var(--violet-500);
+}
+
+.account-feedback .list.account-feedback .list__item.mt4-live::before {
+    background: var(--blue-900);
+}
+
+.account-feedback .list.account-feedback .list__item.mt4-demo::before {
+    background: var(--blue-500);
+}
+
+
+
+
+
+.banner.is-active {
+ height: 50px;
+}
+
+.banner {
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+    transition: height .5s var(--transition) .3s;
+    padding-inline: 10px ;
+}
+
+.splide.banner-carousel.is-hide {
+    transform: translateY(100%);
+}
+
+.splide.banner-carousel {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+
+ 
+    border-radius: 30px;
+    background: var(--dark-400);
+    transform: translateY(0);
+    
+    
+    transition: transform .6s var(--transition) .2s;
+ 
+}
+
+
+.splide.banner-carousel .splide__slide img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 60px;
+    height: 30px;
+    transform: translateY(50%);
+    margin-top: -10px;
+    margin-bottom: 30px;
+    
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    border-radius: 30px;
+    box-shadow: 0 0 0 2px #777, 0 0 4px #777;
+
+    cursor: pointer;
+    border: 4px solid transparent;
+    overflow: hidden;
+    transition: 0.2s;
+  
+}
+
+.slider:before {
+    position: absolute;
+    display: inline-block;
+
+    content: "";
+    width: 100%;
+    height: 100%;
+
+    background-color: #777;
+    border-radius: 30px;
+    transform: translateX(-30px);
+    pointer-events: none;
+
+    transition: 0.2s;
+}
+
+input:checked+.slider:before {
+    transform: translateX(30px);
+    background: var(--green-500);
+}
