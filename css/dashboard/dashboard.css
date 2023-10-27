@@ -29,6 +29,12 @@
   --dark-600: #363636;
   --dark-800: #232323;
   --transition: cubic-bezier(0.68, -0.55, 0.265, 1.5);
+  --border-radius-30: 30px;
+  --border-radius-24: 24px;
+  --border-radius-15: 15px;
+  --padding-card-30: 30px;
+  --padding-card-20: 20px;
+  --padding-card-15: 15px;
 }
 
 *,
@@ -62,6 +68,37 @@ h2,
 h3 {
   font-weight: 700;
   text-transform: capitalize;
+}
+
+.list,
+.list-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.btn-base:hover {
+  text-decoration: none;
+}
+.btn-base:hover {
+  text-decoration: none;
+}
+
+.splide.banner-carousel .splide__slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.account-card.create-new .account-card__body .icon-plus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .text-bold {
@@ -116,7 +153,6 @@ h3 {
 }
 
 .btn-base:hover {
-  text-decoration: none;
   transition: all 0.5s var(--transition) 0.2s;
 }
 
@@ -203,9 +239,6 @@ h3 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .list-features__header {
@@ -236,8 +269,6 @@ h3 {
 }
 
 .list.label {
-  display: flex;
-  flex-wrap: wrap;
   align-items: baseline;
   justify-content: unset;
 }
@@ -312,8 +343,8 @@ h3 {
 .account-card__header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   justify-content: center;
+  justify-content: space-between;
   color: var(--white);
   padding: 28px 28px 15px 28px;
 }
@@ -394,8 +425,8 @@ h3 {
 
 .account-list {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
 }
 
@@ -450,7 +481,7 @@ h3 {
   padding: 28px;
 }
 
-.account-card .menu .wrapper {
+.account-card .menu .profile {
   flex: 1 0 auto;
 }
 
@@ -461,9 +492,7 @@ h3 {
 }
 
 .list.manage-menu {
-  display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 
 .list.manage-menu .list__item {
@@ -590,10 +619,6 @@ h3 {
 
 .account-card.create-new .account-card__body .icon-plus {
   overflow: hidden;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -851,56 +876,4 @@ h3 {
   background: var(--dark-400);
   transform: translateY(0);
   transition: transform 0.6s var(--transition) 0.2s;
-}
-
-.splide.banner-carousel .splide__slide img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}
-
-.switch {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  width: 60px;
-  height: 30px;
-  transform: translateY(50%);
-  margin-top: -10px;
-  margin-bottom: 30px;
-}
-
-.slider {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-radius: 30px;
-  box-shadow: 0 0 0 2px #777, 0 0 4px #777;
-  cursor: pointer;
-  border: 4px solid transparent;
-  overflow: hidden;
-  transition: 0.2s;
-}
-
-.slider:before {
-  position: absolute;
-  display: inline-block;
-  content: "";
-  width: 100%;
-  height: 100%;
-  background-color: #777;
-  border-radius: 30px;
-  transform: translateX(-30px);
-  pointer-events: none;
-  transition: 0.2s;
-}
-
-input:checked + .slider:before {
-  transform: translateX(30px);
-  background: var(--green-500);
 }/*# sourceMappingURL=dashboard.css.map */
