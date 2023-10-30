@@ -12,6 +12,20 @@
     --font-size-11: 0.688rem;
     --font-size-10: 0.625rem;
 
+
+
+    // --font-size-50-24:50px;
+    // --font-size-30-18: 30px;
+    // --font-size-20-14: 20px;
+
+    // --font-size-18: 18px;
+    // --font-size-16: 16px;
+    // --font-size-14: 14px;
+    // --font-size-13: 13px;
+    // --font-size-12: 12px;
+    // --font-size-11: 11px;
+    // --font-size-10: 10px;
+
     --line-height-30: 30px;
     --line-height-24: 24px;
     --line-height-21: 21px;
@@ -48,19 +62,25 @@
     --padding-card-15: 15px;
 }
 
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
 *,
 ::before,
 ::after {
-    box-sizing: border-box;
+    box-sizing:inherit;
 }
 
 body {
     position: relative;
     font-family: "Roboto", sans-serif;
-    font-size: var(--font-size-16);
+    font-size: 16px;
     line-height: var(--line-height-30);
     font-weight: 400;
     color: var(--dark-600);
+    margin: 0;
 }
 
 h1,
@@ -81,6 +101,12 @@ h3 {
     text-transform: capitalize;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 %list-defaults {
     list-style: none;
     padding: 0;
@@ -91,6 +117,7 @@ h3 {
     text-decoration: none;
 
     &:focus,
+    &:active,
     &:hover {
         text-decoration: none;
     }
@@ -110,10 +137,16 @@ h3 {
     left: 50%;
     transform: translate(-50%, -50%);
 }
- 
-@mixin background-image ($repeat, $width, $height, $top-bottom, $left-right ) {
-    background-position: $top-bottom, $left-right;
+
+
+%border-radius-30 {
+    border-radius: var(--border-radius-30);
+}
+
+
+@mixin background-image ($repeat, $top-bottom, $left-right, $width, $height) {
     background-repeat: $repeat;
+    background-position: $top-bottom, $left-right;
     background-size: $width, $height;
 }
 
@@ -136,12 +169,23 @@ h3 {
     font-weight: 700;
 }
 
+.section-padding {
+    padding: 70px 0;
+}
+
+.padding-inline {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
 .btn-button {
     padding: 0;
     margin: 0;
     border: none;
     background: none;
     box-shadow: none;
+
 
     &:hover,
     &:focus {
@@ -157,13 +201,17 @@ h3 {
 
     display: inline-block;
     cursor: pointer;
+
+    color: var(--light);
     text-transform: capitalize;
     text-decoration: none;
+
     border: 1px solid transparent;
-    background: transparent;
-    // border-radius: 10px;
     border-radius: 100px;
-    color: var(--light);
+    background: transparent;
+
+    @extend %link-defaults;
+    
     z-index: 1;
 }
 
@@ -198,8 +246,13 @@ h3 {
 
 .btn-base .text-container {
     overflow: hidden;
+    word-wrap: break-word;
+    white-space: nowrap;
+
     height: var(--line-height-30);
-    @include center-flex("ver")
+    @include center-flex("ver");
+    align-items: center;
+    text-align: center;
 }
 
 .btn-base .text-container span {
@@ -214,14 +267,11 @@ h3 {
 
 
 
-
 .btn-outline {
     border: 1px solid var(--blue-500);
     border-radius: 100px;
     transition: color border .5s var(--transition) 0.2s;
 }
-
-
 
 
 .btn-outline.dark {
@@ -256,6 +306,7 @@ h3 {
 }
 
 .btn-green {
+    color: var(--white);
     background: #4cd7ab;
 }
 
@@ -267,11 +318,6 @@ h3 {
 .btn-green::before {
     background: var(--red-500);
 }
-
-
-
-
-
 
 
 
@@ -311,5 +357,73 @@ h3 {
 }
 
 .list-features__title {
-    font-size: var(--font-size-18);
+    font-size: 18px;
 }
+
+
+
+
+ 
+
+.main-container {
+    display: flex;
+    min-height: 100%;
+    background: #363636;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.content-container {
+    background: #fff;
+    flex: 1 1 0;
+    display: flex;
+    flex-wrap: no-wrap;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.sidebar {
+    background: var(--grey100);
+    box-shadow: inset -3px 0 0 rgba(0,0,0,0.1);
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.sidebar.hide {
+    width: 0;
+}
+
+
+.content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background: #fff;
+ 
+    width: 100%;
+}
+
+
+.pt-5 {
+    padding-top: 50px;
+}
+
+.pb-5 {
+    padding-bottom: 50px;
+}
+
+.border-bottom {
+    border-bottom: 1px solid var(--dark-50);
+}
+
+
+.account-dashboard {
+    width: 100%;
+}
+
+
+ 

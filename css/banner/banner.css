@@ -96,6 +96,20 @@ img {
   text-decoration: none;
 }
 
+.splide.banner-carousel .splide__list .splide__slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.splide.banner-carousel {
+  border-radius: var(--border-radius-30);
+}
+
 .text-bold {
   text-transform: capitalize;
   font-weight: 700;
@@ -316,4 +330,55 @@ img {
 
 .account-dashboard {
   width: 100%;
-}/*# sourceMappingURL=template.css.map */
+}
+
+.banner.is-active {
+  height: 0px;
+  min-height: 50px;
+  margin-bottom: 0;
+}
+
+.banner {
+  position: relative;
+  overflow: hidden;
+  height: 265px;
+  min-height: 50px;
+  margin-bottom: 30px;
+  transition: all 0.5s var(--transition) 0.2s;
+}
+
+.accounts-options .banner {
+  display: none;
+}
+
+.splide.banner-carousel.is-hide {
+  transform: translateY(100%);
+}
+
+.splide.banner-carousel {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  background: var(--dark-400);
+  transform: translateY(0);
+  transition: transform 0.5s var(--transition) 0.2s;
+}
+
+.splide.banner-carousel .splide__list .splide__slide .link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 575.98px) {
+  .account-options .banner-control {
+    display: none;
+  }
+  .banner {
+    height: 344px;
+  }
+  .splide.banner-carousel .splide__list .splide__slide {
+    width: 100%;
+    height: 100%;
+  }
+}/*# sourceMappingURL=banner.css.map */
