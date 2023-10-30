@@ -381,27 +381,27 @@ img {
 }
 
 .list.label {
-  align-items: baseline;
-  justify-content: unset;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 0 193px;
 }
 
 .list.label .list__item {
-  display: flex;
-  align-items: baseline;
-  margin-right: 6px;
+  flex-basis: 50%;
 }
 
-.list.label .list__item:nth-child(-n+3) {
-  margin-bottom: 6px;
+.list.label .list__item:nth-child(2),
+.list.label .list__item:first-child {
+  margin-bottom: 13px;
 }
 
 .label__text {
   display: inline-block;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 11px;
-  line-height: 1.2;
+  line-height: 1.3;
   text-transform: capitalize;
-  padding: 5px 10px;
+  padding: 3px 8px;
   border-radius: 100px;
   background: transparent;
 }
@@ -432,6 +432,12 @@ img {
   box-shadow: 30px 30px 60px 0px rgba(9, 19, 69, 0.08);
 }
 
+.account-card {
+  transform: translateY(0);
+  box-shadow: 0 0 0 transparent;
+  transition: all 0.3s var(--transition);
+}
+
 .account-card.allpips-trading .account-card__header {
   background: var(--violet-900);
 }
@@ -450,36 +456,21 @@ img {
 
 .account-card__header {
   display: flex;
-  flex-direction: column;
-  padding: 20px 20px 15px 20px;
+  padding: 20px 15px 20px 15px;
 }
 
-.account-card__header .inner {
-  display: inherit;
-  justify-content: space-between;
+.account-card__header {
+  display: flex;
   color: var(--white);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  padding-bottom: 10px;
-  margin-bottom: 10px;
 }
 
-.account-card__header .name {
-  font-size: 18px;
-}
-
-.btn-button.account-setting .text,
 .account-card__header .number {
   font-size: 14px;
   line-height: 21px;
 }
 
 .account-card__body {
-  padding: 20px;
-  margin-bottom: 0;
-}
-
-.account-card__body {
-  padding: 20px;
+  padding: 15px;
   margin-bottom: 0;
 }
 
@@ -491,22 +482,11 @@ img {
 .account-card .btn-button.account-setting .icon-setting {
   transform: rotate(90deg);
   transition: transform 0.5s var(--transition) 0.1s;
-  margin-bottom: 3px;
+  margin-bottom: 13px;
 }
 
 .account-card .btn-button.account-setting:hover .icon-setting {
   transform: rotate(180deg);
-}
-
-.btn-button.account-setting {
-  display: flex;
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: var(--white);
-  text-transform: capitalize;
 }
 
 .btn-button.account-setting .text {
@@ -548,10 +528,52 @@ img {
   gap: 10px;
 }
 
-.account-card {
-  transform: translateY(0);
-  box-shadow: 0 0 0 transparent;
-  transition: all 0.3s var(--transition);
+.account-card__header .profile {
+  flex: 1 1 auto;
+}
+
+.account-card__header .profile .number {
+  display: flex;
+  align-items: center;
+}
+
+.account-card .btn-button.account-setting {
+  margin-left: 20px;
+}
+
+.account-card .btn-button.account-setting .icon-setting {
+  margin-bottom: 0;
+  margin-left: 12px;
+}
+
+.account-card__header .name {
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.btn-button.account-setting {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  font-size: 13px;
+}
+
+.btn-button.account-setting .text {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.label__text {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 7px;
+}
+
+.account-card__header .list.label {
+  flex: 1 1 190px;
+}
+
+.account-card .menu .btn-button.account-setting {
+  margin-left: 36px;
 }
 
 .account-card .menu.is-active {
@@ -577,16 +599,18 @@ img {
 }
 
 .account-card .menu .account-card__header {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 20px 20px 15px 20px;
+  min-height: auto;
+  padding: 20px 15px 20px 15px;
   color: var(--white);
 }
 
 .account-card .menu .account-card__body {
   overflow: hidden;
   height: 100%;
-  padding: 20px;
+  padding: 15px;
 }
 
 .account-card .menu .profile {
@@ -594,12 +618,15 @@ img {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  flex: 1 0 auto;
+  flex: 1 1 auto;
+}
+
+.account-card .menu .profile .name {
+  font-size: 16px;
 }
 
 .account-card .menu .btn-button.account-setting {
-  flex: 0 0 50px;
-  width: 50px;
+  flex: 0 0 auto;
   height: auto;
   color: var(--white);
 }
@@ -764,7 +791,7 @@ img {
   display: flex;
   flex-direction: column;
   flex: 5 0 auto;
-  flex-basis: 305px;
+  flex-basis: 234px;
 }
 
 .account-card.create-new .account-card__body::before {
@@ -803,18 +830,8 @@ img {
   line-height: 1.5;
 }
 
-.account-card__header {
-  display: flex;
-  justify-content: space-between;
-}
-
 .account-card__header .profile .number {
   line-height: 1.1;
-}
-
-.account-card__header .btn-button.account-setting,
-.account-card__header .dropdown .btn-button {
-  flex: unset;
 }
 
 .dropdown.program {
@@ -947,16 +964,6 @@ img {
   background: var(--blue-500);
 }
 
-@media screen and (max-width: 2560px) {
-  .grid.account-item {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-@media screen and (max-width: 1880px) {
-  .grid.account-item {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
 @media screen and (max-width: 1399.98px) {
   .grid.account-item {
     grid-template-columns: repeat(auto-fit, minmax(371px, 1fr));
