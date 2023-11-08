@@ -48,6 +48,7 @@
     color: var(--dark-400);
     word-break: break-all;
     white-space: nowrap;
+    text-transform: capitalize;
 }
 
 
@@ -294,6 +295,8 @@
 .account-card__header .list.label {
     flex: 1 1 190px;
 }
+
+
 
 .account-card .menu .btn-button.account-setting {
     margin-left: 36px;
@@ -656,92 +659,141 @@
     font-size: 13px;
 }
 
+// .account-feedback {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+
+//     padding: 16px 0;
+// }
+
+
+
+// .account-feedback .inner {
+//     display: flex;
+//     align-items: center;
+//     justify-content: flex-start;
+//     flex-wrap: wrap;
+// }
+
+
+// .account-feedback .list.account-feedback .text,
+// .account-feedback .list.account-feedback .title {
+//     font-size: 14px;
+//     line-height: 24px;
+//     font-weight: 600;
+//     text-transform: capitalize;
+// }
+
+// .account-feedback .list.account-feedback .text {
+//     display: inline-block;
+//     padding: 4px 30px;
+//     background: var(--white);
+//     border-radius: 100px;
+// }
+
+
+// .account-feedback .list.account-feedback .list__item {
+//     display: flex;
+//     align-items: center;
+//     justify-content: flex-start;
+//     flex-basis: calc(100% / 2 - 10px);
+
+// }
+
+// .account-feedback .list.account-feedback .list__item:nth-child(-n + 2) {
+//     margin-bottom: 10px;
+// }
+
+// .account-feedback .list.account-feedback .link {
+//     flex: 0 0 120px;
+// }
+
+
+
+// .account-feedback .buttons-container .btn-green {
+//     margin-right: 10px;
+// }
+
+// .account-feedback .list.account-feedback .list__item.dot::before {
+//     @include center-flex('hor');
+//     flex: 0 0 10px;
+
+
+//     content: "";
+//     width: 10px;
+//     height: 10px;
+
+//     border-radius: 50%;
+//     margin-right: 10px;
+// }
+
+// .account-feedback .list.account-feedback .list__item.allpips-live::before {
+//     background: var(--violet-900);
+// }
+
+// .account-feedback .list.account-feedback .list__item.allpips-demo::before {
+//     background: var(--violet-500);
+// }
+
+// .account-feedback .list.account-feedback .list__item.mt4-live::before {
+//     background: var(--blue-900);
+// }
+
+// .account-feedback .list.account-feedback .list__item.mt4-demo::before {
+//     background: var(--blue-500);
+// }
+
 .account-feedback {
+    padding: 30px 0;
+}
+
+.account-feedback,
+.list.account-feedback,
+.account-feedback .buttons-container {
     display: flex;
+}
+
+.account-feedback,
+.account-feedback .buttons-container {
     align-items: center;
+}
+
+
+.account-feedback {
     justify-content: space-between;
-
-    padding: 16px 0;
 }
 
+.list.account-feedback .list__item {
+    margin-right: 3px;
+}
 
-
-.account-feedback .inner {
-    display: flex;
-    align-items: center;
+.list.account-feedback {
     justify-content: flex-start;
-    flex-wrap: wrap;
 }
 
-
-.account-feedback .list.account-feedback .text,
-.account-feedback .list.account-feedback .title {
-    font-size: 14px;
-    line-height: 24px;
+.list.account-feedback .list__item .link {
+    display: inline-block;
+    font-size: 13px;
+    color: var(--dark-500);
     font-weight: 600;
     text-transform: capitalize;
+
+    padding: 5px 30px;
+    border-radius: 30px;
+    border: 1px solid var(--dark-500);
 }
 
-.account-feedback .list.account-feedback .text {
-    display: inline-block;
-    padding: 4px 30px;
-    background: var(--white);
-    border-radius: 100px;
-}
-
-
-.account-feedback .list.account-feedback .list__item {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-basis: calc(100% / 2 - 10px);
-
-}
-
-.account-feedback .list.account-feedback .list__item:nth-child(-n + 2) {
-    margin-bottom: 10px;
-}
-
-.account-feedback .list.account-feedback .link {
-    flex: 0 0 120px;
+.list.account-feedback .list__item .text {
+    font-weight: 700;
 }
 
 
-
-.account-feedback .buttons-container .btn-green {
+.account-feedback .buttons-container .btn-green,
+.list.account-feedback .list__item .title {
     margin-right: 10px;
 }
-
-.account-feedback .list.account-feedback .list__item.dot::before {
-    @include center-flex('hor');
-    flex: 0 0 10px;
-
-
-    content: "";
-    width: 10px;
-    height: 10px;
-
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.account-feedback .list.account-feedback .list__item.allpips-live::before {
-    background: var(--violet-900);
-}
-
-.account-feedback .list.account-feedback .list__item.allpips-demo::before {
-    background: var(--violet-500);
-}
-
-.account-feedback .list.account-feedback .list__item.mt4-live::before {
-    background: var(--blue-900);
-}
-
-.account-feedback .list.account-feedback .list__item.mt4-demo::before {
-    background: var(--blue-500);
-}
-
-
+ 
 
 
 // @media screen and (max-width: 2560px) {
@@ -766,22 +818,6 @@
 
 
 
-@media screen and (max-width: 1198.98px) {
-    .account-feedback .buttons-container {
-        @include center-flex('ver');
-    }
-
-    .account-feedback .buttons-container .btn-green {
-        margin-bottom: 10px;
-        margin-right: 0;
-    }
-
-    .account-feedback .buttons-container {
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-
-}
 
 @media screen and (max-width: 991.98px) {
 
@@ -862,8 +898,8 @@
 
 
     .account-feedback .list.account-feedback .link {
-        flex: 1 1 auto;
         font-size: 13px;
+        padding: 8px 20px;
     }
 
 
@@ -872,4 +908,16 @@
         padding: 4px 20px;
     }
 
+
+    .accounts-options .banner-control {
+        display: none;
+    }
+
+    .accounts-options .buttons-container {
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+
+    
 }

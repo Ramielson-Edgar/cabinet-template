@@ -332,23 +332,27 @@ img {
   width: 100%;
 }
 
-.banner.is-active {
-  height: 0px;
+.banner .inner.is-active {
+  max-height: 0px;
   min-height: 50px;
   margin-bottom: 0;
 }
 
-.banner {
+.banner .inner {
   position: relative;
   overflow: hidden;
-  height: 265px;
+  max-height: 410px;
   min-height: 50px;
   margin-bottom: 30px;
   transition: all 0.5s var(--transition) 0.2s;
 }
 
-.accounts-options .banner {
+.banner .banner-control {
   display: none;
+}
+
+.banner .banner-control .toggle .text {
+  text-transform: capitalize;
 }
 
 .splide.banner-carousel.is-hide {
@@ -370,15 +374,32 @@ img {
   height: 100%;
 }
 
+.splide.banner-carousel .splide__list .splide__slid {
+  width: 100%;
+  height: 100%;
+}
+
 @media screen and (max-width: 575.98px) {
   .account-options .banner-control {
     display: none;
   }
-  .banner {
-    height: 344px;
-  }
   .splide.banner-carousel .splide__list .splide__slide {
     width: 100%;
     height: 100%;
+  }
+  .banner .banner-control {
+    display: block;
+    margin-bottom: 30px;
+  }
+  .banner .banner-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .banner .banner-control .toggle {
+    margin-right: 10px;
+  }
+  .banner .inner.is-active {
+    min-height: 10px;
   }
 }/*# sourceMappingURL=banner.css.map */
