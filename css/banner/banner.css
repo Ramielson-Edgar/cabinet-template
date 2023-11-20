@@ -334,7 +334,7 @@ img {
 
 .banner .inner.is-active {
   max-height: 0px;
-  min-height: 50px;
+  min-height: 10px;
   margin-bottom: 0;
 }
 
@@ -342,7 +342,7 @@ img {
   position: relative;
   overflow: hidden;
   max-height: 410px;
-  min-height: 50px;
+  min-height: 10px;
   margin-bottom: 30px;
   transition: all 0.5s var(--transition) 0.2s;
 }

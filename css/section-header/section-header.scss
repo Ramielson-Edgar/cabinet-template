@@ -1,0 +1,35 @@
+@import "../templates/template.scss";
+
+.section-header {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+
+.section-header .title {
+    font-size: 20px;
+    color: var(--dark-800);
+    margin-right: 10%;
+}
+
+.section-header .title,
+.section-header .link {
+    text-transform: capitalize;
+}
+
+.section-header .link {
+    color: var(--red-500);
+    line-height: 1.5;
+}
+
+.section-header .link .icon-arrow {
+    opacity: 0;
+    transform: translateX(-5px);
+    transition: opacity, transform 0.4s var(--transition) -0.15s;
+}
+ 
+
+.section-header .link:hover .icon-arrow {
+    opacity: 1;
+    transform: translateX(10px);
+}

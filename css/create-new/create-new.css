@@ -82,7 +82,7 @@ img {
   height: auto;
 }
 
-.grid.account-item, .list,
+.list,
 .list-features {
   list-style: none;
   padding: 0;
@@ -94,6 +94,13 @@ img {
 }
 .btn-base:focus, .btn-base:active, .btn-base:hover {
   text-decoration: none;
+}
+
+.account-card.create-new .account-card__body .icon-plus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .text-bold {
@@ -318,151 +325,141 @@ img {
   width: 100%;
 }
 
-.content.dashboard {
+.account-card.create-new {
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+}
+
+.account-card.create-new .account-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1 0 52px;
+  color: var(--dark-800);
+  border-bottom: 1px solid var(--dark-50);
+}
+
+.account-card.create-new .account-card__header,
+.account-card.create-new .account-card__body {
   padding: 0;
 }
 
-.account-dashboard {
-  background: #f7f9ff;
+.account-card.create-new .title {
+  font-size: 18px;
 }
 
-.accounts-options {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.accounts-options .buttons-container {
-  width: 100%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.accounts-options .buttons-container .btn-outline.dark:hover,
-.accounts-options .buttons-container .btn-outline.blue:hover {
-  color: var(--blue-500);
-  border: 1px solid #E9F5FF;
-  transition: all 0.5s var(--transition) 0s;
-}
-
-.accounts-options .buttons-container .btn-outline.dark:before,
-.accounts-options .buttons-container .btn-outline.blue::before {
-  background: #E9F5FF;
-}
-
-.accounts-options .banner-control {
-  display: flex;
-  align-items: center;
-}
-
-.accounts-options .banner-control .text {
+.account-card.create-new .text {
+  color: var(--dark-300);
   font-size: 13px;
-  line-height: 21px;
-  color: var(--dark-400);
-  word-break: break-all;
-  white-space: nowrap;
-  text-transform: capitalize;
+  line-height: 1.2;
+  text-align: left;
 }
 
-.accounts-options .banner-control .toggle {
-  margin-right: 20px;
+@keyframes pulse {
+  from {
+    opacity: 0.3;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2.5);
+  }
+}
+.account-card.create-new .link {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  z-index: 1;
 }
 
-.account-menu .link:hover .icon-arrow {
-  transform: translateX(10px);
+.account-card.create-new .link::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  display: inline-block;
+  content: "";
+  width: 30px;
+  height: 30px;
+  opacity: 0.3;
+  border-radius: 50%;
+  background: var(--blue-500);
+  animation: 2s pulse ease-in 0s infinite;
 }
 
-.grid.account-item {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+.account-card.create-new .link:hover::before {
+  animation: none;
 }
 
-@media screen and (max-width: 2560px) {
-  .grid.account-item {
-    grid-template-columns: repeat(4, 1fr);
-  }
+.account-card.create-new .link:hover .icon-plus .vertical,
+.account-card.create-new .link:hover .icon-plus .horizontal {
+  transform: translate(-50%, -50%);
 }
-@media screen and (max-width: 1880px) {
-  .grid.account-item {
-    grid-template-columns: repeat(3, 1fr);
-  }
+
+.account-card.create-new .account-card__body .icon-plus {
+  overflow: hidden;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: transparent;
+  z-index: 2;
 }
-@media screen and (max-width: 1399.98px) {
-  .grid.account-item {
-    grid-template-columns: repeat(auto-fit, minmax(371px, 1fr));
-  }
+
+.account-card.create-new .icon-plus span {
+  border-radius: 5px;
+  background: #363853;
+  z-index: 4;
 }
-@media screen and (max-width: 991.98px) {
-  .btn-base {
-    font-size: 14px;
-  }
-  .btn-base .text-container {
-    height: 24px;
-  }
-  .account-feedback {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 50px 0;
-  }
-  .account-feedback .inner {
-    flex-direction: column;
-  }
-  .account-feedback .list.account-feedback {
-    flex: 1;
-  }
-  .account-feedback .list.account-feedback,
-  .account-feedback .buttons-container {
-    flex-direction: row;
-  }
-  .account-feedback .list.account-feedback,
-  .account-feedback .inner .title {
-    margin-bottom: 30px;
-  }
-  .account-feedback .buttons-container,
-  .account-feedback .list.account-feedback .list__item {
-    align-items: center;
-  }
-  .account-feedback .buttons-container .btn-green,
-  .account-feedback .list.account-feedback .title {
-    margin-bottom: 0;
-  }
-  .account-feedback .inner .title {
-    margin-right: 0;
-  }
-  .account-feedback .buttons-container .btn-green {
-    margin-right: 10px;
-  }
+
+.account-card.create-new .account-card__body::before,
+.account-card.create-new .icon-plus span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
+
+.account-card.create-new .icon-plus .horizontal {
+  transform: translate(-280%, -50%);
+  width: 25px;
+  height: 5px;
+  transition: transform 0.5s var(--transition);
+}
+
+.account-card.create-new .icon-plus .vertical {
+  transform: translate(-50%, -280%);
+  width: 5px;
+  height: 25px;
+  transition: transform 0.5s var(--transition) 0.2s;
+}
+
+.account-card.create-new .account-card__body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 5 0 auto;
+  flex-basis: 234px;
+}
+
+.account-card.create-new .account-card__body::before {
+  transform: translateX(70%);
+  display: inline-block;
+  content: "";
+  width: 72px;
+  height: 120px;
+  background: url("/icons/arrow-curve.svg");
+  background-repeat: no-repeat;
+  background-position: center, center;
+  background-size: contain, contain;
+  pointer-events: none;
+  z-index: 1;
+}
+
 @media screen and (max-width: 575.98px) {
-  .section-padding {
-    padding: 50px 0;
-  }
-  .section-header {
-    justify-content: space-between;
-  }
-  .section-header .link {
-    margin-right: 15px;
-  }
-  .section-header .title,
-  .account-feedback .list.account-feedback {
-    margin-right: 0;
-  }
-  .account-feedback .list.account-feedback .link {
-    font-size: 13px;
-    padding: 8px 20px;
-  }
-  .account-feedback .list.account-feedback .text {
-    font-size: 11px;
-    padding: 4px 20px;
-  }
-  .accounts-options .banner-control {
+  .account-card.create-new {
     display: none;
   }
-  .accounts-options .buttons-container {
-    margin-bottom: 0;
-    text-align: center;
-  }
-}/*# sourceMappingURL=dashboard.css.map */
+}/*# sourceMappingURL=create-new.css.map */
