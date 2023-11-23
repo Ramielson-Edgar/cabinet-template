@@ -339,7 +339,12 @@ img {
 }
 
 .accounts-options .buttons-container .btn-base {
-  padding: 5px 20px;
+  padding: 10px 20px;
+}
+
+.accounts-options .buttons-container .btn-base .text-container {
+  height: 16px;
+  line-height: 16px;
 }
 
 .accounts-options .buttons-container .btn-outline.dark:hover,
