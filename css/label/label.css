@@ -102,7 +102,7 @@ img {
 }
 
 .section-padding {
-  padding: 70px 0;
+  padding: 30px 0;
 }
 
 .padding-inline {
@@ -324,31 +324,30 @@ img {
 
 .list.label {
   display: grid;
-  grid-template-columns: repeat(2, 85px);
-  row-gap: 5px;
+  grid-template-columns: repeat(2, 100px);
+  gap: 3px;
 }
 
 .list.label .list__item {
-  padding: 4px 7px;
+  text-align: center;
+  padding: 3px 4px;
   border-radius: 100px;
 }
 
 .list.label .text {
   overflow: hidden;
-  display: -webkit-box;
+  display: inline-block;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
-  width: 74px;
-  height: 13px;
-  text-overflow: ellipsis;
-}
-
-.list.label .text {
-  font-size: 10px;
-  font-weight: 600;
-  line-height: 1.3;
+  vertical-align: middle;
+  width: 89px;
+  height: 18px;
+  font-size: 12px;
+  line-height: 18px;
   text-transform: capitalize;
-  text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
 }
 
 .label-cashback {
@@ -367,20 +366,21 @@ img {
 }
 
 .list.label.dropdown-menu {
-  display: block;
-}
-
-.list.label.dropdown-menu .list__item .text {
-  display: inline-block;
-  font-size: 13px;
-  text-align: center;
-  line-height: 1.5;
-  width: 100%;
-  height: 100%;
-  padding: 3px 7px;
-  border-radius: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 3px;
 }
 
 .list.label.dropdown-menu .list__item {
-  padding: 0;
+  text-align: center;
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+
+.list.label.dropdown-menu .list__item > .text {
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: capitalize;
+  width: 100%;
 }/*# sourceMappingURL=label.css.map */
