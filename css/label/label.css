@@ -329,6 +329,7 @@ img {
 }
 
 .list.label .list__item {
+  min-height: 24px;
   text-align: center;
   padding: 3px 4px;
   border-radius: 100px;
