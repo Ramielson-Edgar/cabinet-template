@@ -322,6 +322,17 @@ img {
   width: 100%;
 }
 
+@media screen and (max-width: 767.98px) {
+  .sidebar.hide {
+    width: 0;
+  }
+  .sidebar {
+    width: 0;
+  }
+  .toogle {
+    display: none;
+  }
+}
 .account-card {
   overflow: hidden;
   background: var(--white);
@@ -490,4 +501,27 @@ img {
 .account-card .menu .account-card__body {
   height: 100%;
   padding: 15px;
+}
+
+@media screen and (max-width: 575.98px) {
+  .account-card__header {
+    justify-content: space-between;
+  }
+  .account-card__header .profile {
+    flex: 0 1 auto;
+  }
+  .account-card__header .profile .name,
+  .account-card__header .profile .number,
+  .account-card .btn-button.account-setting .text {
+    font-size: 13px;
+    line-height: 21px;
+  }
+  .account-card__header .profile .name {
+    font-size: 16px;
+    margin-bottom: 11px;
+  }
+  .account-card .account-card__body .title,
+  .account-card .account-card__body .text {
+    font-size: 13px;
+  }
 }/*# sourceMappingURL=account-card.css.map */

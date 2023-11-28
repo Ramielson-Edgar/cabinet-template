@@ -318,6 +318,17 @@ img {
   width: 100%;
 }
 
+@media screen and (max-width: 767.98px) {
+  .sidebar.hide {
+    width: 0;
+  }
+  .sidebar {
+    width: 0;
+  }
+  .toogle {
+    display: none;
+  }
+}
 .toggle {
   width: 61px;
   height: 22px;

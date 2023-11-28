@@ -1,4 +1,3 @@
-
 @import "../templates/template.scss";
 
 .account-feedback {
@@ -51,3 +50,55 @@
     margin-right: 10px;
 }
 
+
+@media screen and (max-width: 991.98px) {
+
+    .account-feedback,
+    .account-feedback .buttons-container {
+        align-items: flex-start;
+    }
+}
+
+
+@media screen and (max-width: 575.98px) {
+    .account-feedback,
+    .account-feedback .buttons-container .btn-base {
+        padding: 12px 20px;
+    }
+
+    .account-feedback,
+    .account-feedback .buttons-container {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+
+    .account-feedback .buttons-container,
+    .account-feedback .list.account-feedback {
+        gap: 5px;
+    }
+
+
+    .account-feedback .buttons-container .btn-green,
+    .list.account-feedback .list__item .title {
+        margin-right: 0;
+    }
+
+
+    .account-feedback,
+    .account-feedback.buttons-container {
+        padding: 0;
+    }
+
+    .account-feedback {
+        padding: 30px 0;
+    }
+
+    .account-feedback .list.account-feedback .link {
+        font-size: 13px;
+        line-height: 21px;
+        padding: 8px 20px;
+    }
+
+
+}

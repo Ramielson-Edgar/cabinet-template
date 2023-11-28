@@ -96,20 +96,6 @@ img {
   text-decoration: none;
 }
 
-.splide.banner-carousel .splide__list .splide__slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}
-
-.splide.banner-carousel {
-  border-radius: var(--border-radius-30);
-}
-
 .text-bold {
   text-transform: capitalize;
   font-weight: 700;
@@ -332,6 +318,21 @@ img {
   width: 100%;
 }
 
+@media screen and (max-width: 767.98px) {
+  .sidebar.hide {
+    width: 0;
+  }
+  .sidebar {
+    width: 0;
+  }
+  .toogle {
+    display: none;
+  }
+}
+.banner {
+  overflow: hidden;
+}
+
 .banner .inner.is-active {
   max-height: 0px;
   min-height: 10px;
@@ -339,11 +340,12 @@ img {
 }
 
 .banner .inner {
-  position: relative;
   overflow: hidden;
-  max-height: 410px;
+  position: relative;
+  max-height: 200px;
   min-height: 10px;
   margin-bottom: 10px;
+  border-radius: 20px;
   transition: all 0.5s var(--transition) 0.2s;
 }
 
@@ -355,41 +357,25 @@ img {
   text-transform: capitalize;
 }
 
-.splide.banner-carousel.is-hide {
-  transform: translateY(100%);
-}
-
-.splide.banner-carousel {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  background: var(--dark-400);
+.banner .inner .banner-carousel {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   transform: translateY(0);
   transition: transform 0.5s var(--transition) 0.2s;
 }
 
-.splide.banner-carousel .splide__list .splide__slide .link {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.splide.banner-carousel .splide__list .splide__slid {
-  width: 100%;
-  height: 100%;
+.banner .inner .banner-carousel.is-hide {
+  transform: translateY(100%);
 }
 
 @media screen and (max-width: 575.98px) {
-  .account-options .banner-control {
-    display: none;
-  }
-  .splide.banner-carousel .splide__list .splide__slide {
-    width: 100%;
-    height: 100%;
-  }
   .banner .banner-control {
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+  }
+  .account-options .banner-control {
+    display: none;
   }
   .banner .banner-control {
     display: flex;
@@ -399,7 +385,7 @@ img {
   .banner .banner-control .toggle {
     margin-right: 10px;
   }
-  .banner .inner.is-active {
-    min-height: 10px;
+  .banner .inner {
+    max-height: 100%;
   }
 }/*# sourceMappingURL=banner.css.map */

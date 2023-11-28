@@ -318,6 +318,17 @@ img {
   width: 100%;
 }
 
+@media screen and (max-width: 767.98px) {
+  .sidebar.hide {
+    width: 0;
+  }
+  .sidebar {
+    width: 0;
+  }
+  .toogle {
+    display: none;
+  }
+}
 .dropdown.program.is-show {
   display: block;
 }
@@ -377,4 +388,18 @@ img {
   opacity: 1;
   top: 100%;
   box-shadow: -16px 20px 50px -10px rgba(9, 19, 69, 0.3);
+}
+
+@media screen and (max-width: 767.98px) {
+  .dropdown.program {
+    display: block;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .dropdown.program {
+    margin-top: 20px;
+  }
+  .account-card .btn-button.account-setting .icon-setting {
+    margin-bottom: 10px;
+  }
 }/*# sourceMappingURL=dropdown.css.map */

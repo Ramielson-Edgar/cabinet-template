@@ -318,6 +318,17 @@ img {
   width: 100%;
 }
 
+@media screen and (max-width: 767.98px) {
+  .sidebar.hide {
+    width: 0;
+  }
+  .sidebar {
+    width: 0;
+  }
+  .toogle {
+    display: none;
+  }
+}
 .list.label.is-hide {
   display: none;
 }
@@ -384,4 +395,21 @@ img {
   line-height: 18px;
   text-transform: capitalize;
   width: 100%;
+}
+
+@media screen and (max-width: 767.98px) {
+  .list.label {
+    display: none;
+  }
+  .list.label.dropdown-menu {
+    display: flex;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .list.manage-menu .list__item {
+    flex-basis: 100%;
+  }
+  .dropdown.program .btn-button {
+    font-size: 11px;
+  }
 }/*# sourceMappingURL=label.css.map */

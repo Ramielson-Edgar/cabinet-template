@@ -318,8 +318,23 @@ img {
   width: 100%;
 }
 
+@media screen and (max-width: 767.98px) {
+  .sidebar.hide {
+    width: 0;
+  }
+  .sidebar {
+    width: 0;
+  }
+  .toogle {
+    display: none;
+  }
+}
+.content-container {
+  overflow: hidden;
+}
+
 .content.dashboard {
-  padding: 0;
+  padding: 0 15px;
 }
 
 .account-dashboard {
@@ -430,10 +445,6 @@ img {
   .account-feedback .inner .title {
     margin-bottom: 30px;
   }
-  .account-feedback .buttons-container,
-  .account-feedback .list.account-feedback .list__item {
-    align-items: center;
-  }
   .account-feedback .buttons-container .btn-green,
   .account-feedback .list.account-feedback .title {
     margin-bottom: 0;
@@ -444,6 +455,20 @@ img {
   .account-feedback .buttons-container .btn-green {
     margin-right: 10px;
   }
+  .grid.account-item {
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .main-container {
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 100%;
+  }
+  .sidebar {
+    display: none;
+    width: 0;
+  }
 }
 @media screen and (max-width: 575.98px) {
   .section-padding {
@@ -451,21 +476,31 @@ img {
   }
   .section-header {
     justify-content: space-between;
+    margin-bottom: 30px;
   }
   .section-header .link {
+    font-size: 14px;
     margin-right: 15px;
+  }
+  .section-header .title {
+    font-size: 18px;
+  }
+  .accounts-options .buttons-container .btn-base .text-container,
+  .account-feedback .buttons-container .btn-base .text-container {
+    height: 20px;
+  }
+  .btn-base .text-container span {
+    line-height: 22px;
+  }
+  .grid.account-item {
+    grid-template-columns: 1fr;
   }
   .section-header .title,
   .account-feedback .list.account-feedback {
     margin-right: 0;
   }
-  .account-feedback .list.account-feedback .link {
-    font-size: 13px;
-    padding: 8px 20px;
-  }
   .account-feedback .list.account-feedback .text {
     font-size: 11px;
-    padding: 4px 20px;
   }
   .accounts-options .banner-control {
     display: none;
@@ -473,5 +508,6 @@ img {
   .accounts-options .buttons-container {
     margin-bottom: 0;
     text-align: center;
+    margin-bottom: 10px;
   }
 }/*# sourceMappingURL=dashboard.css.map */

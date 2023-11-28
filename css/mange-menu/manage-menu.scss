@@ -32,7 +32,7 @@
     margin-right: 10px;
 }
 
- 
+
 .list.manage-menu .link .icon-arrow {
     opacity: 0;
     transform: translateX(-5px);
@@ -45,5 +45,23 @@
     transform: translateX(10px);
 }
 
- 
- 
+
+
+@media screen and (max-width: 575.98px) {
+    .list.manage-menu .link .text {
+        font-size: 11px;
+    }
+
+    .list.manage-menu {
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .list.manage-menu .list__item:nth-child(even) {
+        padding-left: 10px;
+    }
+
+    .list.manage-menu .list__item {
+        flex-basis: calc(100% / 2);
+    }
+}

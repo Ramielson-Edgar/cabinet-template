@@ -4,6 +4,8 @@
     display: none;
 }
 
+
+
 .list.label {
     display: grid;
     grid-template-columns: repeat(2, 100px);
@@ -72,4 +74,26 @@
     text-transform: capitalize;
 
     width: 100%;
+}
+
+
+@media screen and (max-width: 767.98px) {
+    .list.label {
+        display: none;
+    }
+    
+    .list.label.dropdown-menu {
+        display: flex;
+    }
+}
+ 
+
+@media screen and (max-width:575.98px) {
+    .list.manage-menu .list__item {
+        flex-basis: 100%;
+    }
+    
+    .dropdown.program .btn-button {
+        font-size: 11px;
+    }
 }
