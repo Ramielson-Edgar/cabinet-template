@@ -5978,24 +5978,6 @@
                 },
             });
 
-            const banner = document.querySelector(".banner .inner");
-            const bannerSlider = document.querySelector(".banner-carousel");
-
-            const toggles = document
-                .querySelectorAll(".toggle__checkbox")
-                .forEach(function (checkbox) {
-                    checkbox.addEventListener("change", function () {
-                        if (checkbox.checked === false) {
-                            bannerSlider.classList.remove("is-hide");
-                            banner.classList.remove("is-active");
-                        }
-
-                        if (checkbox.checked === true) {
-                            bannerSlider.classList.add("is-hide");
-                            banner.classList.add("is-active");
-                        }
-                    });
-                });
         });
     </script>
 </body>
