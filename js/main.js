@@ -47,11 +47,8 @@ window.addEventListener('DOMContentLoaded', () => {
                cloneLabels(dropdownContainer, dropdown, labels, indicator);
             }
          });
-
-         console.log('если више 767')
       } else {
          updateLabelIndicator()
-         console.log('если ниже 767')
       }
    }
 

@@ -403,9 +403,9 @@ img {
   gap: 10px;
 }
 
-@media screen and (max-width: 2560px) {
+@media screen and (min-width: 2560px) {
   .grid.account-item {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
   }
 }
 @media screen and (max-width: 1880px) {
