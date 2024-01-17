@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const splide = new Splide(slider, {
         type: "loop",
-        perPage: 5,
+        perPage: 10,
         perMove: 1,
         gap: 10,
         arrows: false,
@@ -14,6 +14,18 @@ document.addEventListener('DOMContentLoaded', () => {
         interval: 2500,
         focus: "center",
         breakpoints: {
+            2500:{
+                perPage: 7,
+                perMove: 1,
+            },
+
+            1800: {
+                perPage: 5,
+                perMove: 1,
+            },
+            1400:{
+                perPage: 4,
+            },
             1198: {
                 destroy: true,
                 gap: 20,
@@ -116,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
         // small
-        "(min-width:320px) and (max-width:992px)": function () {
+        "(min-width:320px) and (max-width:1198px)": function () {
 
             imgs.forEach((img) => {
                 gsap.to(img, {

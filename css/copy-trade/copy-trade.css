@@ -608,7 +608,7 @@ img {
   position: relative;
 }
 
-.hero.copy-trade .bottom .container.xxl > .inner {
+.hero.copy-trade .bottom > .inner {
   display: flex;
   align-items: center;
 }
@@ -1354,11 +1354,6 @@ img {
   }
 }
 @media screen and (min-width: 1450px) {
-  .instruments .inner {
-    width: 1320px;
-    margin-left: auto;
-    margin-right: auto;
-  }
   .hero.copy-trade .section-title {
     font-size: 80px;
   }
@@ -1394,6 +1389,11 @@ img {
     width: 1320px;
     padding-left: 15px;
     padding-right: 15px;
+  }
+  .instruments .inner {
+    width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -1591,7 +1591,7 @@ img {
     padding-left: 0;
     padding-right: 0;
   }
-  .hero.copy-trade .bottom .container.xxl > .inner {
+  .hero.copy-trade .bottom > .inner {
     justify-content: center;
   }
   .splide.awards.is-initialized:not(.is-active) .splide__list {
@@ -1615,7 +1615,10 @@ img {
   }
   .list.instruments .list__item.markets .inner {
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: flex-end;
+  }
+  .list.instruments .list__item.markets .inner .animate {
+    margin-left: unset;
   }
 }
 @media screen and (max-width: 991.98px) {
@@ -1696,7 +1699,7 @@ img {
   .instruments .list.instruments .list__item .animate {
     width: 40%;
   }
-  .hero.copy-trade .bottom .inner::before {
+  .hero.copy-trade .bottom .inner > .inner::before {
     right: 20px;
   }
   .hero.copy-trade .hero-image {
