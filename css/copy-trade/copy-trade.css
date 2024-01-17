@@ -520,7 +520,7 @@ img {
 }
 
 .hero.copy-trade .top {
-  background: url("/img/copy-trade/icon.png"), url("/img/copy-trade/hero-top-pips.png"), transparent;
+  background: url("../../img/copy-trade/icon.png"), url("../../img/copy-trade/hero-top-pips.png"), transparent;
   background-repeat: no-repeat;
   background-position: center, center;
   background-size: cover, cover;
@@ -715,7 +715,7 @@ img {
 }
 
 .awards {
-  background: url("/img/copy-trade/awards-branch.svg");
+  background: url("../../img/copy-trade/awards-branch.svg");
   background-repeat: no-repeat;
   background-position: 50% -70%;
   background-size: cover;
@@ -821,7 +821,7 @@ img {
 
 .about {
   position: relative;
-  background: url("/img/copy-trade/about-pips.png"), var(--white);
+  background: url("../../img/copy-trade/about-pips.png"), var(--white);
   background-repeat: no-repeat;
   background-position: center, center;
   background-size: cover, cover;
@@ -884,7 +884,7 @@ img {
   content: "";
   width: 187px;
   height: 124px;
-  background: url("/img/copy-trade/arrow-rounded-xl.svg");
+  background: url("../../img/copy-trade/arrow-rounded-xl.svg");
   background-repeat: no-repeat;
   background-position: center, center;
   background-size: contain, contain;
@@ -923,7 +923,7 @@ img {
 }
 
 .easy-start {
-  background: url("/img/copy-trade/ease-start.png"), var(--white);
+  background: url("../../img/copy-trade/ease-start.png"), var(--white);
   background-repeat: no-repeat;
   background-position: bottom, center;
   background-size: contain, contain;
@@ -1061,7 +1061,7 @@ img {
 }
 
 .top-choose.top {
-  background: url("/img/copy-trade/top-choose-pips.png"), #1363DF;
+  background: url("../../img/copy-trade/top-choose-pips.png"), #1363DF;
   background-repeat: no-repeat;
   background-position: center, center;
   background-size: cover, cover;
@@ -1150,7 +1150,7 @@ img {
 }
 
 .instruments .top {
-  background: url("/img/copy-trade/instrument-pips.png"), var(--white);
+  background: url("../../img/copy-trade/instrument-pips.png"), var(--white);
   background-repeat: no-repeat;
   background-position: right, center;
   background-size: contain, contain;
