@@ -119,7 +119,7 @@ img {
      object-position: center;
 }
 
-.progress__top .progress__circle.is-active + .title {
+.progress__top .progress__circle.is-active + .title, .hero.copy-trade .container.xxl .bottom .background.bottom {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -513,11 +513,49 @@ img {
   overflow: hidden;
 }
 
+.hero.copy-trade {
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+}
+
 .hero.copy-trade .top {
-  background: url("/img/copy-trade/icon.png"), url("/img/copy-trade/hero-top-pips.png"), linear-gradient(180deg, #DFF6FF 0%, rgba(223, 246, 255, 0.8) 142.26%);
+  background: url("/img/copy-trade/icon.png"), url("/img/copy-trade/hero-top-pips.png"), transparent;
   background-repeat: no-repeat;
   background-position: center, center;
   background-size: cover, cover;
+}
+
+.hero.copy-trade .container.xxl .top .background.top {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100dvw;
+  height: 100%;
+  max-width: 1600px;
+  border-radius: 30px;
+  background: #DFF6FF;
+  z-index: -1;
+}
+
+.hero.copy-trade .container.xxl .bottom .background.bottom {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  width: 100dvw;
+  height: 100%;
+  max-width: 1600px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background: #06283D;
+  z-index: -1;
+}
+
+.hero.copy-trade .bottom .inner > .animation {
+  z-index: 3;
 }
 
 .hero.copy-trade .top .inner {
@@ -545,8 +583,13 @@ img {
   flex-wrap: nowrap;
 }
 
-.section-title.copy-trade .letter {
-  width: 11vw;
+.section-title.copy-trade .inner .letter {
+  width: 9.3vw;
+  height: auto;
+}
+
+.section-title.copy-trade .text .letter {
+  width: 9vw;
   height: auto;
 }
 
@@ -594,10 +637,12 @@ img {
 }
 
 .hero.copy-trade .bottom {
-  background: url("../../img/copy-trade/hero-bottom-pips.png"), #06283D;
-  background-repeat: no-repeat;
-  background-position: center, center;
-  background-size: cover, cover;
+  position: relative;
+  background: url("../../img/copy-trade/hero-bottom-pips.png");
+  background-repeat: repeat-x;
+  background-position: bottom center;
+  background-size: contain;
+  background-clip: padding-box;
   padding-top: 40px;
   padding-bottom: 40px;
   border-radius: 0px 0px 50px 50px;
@@ -670,14 +715,14 @@ img {
 }
 
 .awards {
-  background: url("/img/copy-trade/awards-branch.svg"), transparent;
+  background: url("/img/copy-trade/awards-branch.svg");
   background-repeat: no-repeat;
-  background-position: bottom, center;
-  background-size: contain, contain;
+  background-position: 50% -70%;
+  background-size: cover;
 }
 
 .awards.top.white {
-  background: var(--white);
+  background: url(""), var(--white);
 }
 
 .awards.top .awards-benefits {
@@ -1461,6 +1506,9 @@ img {
     width: 100%;
     padding-bottom: 150px;
   }
+  .awards .container-fluid .animation {
+    z-index: 5;
+  }
   .splide.awards.is-initialized:not(.is-active) .splide__list {
     display: flex;
     flex-wrap: wrap;
@@ -1593,6 +1641,7 @@ img {
   }
   .hero.copy-trade .bottom > .inner {
     justify-content: center;
+    width: 100%;
   }
   .splide.awards.is-initialized:not(.is-active) .splide__list {
     justify-content: space-between;
