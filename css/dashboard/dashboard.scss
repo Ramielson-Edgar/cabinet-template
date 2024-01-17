@@ -88,6 +88,17 @@
 }
 
 
+.test .text {
+    max-width: 440px;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.test .text > .link {
+    text-decoration: underline;
+    color: var(--blue-500);
+}
+
 @media screen and (min-width: 2560px) {
     .grid.account-item {
         grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));

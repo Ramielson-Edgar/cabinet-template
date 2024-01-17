@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap");
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  src: url("/fonts/montserrat-latin-700-normal.woff2") format("woff2"), url("/fonts/montserrat-latin-700-normal.woff") format("woff");
+}
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  src: url("/fonts/montserrat-latin-300-italic.woff2") format("woff2"), url("/fonts/montserrat-latin-300-italic.woff") format("woff");
+}
 :root {
   --font-size-50-24: clamp(1.5rem, -0.0234rem + 4.0625vw, 3.125rem);
   --font-size-30-18: clamp(1.125rem, 0.4219rem + 1.875vw, 1.875rem);
@@ -29,6 +37,10 @@
   --dark-600: #363636;
   --dark-800: #232323;
   --transition: cubic-bezier(0.68, -0.55, 0.265, 1.5);
+  --ease-out: cubic-bezier(0.16,1,0.3,1);
+  --ease-out-slow: cubic-bezier(0.33,1,0.68,1);
+  --ease-in: cubic-bezier(0.12,0,0.39,0);
+  --ease-in-out: cubic-bezier(0.86,0,0.07,1);
   --border-radius-30: 30px;
   --border-radius-24: 24px;
   --border-radius-15: 15px;
@@ -110,6 +122,14 @@ img {
   padding-right: 10px;
 }
 
+.blue-500 {
+  color: var(--blue-500);
+}
+
+.white {
+  background: var(--white);
+}
+
 .btn-button {
   padding: 0;
   margin: 0;
@@ -135,6 +155,10 @@ img {
   border-radius: 100px;
   background: transparent;
   z-index: 1;
+}
+
+.rounded {
+  border-radius: 100px;
 }
 
 .btn-base::before {
@@ -213,6 +237,20 @@ img {
   border: 1px solid var(--blue-500);
 }
 
+.btn-outline.white {
+  border: 1px solid var(--white);
+  color: var(--white);
+}
+
+.btn-outline.white::before {
+  background: var(--white);
+}
+
+.btn-outline.white:hover {
+  color: var(--dark-800);
+  border: 1px solid var(--white);
+}
+
 .btn-green {
   color: var(--white);
   background: #4cd7ab;
@@ -225,6 +263,20 @@ img {
 
 .btn-green::before {
   background: var(--red-500);
+}
+
+.btn-blue {
+  color: var(--white);
+  background: var(--blue-500);
+}
+
+.btn-blue:hover {
+  border: 1px solid var(--green-500);
+  color: var(--white);
+}
+
+.btn-blue::before {
+  background: var(--green-500);
 }
 
 .btn-base-xs {
@@ -401,6 +453,17 @@ img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
+}
+
+.test .text {
+  max-width: 440px;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.test .text > .link {
+  text-decoration: underline;
+  color: var(--blue-500);
 }
 
 @media screen and (min-width: 2560px) {
