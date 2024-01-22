@@ -69,6 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     start: "top top",
                     pin: true,
                     scrub: true,
+                    markers:true,
+                    end:`+=${mainContainer.offsetWidth}`
                 }
             })
         },
