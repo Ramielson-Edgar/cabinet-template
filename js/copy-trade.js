@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         interval: 2500,
         focus: "center",
         breakpoints: {
-            2500:{
+            2500: {
                 perPage: 7,
                 perMove: 1,
             },
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 perPage: 5,
                 perMove: 1,
             },
-            1400:{
+            1400: {
                 perPage: 4,
             },
             1198: {
@@ -45,95 +45,50 @@ document.addEventListener('DOMContentLoaded', () => {
 
     gsap.registerPlugin(ScrollTrigger);
 
- 
+
     let videos = gsap.utils.toArray(".list.video .list__item");
-    let item = gsap.utils.toArray(".list.header .list__item");
+
     let imgs = gsap.utils.toArray(".benefits-item");
-    let mainContainer = document.querySelector('.grid.start');
+
+    let mainContainer = document.querySelector('.horizontal')
+
+    const instrumentsTitle = gsap.utils.toArray(".list.instruments .list__item .mask .title")
+
+
 
     ScrollTrigger.matchMedia({
-        
 
-        // large
-        "(min-width: 1198px)": function () {
-    
+
+        "(min-width: 575px)": function () {
+
             gsap.to(videos, {
-               x: - (mainContainer.scrollWidth - videos.length - 401) ,
+                xPercent: -100 * (videos.length - 1),
                 ease: "none",
                 scrollTrigger: {
-                    trigger: ".grid.start",
-                    start: "-=50px top",
+                    trigger: '.horizontal',
+                    start: "top top",
                     pin: true,
-                    scrub: 1,
-                    end: `+=${mainContainer.offsetWidth}`,
-                },
-            });
-
-
-            gsap.to(item, {
-               yPercent: -100 * (item.length - 1),
-                ease: "none",
-                scrollTrigger: {
-                    trigger: ".grid.start",
-                    start: "-=50px top",
-                    scrub: 1,
-                    end: `+=${mainContainer.offsetWidth}`,
-                },
-            });
-
-
-            gsap.to(".progress__line", {
-
-                scrollTrigger: {
-                    trigger: ".progress",
-                    start: "-100px top",
-                    scrub: 1,
-                    end: () => `+=${document.querySelector(".grid.start").offsetWidth}`,
-                    onUpdate: (self) => {
-                        const text = document.querySelector('.title.count')
-                        const line = document.querySelector('.progress__line')
-                        let progressCount = Math.fround(self.progress).toFixed(2) * 100;
-                        line.style.height = progressCount / 1.3 + "%"
-
-                        if (progressCount <= 10) {
-                            text.innerHTML = 1 + "."
-                        }
-
-                        if (progressCount >= 20) {
-                            text.innerHTML = 2 + "."
-                        }
-
-                        if (progressCount >= 50) {
-                            text.innerHTML = 3 + "."
-                        }
-
-                    },
-                },
-
-            });
-
-            imgs.forEach((img) => {
-                gsap.to(img, {
-                    y: 0,
-               
-                    scrollTrigger: {
-                        trigger: img,
-               
-                        scrub: true,
-                    },
-                });
-            });
+                    scrub: true,
+                }
+            })
         },
-
-
+   
 
         // small
-        "(min-width:320px) and (max-width:1198px)": function () {
+        "(min-width:320px)": function () {
+            gsap.to(instrumentsTitle, {
+                scrollTrigger: {
+                    trigger: ".list.instruments",
+                },
+
+                y: 0,
+            })
+
 
             imgs.forEach((img) => {
                 gsap.to(img, {
                     y: 0,
-                    ease:"none",
+                    ease: "none",
                     scrollTrigger: {
                         trigger: img,
                         scrub: true,
@@ -141,10 +96,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
         },
+
+
     });
 
 
     ScrollTrigger.refresh();
+
+    // window.addEventListener('resize', () => {
+    //     ScrollTrigger.refresh();
+    // })
+
 })
 
 
