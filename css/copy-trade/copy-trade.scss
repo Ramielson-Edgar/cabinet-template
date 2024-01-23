@@ -398,7 +398,7 @@
 
 .hero.copy-trade .hero-image .video-container .video {
     position: absolute;
-    top: 65%;
+    top: 64%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -1255,7 +1255,12 @@
     }
 
     .hero.copy-trade .hero-image .video-container .video {
-        width: 300px;
+        width: 290px;
+    }
+
+    .hero.copy-trade .hero-image .video-container .video {
+        border-top-right-radius: 25px;
+        border-top-left-radius: 25px;
     }
 
 }

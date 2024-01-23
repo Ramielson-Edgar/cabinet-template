@@ -104,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
             gsap.to(instrumentsTitle, {
                 scrollTrigger: {
                     trigger: ".list.instruments",
+                    start:"-=320px top",
                 },
 
                 y: 0,
