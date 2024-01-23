@@ -109,7 +109,7 @@ img {
   text-decoration: none;
 }
 
-.top-choose.bottom .grid .grid__item .img-container img, .promo-video .video-container video {
+.top-choose.bottom .grid .grid__item .img-container img {
   display: block;
   width: 100%;
   height: 100%;
@@ -975,8 +975,6 @@ img {
 
 .promo-video {
   position: relative;
-  width: auto;
-  height: 100%;
   margin-bottom: 1%;
   border-radius: 40px;
 }
@@ -986,15 +984,22 @@ img {
   display: flex;
   justify-content: center;
   align-items: stretch;
-  width: 100%;
-  height: auto;
+  width: 99.98vw;
+  height: 100%;
   aspect-ratio: 16/5;
   border-radius: 40px;
 }
 
 .promo-video .video-container video {
-  border-radius: 40px;
+  display: block;
+  width: 101vw;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   aspect-ratio: 16/5;
+  border-radius: 40px;
 }
 
 .easy-start {
@@ -1015,6 +1020,7 @@ img {
 .easy-start .section-title {
   width: 39%;
   margin-left: 46%;
+  margin-bottom: 70px;
 }
 
 .horizontal {
@@ -1025,7 +1031,6 @@ img {
 }
 
 .list.video {
-  overflow: hidden;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: flex-start;
@@ -1055,6 +1060,7 @@ img {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  box-shadow: 50px 70px 80px -50px rgba(0, 0, 0, 0.15);
 }
 
 .list.video .list__item {
@@ -1063,7 +1069,12 @@ img {
   justify-content: center;
   gap: 50px;
   width: 100vw;
-  height: 100vh;
+  border-radius: 20px;
+}
+
+.list.video .list__item:last-child {
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .list.video .list__item .section-header {
@@ -1150,7 +1161,7 @@ img {
 }
 
 .wrapper.blue {
-  background: #1363DF;
+  background: var(--white);
 }
 
 .wrapper.blue {
@@ -1286,6 +1297,7 @@ img {
 .instruments .bottom {
   overflow: hidden;
   padding: 10px;
+  margin-bottom: 10px;
   background: #0440E4;
 }
 
@@ -1365,6 +1377,10 @@ img {
   margin-bottom: 18px;
 }
 
+.list.instruments .list__item .animate .text::first-letter {
+  text-transform: uppercase;
+}
+
 .list.instruments .list__item:hover .animate {
   transform: translateY(0);
 }
@@ -1429,6 +1445,15 @@ img {
     width: 1320px;
     margin-left: auto;
     margin-right: auto;
+  }
+  .hero.copy-trade .hero-image .video-container {
+    width: 320px;
+  }
+  .hero.copy-trade .top {
+    background-size: contain;
+  }
+  .hero.copy-trade .hero-image .video-container .video {
+    width: 300px;
   }
 }
 @media screen and (max-width: 1200px) {

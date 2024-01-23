@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
+    let videos = gsap.utils.toArray(".list.video .list__item");
+    let imgs = gsap.utils.toArray(".benefits-item");
+    let mainContainer = document.querySelector('.horizontal');
+    const instrumentsTitle = gsap.utils.toArray(".list.instruments .list__item .mask .title");
+    const instrument = gsap.utils.toArray(".list.instruments .list__item");
 
     const slider = document.querySelector('.splide')
 
@@ -42,38 +47,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
     splide.mount();
 
-
     gsap.registerPlugin(ScrollTrigger);
-
-
-    let videos = gsap.utils.toArray(".list.video .list__item");
-
-    let imgs = gsap.utils.toArray(".benefits-item");
-
-    let mainContainer = document.querySelector('.horizontal')
-
-    const instrumentsTitle = gsap.utils.toArray(".list.instruments .list__item .mask .title")
-
 
 
     ScrollTrigger.matchMedia({
 
 
         "(min-width: 575px)": function () {
-
             gsap.to(videos, {
                 xPercent: -100 * (videos.length - 1),
                 ease: "none",
                 scrollTrigger: {
                     trigger: '.horizontal',
-                    start: "top top",
+                    start: "-=70px top",
                     pin: true,
                     scrub: true,
-                    markers:true,
-                    end:`+=${mainContainer.offsetWidth}`
+                    end:`+=${mainContainer.scrollWidth}`
                 }
             })
+
+            gsap.to('.wrapper.blue', {
+                scrollTrigger:{
+                    trigger:'.wrapper.blue',
+                    start:"-=90px top",
+                    end:"bottom top",
+            
+                },
+                backgroundColor: "#1363DF",
+                duration: .5,
+            })
+
+
+            instrument.forEach(el=> {
+                const video = el.querySelector('.video');
+                video.pause();
+                video.currentTime = 0;
+
+                el.addEventListener('mouseenter', ()=> {
+                    video.play()
+                })
+ 
+                el.addEventListener('mouseleave', ()=> {
+                    video.pause();
+                    video.currentTime = 0;
+                })
+            })
+ 
+      
         },
+
+ 
    
 
         // small
@@ -91,6 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 gsap.to(img, {
                     y: 0,
                     ease: "none",
+                
                     scrollTrigger: {
                         trigger: img,
                         scrub: true,
@@ -103,11 +127,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    ScrollTrigger.refresh();
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
-    // window.addEventListener('resize', () => {
-    //     ScrollTrigger.refresh();
-    // })
+    ScrollTrigger.refresh();
 
 })
 
