@@ -55,7 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         "(min-width: 575px)": function () {
             gsap.to(videos, {
-                xPercent: -100 * (videos.length - 1),
+                // xPercent: -100 * (videos.length - 1),
+                x: -(mainContainer.scrollWidth - window.innerWidth),
                 ease: "none",
                 scrollTrigger: {
                     trigger: '.horizontal',
@@ -101,14 +102,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // small
         "(min-width:320px)": function () {
-            gsap.to(instrumentsTitle, {
-                scrollTrigger: {
-                    trigger: ".list.instruments",
-                    start:"-=320px top",
-                },
+            // gsap.to(instrumentsTitle, {
+            //     scrollTrigger: {
+            //         trigger: ".list.instruments",
+            //         start:"-=320px top",
+            //     },
 
-                y: 0,
+            //     y: 0,
+            // })
+
+
+            gsap.to('.wrapper.blue', {
+                scrollTrigger:{
+                    trigger:'.wrapper.blue',
+                    start:"-=90px top",
+                    end:"bottom top",
+            
+                },
+                backgroundColor: "#1363DF",
+                duration: .5,
             })
+
 
 
             imgs.forEach((img) => {
