@@ -55,7 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         "(min-width: 575px)": function () {
             gsap.to(videos, {
-                // xPercent: -100 * (videos.length - 1),
                 x: -(mainContainer.scrollWidth - window.innerWidth),
                 ease: "none",
                 scrollTrigger: {
@@ -67,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             })
 
+ 
             gsap.to('.wrapper.blue', {
                 scrollTrigger:{
                     trigger:'.wrapper.blue',
@@ -79,10 +79,12 @@ document.addEventListener('DOMContentLoaded', () => {
             })
 
 
+
+
             instrument.forEach(el=> {
-                const video = el.querySelector('.video');
-                video.pause();
-                video.currentTime = 0;
+                const video = el.querySelector('video');
+                    video.pause();
+                    video.currentTime = 0;
 
                 el.addEventListener('mouseenter', ()=> {
                     video.play()
@@ -94,6 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 })
             })
  
+
       
         },
 
@@ -102,14 +105,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // small
         "(min-width:320px)": function () {
-            // gsap.to(instrumentsTitle, {
-            //     scrollTrigger: {
-            //         trigger: ".list.instruments",
-            //         start:"-=320px top",
-            //     },
+            gsap.to(instrumentsTitle, {
+                scrollTrigger: {
+                    trigger: ".list.instruments",
+                    start:"-=320px top",
+                },
 
-            //     y: 0,
-            // })
+                y: 0,
+            })
 
 
             gsap.to('.wrapper.blue', {
@@ -141,8 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
-
-    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+ 
 
     ScrollTrigger.refresh();
 
