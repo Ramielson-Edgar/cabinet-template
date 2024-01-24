@@ -2122,7 +2122,7 @@
     }
 
     .top-choose.top {
-        padding-top: 0;
+        padding-top: 50px;
         padding-bottom: 50px;
     }
 
@@ -2227,6 +2227,7 @@
         padding-right: 15px;
     }
 
+    .list.instruments .list__item,
     .list.instruments .list__item .inner {
         padding: 50% 10px 10px 10px;
     }
@@ -2281,5 +2282,7 @@
     .easy-start .container-fluid .section-title {
         font-size: 24px;
     }
+
+
 
 }
