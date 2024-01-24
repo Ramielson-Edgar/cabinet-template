@@ -53,7 +53,9 @@ document.addEventListener('DOMContentLoaded', () => {
     ScrollTrigger.matchMedia({
 
 
-        "(min-width: 575px)": function () {
+
+        "(min-width: 768px)": function () {
+
             gsap.to(videos, {
                 x: -(mainContainer.scrollWidth - window.innerWidth),
                 ease: "none",
@@ -65,7 +67,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     end:`+=${mainContainer.scrollWidth}`
                 }
             })
+        },
 
+
+        "(min-width: 575px)": function () {
+    
  
             gsap.to('.wrapper.blue', {
                 scrollTrigger:{
