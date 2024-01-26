@@ -1110,9 +1110,6 @@
     z-index: 10;
 }
 
-.list.instruments .list__item:hover>.mask .title {
-    transform: translateY(100%) !important;
-}
 
 .list.instruments .list__item .animate {
     position: relative;
@@ -1130,10 +1127,6 @@
     background: rgba(4, 64, 228, 1);
     padding: 30px;
     @extend %border-radius-30;
-
-    transform: translateY(110%);
-    transition: transform 900ms var(--ease-in-out) 100ms;
-
     z-index: 10;
 }
 
@@ -1154,11 +1147,6 @@
     text-transform: uppercase;
 }
 
-
-.list.instruments .list__item:hover .animate {
-    transform: translateY(0);
-
-}
 
 .list.instruments .list__item:first-child .video {
     object-position: -200px 50%;

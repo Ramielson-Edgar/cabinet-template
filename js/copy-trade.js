@@ -72,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         "(min-width: 575px)": function () {
     
- 
             gsap.to('.wrapper.blue', {
                 scrollTrigger:{
                     trigger:'.wrapper.blue',
@@ -83,8 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 backgroundColor: "#1363DF",
                 duration: .5,
             })
-
-
 
 
             instrument.forEach(el=> {
@@ -111,14 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // small
         "(min-width:320px)": function () {
-            gsap.to(instrumentsTitle, {
-                scrollTrigger: {
-                    trigger: ".list.instruments",
-                    start:"-=320px top",
-                },
-
-                y: 0,
-            })
+    
 
 
             gsap.to('.wrapper.blue', {
