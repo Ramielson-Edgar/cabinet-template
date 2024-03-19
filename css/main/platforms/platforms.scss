@@ -1,0 +1,36 @@
+@import '../../templates/template.scss';
+
+.platforms {
+    background: var(--blue300);
+}
+
+.section-header.platforms {
+    background: transparent;
+}
+
+.section-header.platforms  .section-header__title {
+    font-family: "Roboto-medium",sans-serif;
+    font-size: 60px;
+    line-height: normal;
+}
+
+.section-header.platforms  .section-header__title span {
+    display: block;
+}
+
+.section-header.platforms .section-header__text {
+    font-size: 16px;
+    line-height: normal;
+}
+
+
+.section-header.platforms  .section-header__title,
+.section-header.platforms .section-header__text {
+    color: var(--white);
+    margin-bottom: 30px;
+}
+
+
+ 
+
+ 

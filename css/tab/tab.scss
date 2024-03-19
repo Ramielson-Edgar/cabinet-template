@@ -1,0 +1,146 @@
+@import '../templates/template.scss';
+@import '../label/label.scss';
+
+.list.tab {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    width: 75%;
+}
+
+.list.tab,
+.list.os {
+    padding: 10px;
+}
+
+.list.tab,
+.list.operation-systems,
+.img-container.platforms {
+    background: var(--white);
+}
+
+.list.tab .list__item {
+    @include center-flex('hor');
+    flex-basis: calc(100% / 2 - 5px);
+    border: 1px solid var(--grey300);
+}
+
+.list.tab .list__item button {
+    @include center-flex('hor');
+    padding: 15px 20px;
+    width: 100%;
+}
+
+.indicator,
+.list.tab,
+.list.operation-systems,
+.list.tab .list__item {
+    border-radius: 100px;
+}
+
+.indicator {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transform: translateX(0);
+
+    background: var(--green-500);
+    width: calc(100% / 2 - 10px);
+    height: calc(100% - 20px);
+    
+    transition: transform .5s var(--ease-out) 0s;
+}
+
+.indicator.right {
+    transform: translateX(100%);
+}
+
+.img-container.platforms {
+    overflow: hidden;
+    @include center-flex('hor');
+    @extend %border-radius-30;
+    @extend %padding-card-30;
+    margin-bottom: 20px;
+}
+
+.img-container.platforms.active + .list.operation-systems .list__item:nth-child(-n + 2) {
+    display: none;
+}
+
+.list.operation-systems {
+    justify-content: center
+}
+
+.list.operation-systems .list__item {
+    @include center-flex('hor');
+    padding: 10px;
+}
+
+.list.operation-systems .list__item svg {
+    margin-right: 5px;
+}
+
+.list.operation-systems .list__item:not(:last-child) {
+    margin-right: 10px;
+}
+ 
+
+ 
+
+.slide-track  {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: auto;
+    transform: translateX(0);
+    transition: transform 2s var(--ease-out) 0s;
+}
+
+.slide-track.end {
+    transform: translateX(-106.7%);
+}
+
+
+ 
+.slide-track .slide {
+    position: relative;
+    flex: 1 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+.slide-track .slide:not(:last-child) {
+    margin-right: 30px;
+}
+
+.slide-track .slide img {
+    @extend %object-fit;
+    object-fit: contain;
+}
+
+.slide-track .slide .label {
+    @include center-flex('hor');
+    font-family: "Roboto-medium",sans-serif;
+    font-size: 16px;
+    line-height: 1.1;
+}
+
+.slide-track .slide .btn-blue,
+.slide-track .slide .label {
+    position: absolute;
+}
+
+.slide-track .slide .label {
+    top: 0;
+    right: 0;
+}
+
+.slide-track .slide .btn-blue {
+    bottom: 0;
+    right: 0;
+
+    padding: 14px 40px;
+}

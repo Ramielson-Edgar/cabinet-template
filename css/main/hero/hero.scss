@@ -1,0 +1,163 @@
+@import '../../templates/template.scss';
+@import '../../keyframes/keyframes.scss';
+
+
+.section-header.hero {
+    margin-top: 7%;
+    margin-bottom: 9%
+}
+
+.section-header.hero .section-header__title {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    font-size: clamp(1.5rem, -1.6575rem + 8.7861vi, 6.25rem);
+    line-height: normal;
+}
+
+.section-header.hero .section-header__title .icon,
+.section-header.hero .section-header__title .icon::before {
+    border-radius: 50%;
+}
+
+
+.section-header.hero .section-header__title .icon {
+    position: relative;
+
+    flex: 0 0 93px;
+
+    width: 93px;
+    height: 93px;
+
+    margin-right: 10px;
+    background: transparent;
+    z-index: 2;
+}
+
+.section-header.hero .section-header__title .icon::after {
+    content: '';
+
+    width: 65%;
+    height: 65%;
+
+    background: transparent;
+    border: 1px solid var(--blue-500);
+    animation: online-pulse 2s infinite;
+
+    z-index: 2;
+}
+
+.section-header.hero .buttons-container .btn-blue,
+.section-header.hero .section-header__title .icon,
+.section-header.hero .section-header__title .icon::before,
+.section-header.hero .section-header__title .icon::after {
+    @include center-flex("hor");
+}
+
+.section-header.hero .buttons-container .btn-blue,
+.section-header.hero .section-header__title .icon,
+.section-header.hero .section-header__title .icon::before,
+.section-header.hero .section-header__title .icon::after {
+    border-radius: 50%;
+}
+
+.section-header.hero .section-header__title .icon::before,
+.section-header.hero .section-header__title .icon::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.section-header.hero .section-header__title .icon::before {
+    content: "";
+
+    width: 60px;
+    height: 60px;
+
+    @extend %blue-500-bg;
+    z-index: -1;
+}
+
+
+.section-header.hero .section-header__title,
+.section-header.hero .section-header__text {
+    margin-bottom: 40px;
+}
+
+.section-header.hero .section-header__text {
+    font-size: clamp(1.0625rem, 0.0357rem + 2.8571vi, 2.25rem);
+    max-width: 350px;
+}
+
+.section-header.hero .buttons-container {
+    display: flex;
+    align-items: center;
+}
+
+.section-header.hero .buttons-container .btn-outline.blue {
+    font-size: 18px;
+    padding: 20px 60px;
+    margin-right: 10px;
+}
+
+.section-header.hero .buttons-container .btn-blue {
+    width: 71px;
+    height: 71px;
+
+    @extend %blue-500-bg;
+}
+
+
+.hero.main {
+    background: url('../../../img/main-page/hero-lg.png') var(--grey100);
+    background-repeat: no-repeat;
+    background-position: right 50px top -50px;
+    background-size: 60%;
+
+    padding-top: 70px;
+    padding-bottom: 20px;
+}
+
+
+.hero.main .inner.margin-inline {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.hero.main .inner {
+    padding: 50px 0;
+    border-radius: 30px;
+    background: var(--white);
+}
+
+.hero.main .form-quick {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 5px;
+}
+
+
+.section-header.form {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 30px;
+}
+
+.section-header.form .section-header__title,
+.section-header.form .section-header__text {
+    line-height: normal;
+}
+
+.section-header.form .section-header__title {
+    font-size: 2.813rem;
+    margin-right: 30px;
+
+}
+
+.section-header.form .section-header__text {
+    font-size: 24px;
+    max-width: 230px;
+}

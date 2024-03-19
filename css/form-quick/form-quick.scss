@@ -1,0 +1,52 @@
+@import '../templates/template.scss';
+
+ 
+.form-quick>label {
+    font-family: "Roboto-normal", sans-serif;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+// .form-quick>label .error {
+//     position: absolute;
+//     left: 0;
+//     bottom: 0;
+
+//     display: inline-block;
+//     font-size: 20px;
+//     color: var(--red-500);
+//     background: var(--red-100);
+//     border-radius: 100px;
+//     padding: 5px 10px;
+// }
+
+.form-quick>label,
+.form-quick>label input {
+    position: relative;
+    outline: none;
+    border: 1px solid transparent;
+}
+
+.form-quick>label input {
+    width: 100%;
+    padding: 20px 30px;
+    background: #F5F5F5;
+    border-radius: 100px;
+}
+
+.form-quick>label input:focus {
+   border: 1px solid var(--blue-500);
+}
+
+.form-quick>label input::placeholder {
+    font-size: 14px;
+    color: var(--dark-300);
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.form-quick> .btn-outline.green svg {
+ margin-left: 10px;
+}
+
+ 

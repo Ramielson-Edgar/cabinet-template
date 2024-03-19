@@ -1,0 +1,92 @@
+@import '../../templates/template.scss';
+
+.awards {
+    background: url('/img/main-page/olive-branch.svg') #F9F9F9;
+    @include background-image(no-repeat,center,center,cover,cover);
+    padding-top: 70px;
+}
+
+.section-header.award {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+
+.section-header.award .section-header__title {
+    flex: 1 0 auto;
+
+    font-family: "Roboto-medium", sans-serif;
+    font-size: 45px;
+    line-height: normal;
+
+    margin-right: 30px;
+}
+
+.section-header.award .section-header__title>span {
+    display: block;
+}
+
+.section-header.award .section-header__text {
+    font-size: 16px;
+    line-height: normal;
+    max-width: 580px;
+}
+
+
+.splide__list.award-carousel,
+.splide.award-carousel .splide__track{
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.splide.award-carousel .splide__track {
+    padding-bottom: 70px;
+}
+
+
+.splide__list.awards .splide__slide {
+    overflow: hidden;
+    position: relative;
+    padding: 30px;
+    background: var(--white);
+    @extend %border-radius-30;
+    box-shadow: 17px 32px 50px -10px rgba(9, 19, 69, 0.05);
+}
+
+.splide__list.awards .splide__slide::before {
+    position: absolute;
+    top: 36px;
+    right: 0;
+
+    content: "";
+    display: block;
+
+    width: 105px;
+    height: 216px;
+    opacity: .5;
+
+    background: url('../../../icons/icon-branch-stroke.svg');
+    @include background-image(no-repeat,center,center,contain,contain);
+}
+
+.splide__list.awards .splide__slide > .title {
+    color: var(--dark-800);
+    font-family: "Roboto-bold", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
+    line-height: normal;
+    text-transform: uppercase;
+
+
+    margin-bottom: 30px;
+}
+
+.splide__list.awards .splide__slide .text {
+    font-family: "Roboto-light", sans-serif;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 300;
+    color: var(--grey600);
+    line-height: normal;
+}

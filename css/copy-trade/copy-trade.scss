@@ -1,4 +1,5 @@
 @import '../templates/template.scss';
+@import '../keyframes/keyframes.scss';
  
 
 .align-items-center {
@@ -1031,22 +1032,6 @@
 }
 
 
-
-
-
-@keyframes fly-smooth {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(30px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
 
 .fly-smooth {
     animation: fly-smooth 5s ease 0s infinite;

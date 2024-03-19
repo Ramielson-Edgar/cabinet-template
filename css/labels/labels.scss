@@ -1,0 +1,100 @@
+@import "../templates/template.scss";
+ 
+
+.list.label.is-hide {
+    display: none;
+}
+
+
+
+.list.label {
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    gap: 3px;
+}
+
+.list.label .list__item {
+    min-height: 24px;
+
+    text-align: center;
+    padding: 3px 4px;
+    border-radius: 100px;
+}
+
+.list.label .text {
+    overflow: hidden;
+    display: inline-block;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    vertical-align: middle;
+
+    width: 89px;
+    height: 18px;
+
+    font-size: 12px;
+    line-height: 18px;
+
+    text-transform: capitalize;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.label-cashback {
+    color: #523108;
+    background: #ffcd8f;
+}
+
+.label-copy-trade {
+    color: #0b5941;
+    background: #a8ffe3;
+}
+
+.label-ib {
+    color: var(--white);
+    background: var(--dark-800);
+}
+
+.list.label.dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 3px;
+}
+
+
+.list.label.dropdown-menu .list__item {
+    text-align: center;
+    padding: 3px 10px;
+    border-radius: 100px;
+}
+
+.list.label.dropdown-menu .list__item > .text {
+    font-size: 12px;
+    line-height: 18px;
+    text-transform: capitalize;
+
+    width: 100%;
+}
+
+
+@media screen and (max-width: 767.98px) {
+    .list.label {
+        display: none;
+    }
+    
+    .list.label.dropdown-menu {
+        display: flex;
+    }
+}
+ 
+
+@media screen and (max-width:575.98px) {
+    .list.manage-menu .list__item {
+        flex-basis: 100%;
+    }
+    
+    .dropdown.program .btn-button {
+        font-size: 11px;
+    }
+}

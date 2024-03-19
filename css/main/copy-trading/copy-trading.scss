@@ -1,0 +1,99 @@
+@import '../../templates/template.scss';
+
+.copy-trading {
+    background: url('../../../img/main-page/copy-trading-pips.png'), var(--white);
+    @include background-image(no-repeat,center,center,contain,contain);
+    padding-top: 70px;
+}
+
+.section-header.copy {
+    margin-bottom: 0;
+}
+
+.section-header.copy .section-header__title {
+    color: var(--dark-800);
+    font-family: "Roboto-medium", sans-serif;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.section-header.copy .section-header__title,
+.section-header.copy .section-header__text{
+    margin-bottom: 30px;
+}
+
+.section-header.copy .section-header__text {
+    max-width: 420px;
+    line-height: normal;
+}
+
+
+.section-header.copy .section-header__text + .btn-outline.blue {
+    padding: 14px 50px;
+}
+
+ 
+
+.img-container.copy .phone-frame {
+    overflow: hidden;
+    position: relative;
+    @include center-flex('hor');
+
+    width: 444px;
+    height: 100%; 
+}
+
+.img-container.copy .phone-frame img {
+    position: relative;
+    z-index: 2;
+}
+
+.img-container.copy .phone-frame .inner {
+    overflow: hidden;
+    position: absolute;
+    @extend %absolute-center;
+    top: 56%;
+
+    @include center-flex('hor');
+    width: calc(100% + 7px);
+    height: auto;
+
+    padding: 24px;
+ 
+}
+
+.img-container.copy .phone-frame .inner video {
+    @extend %object-fit;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+.img-container.copy .trader {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 4;
+}
+
+
+.img-container.copy .animation {
+    position: relative;
+    top: 100px;
+    left: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: max-content;
+    padding: 7px;
+
+    background: var(--green-500);
+    margin-left: auto;
+}
+
+.img-container.copy .animation svg {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+ 

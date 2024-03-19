@@ -1,0 +1,80 @@
+@import '../../templates/template.scss';
+@import '../../keyframes/keyframes.scss';
+
+.banner-club {
+    background: url('../../../img/main-page/banner-pips.png') #64B5F6;
+    @include background-image(no-repeat, center, center, cover, cover);
+}
+
+.banner-club .inner {
+    position: relative;
+    text-align: center;
+
+    background: var(--white);
+    border-radius: 40px;
+    padding: 100px;
+
+    box-shadow: 27px 27px 100px -20px rgba(33, 150, 243, 0.30);
+}
+
+
+.banner-club .inner::before {
+    position: absolute;
+    bottom: 0;
+    right: 20%;
+
+    display: block;
+    content: '';
+
+    width: 188px;
+    height: 123px;
+
+    background: url('../../../icons/icon-round-arrow.svg');
+    @include background-image(no-repeat, center, center, contain, contain);
+}
+
+
+
+
+.section-header.banner-cta .section-header__title {
+    font-family: "Roboto-bold", sans-serif;
+    font-size: 100px;
+    line-height: normal;
+    color: var(--dark-800);
+    margin-bottom: 10px;
+}
+
+.section-header.banner-cta .section-header__title span {
+    display: block;
+}
+
+.section-header.banner-cta .section-header__text {
+    max-width: 500px;
+    font-size: 20px;
+    line-height: normal;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.section-header.banner-cta .btn-outline {
+    padding: 15px 40px;
+}
+
+
+.logo-container {
+    position: absolute;
+    top: calc(100px + 12px);
+    left: 12%;
+
+    width: 120px;
+    height: 200px;
+
+    border-radius: 500px;
+    padding: 6px;
+    background: linear-gradient(168deg, #1E88E5 5.59%, rgba(255, 255, 255, 0.00) 114.79%);
+}
+
+
+.logo-container > .icon-logo {
+    animation: spin-rotate 3s var(--ease-out-slow) 0s infinite;
+}

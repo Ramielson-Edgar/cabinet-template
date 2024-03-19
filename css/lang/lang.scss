@@ -1,0 +1,113 @@
+@import "../../css/templates/template.scss";
+
+.dropdown.lang>.btn-base {
+    position: relative;
+
+    display: block;
+    font-size: 14px;
+
+    padding: 10px 34px 10px 15px;
+    position: relative;
+    border: 1px solid var(--dark-300);
+    border-radius: 100px;
+}
+
+.dropdown.lang>.btn-base::before {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    left: unset;
+
+    content: "";
+    display: block;
+
+    width: 14px;
+    height: 14px;
+
+    cursor: pointer;
+    background: url("../../icons/icon-arrow-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: 1;
+}
+
+.dropdown.lang>.btn-base:hover::before,
+.dropdown.lang>.btn-base:focus:before {
+    transform: unset;
+}
+
+.dropdown.lang.open>.dropdown-menu {
+    top: 100%;
+    display: block;
+    pointer-events: visible;
+    opacity: 1;
+    z-index: auto;
+}
+
+.dropdown.lang .dropdown-menu {
+    overflow: hidden;
+
+    top: 0;
+    left: -50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items:stretch;
+
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 20px 5px 50px 0px rgba(9, 19, 69, 0.04);
+ 
+    pointer-events: none;
+    opacity: 0;
+    transition: top 0.2s var(--ease-out-slow) 0s,
+    opacity 0.2s var(--ease-in-out) 0s;
+    
+    border: unset;
+    padding: 0;
+    margin: 0;
+
+    z-index: -1;
+}
+
+.dropdown.lang .dropdown-menu__item {
+    width: 100%;
+    height: 100%;
+}
+ 
+
+
+.dropdown.lang .dropdown-menu__item>.link {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    padding: 15px;
+    z-index: 2;
+}
+
+.dropdown.lang .dropdown-menu__item .link:hover,
+.dropdown.lang .dropdown-menu__item .link:focus {
+    text-decoration: none;
+    background: #F9F9F9;
+}
+ 
+ 
+
+.dropdown.lang .btn-base,
+.dropdown.lang .dropdown-menu__item>.link {
+    font-family: "Roboto-normal", sans-serif;
+    font-size: 16px;
+    line-height: 1.1;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--dark-800);
+}
+
+.dropdown.lang .link>img {
+    margin-right: 16px;
+}
+
+ 

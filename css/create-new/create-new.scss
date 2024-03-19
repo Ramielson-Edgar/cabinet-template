@@ -1,4 +1,5 @@
 @import "../templates/template.scss";
+@import "../keyframes/keyframes.scss";
 
 .account-card.create-new {
     @include center-flex("ver");
@@ -32,17 +33,6 @@
     text-align: left;
 }
 
-@keyframes pulse {
-    from {
-        opacity: 0.3;
-        transform: translate(-50%, -50%) scale(0);
-    }
-
-    to {
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(2.5);
-    }
-}
 
 .account-card.create-new .link {
     position: relative;
