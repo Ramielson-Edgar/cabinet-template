@@ -248,6 +248,76 @@ img {
     text-transform: capitalize;
 }
 
+%fill-white {
+    fill: var(--white);
+}
+
+%fill-green {
+    fill: var(--green-500);
+}
+
+%fill-blue {
+    fill: var(--blue-500);
+}
+
+
+%stroke-white {
+    stroke: var(--white);
+}
+
+%stroke-green {
+    stroke: var(--green-500);
+}
+
+%stroke-blue {
+    stroke: var(--blue-500);
+}
+
+%fill-yellow {
+    fill: #FFC452; 
+}
+
+%fill-black {
+    fill: var(--dark-800)
+}
+
+.stroke-white {
+    @extend %stroke-white;
+}
+
+.stroke-green {
+    @extend %stroke-green;
+}
+
+.stroke-blue {
+    @extend %stroke-blue;
+}
+
+
+.fill-white {
+    @extend %fill-white;
+}
+
+.fill-green {
+    @extend %fill-green;
+}
+
+.fill-blue {
+    @extend %fill-blue;
+}
+
+.fill-yellow {
+    @extend %fill-yellow;
+}
+
+.fill-black {
+    @extend %fill-black;
+}
+
+
+
+
+
 @mixin background-image ($repeat, $top-bottom, $left-right, $width, $height) {
     background-repeat: $repeat;
     background-position: $top-bottom, $left-right;
