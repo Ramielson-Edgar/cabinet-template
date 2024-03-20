@@ -90,3 +90,59 @@
     color: var(--grey600);
     line-height: normal;
 }
+
+
+@media screen and (max-width:991.98px) {
+
+    .section-header.award .section-header__title {
+        font-size: 30px;
+    }
+    .section-header.award .section-header__text {
+        font-size: 14px;
+    }
+
+    .splide__list.awards .splide__slide > .title {
+        font-size: 18px;
+ 
+    }
+    .splide__list.awards .splide__slide > .text {
+        font-size: 16px;
+ 
+    }
+
+    .section-header.award .section-header__text,
+    .splide__list.awards .splide__slide > .text,
+    .splide__list.awards .splide__slide > .title  {
+        line-height: normal;
+    }
+}
+
+
+@media screen and (max-width:767.98px) {
+    .section-header.award {
+        display: block;
+    }
+
+    .section-header.award .section-header__title {
+        margin-bottom: 18px;
+    }
+}
+
+
+@media screen and (max-width:575.98px) {
+    .awards {
+        padding-top: 50px;
+    }
+
+    .section-header.award .section-header__title {
+        font-size: 24px;
+    }
+
+    .section-header.platforms .section-header__text,
+    .section-header.award .section-header__text {
+        font-size: 13px;
+        line-height: normal;
+    }
+
+     
+}

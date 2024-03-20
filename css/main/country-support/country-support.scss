@@ -188,10 +188,108 @@
   
 }
 
+ 
+
 @for $i from 1 through 4 {
     .country .inner .country-card:nth-child(#{$i}n) {
         z-index: $i * 4;
-        top: $i * 15;
     }
 
+}
+
+
+@media screen and (max-width: 1198px) {
+
+    .country-card .section-header.card {
+        margin-left: 0;
+    }
+
+    .list.tags,
+    .country-card .video-container .icon  {
+        display: none;
+    }    
+}
+
+
+@media screen and (max-width:991.98px) {
+    .country .icon-planet {
+        margin-bottom: 30px;
+    }
+
+    .section-header.supporting-country .section-header__title {
+        font-size: 30px;
+    }
+
+    .country-card .section-header.card .section-header__title {
+        font-size: 20px;
+    }
+
+
+    .country-card .section-header.card .section-header__title,
+    .country-card .section-header.card .section-header__text {
+        line-height: normal;
+    }
+
+    .country-card .section-header.card .section-header__text {
+        font-size: 14px;
+    }
+
+    .country-card .video-container {
+        flex: 1;
+        height: auto;
+    }
+
+ 
+    .country-card .video-container .btn-outline {
+        bottom: 10px;
+        right: 10px;
+
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+
+    .section-header.supporting-country .section-header__title {
+        font-size: 24px;
+        margin-bottom: 18px;
+    }
+
+    .section-header.supporting-country .section-header__title,
+    .section-header.supporting-country .section-header__text {
+        line-height: normal;
+    }
+    
+    .country-card .section-header.card .section-header__text,
+    .section-header.supporting-country .section-header__text {
+        font-size: 13px;
+    }
+
+    .country-card .section-header.card {
+        margin-left: 0;
+    }
+
+
+    .country-card  {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .country-card .section-header.card {
+        flex: 1;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    
+    .country-card .section-header.card .section-header__title {
+        font-size: 18px;
+        margin-bottom: 9px;
+    }
+
+
+    .country .inner {
+        gap: 20px;
+    }
 }

@@ -75,6 +75,7 @@
     background: var(--white);
     @extend %border-radius-30;
     @extend %padding-card-30;
+    box-shadow: 17px 32px 50px -10px rgba(9, 19, 69, 0.05);
 }
 
 
@@ -92,48 +93,154 @@
 .list.market-cards>.list__item .title,
 .list.market-cards>.list__item .text,
 .section-header.market .section-header__text,
-.section-header.market .section-header__title{
+.section-header.market .section-header__title {
     line-height: normal;
     @extend %text-capitalize;
 }
 
 
-.list.market-cards >.list__item .text {
+.list.market-cards>.list__item .text {
     font-size: 15px;
 }
 
-.list.market-cards .list__item > .list.features {
+.list.market-cards .list__item>.list.features {
     flex-direction: column;
     justify-content: stretch;
     flex-grow: 1;
 }
 
 
-.list.market-cards .list__item > .list.features .list__item {
+.list.market-cards .list__item>.list.features .list__item {
     font-size: 16px;
 }
 
-.list.market-cards .list__item >.list.features .list__item:not(:last-child) {
+.list.market-cards .list__item>.list.features .list__item:not(:last-child) {
     margin-bottom: 10px;
 }
 
-.list.market-cards .list__item >.list.features svg {
+.list.market-cards .list__item>.list.features svg {
     margin-right: 10px;
 }
 
+
+
+
+@media screen and (max-width: 1198px) {
+
+    .list.market-cards>.list__item .title {
+        font-size: 24px;
+    }
+
+    .section-header.market {
+        margin-bottom: 40px;
+    }
+
+    .section-header.market .section-header__title {
+        font-size: 30px;
+    }
+
+    .section-header.market .section-header__text {
+        font-size: 14px;
+    }
+
+    .section-header.market .section-header__title,
+    .section-header.market .section-header__text {
+        line-height: normal;
+    }
+
+    .list.market-benefits .list__item {
+        padding: 15px 20px;
+    }
+
+    .list.market-cards .list__item>.list.features .list__item,
+    .list.market-cards>.list__item .text {
+        font-size: 13px;
+    }
+
+    .list.market-cards>.list__item {
+        padding: 20px;
+    }
+
+    .list.market-cards>.list__item .title {
+        font-size: 20px;
+    }
+
+    .list.market-cards .icon-market,
+    .list.market-cards>.list__item .text,
+    .list.market-cards .list__item>.list.features {
+        margin-bottom: 35px;
+    }
+
+    .list.market-cards>.list__item {
+        flex-basis: calc(100% / 2 - 10px);
+    }
+
+    .list.market-cards>.list__item:nth-child(-n + 2) {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+@media screen and (max-width: 767.98px) {
+    .section-header.market  {
+        display: block;
+    }
+
+    .section-header.market .section-header__title {
+        margin-bottom: 18px;
+    }
+
+    .list.market-benefits  {
+        flex-wrap: wrap;
+    }
+
+    .list.market-benefits .list__item  {
+        display: inline-block;
+    }
+
+    
+    .list.market-benefits .list__item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+
+
+@media screen and (max-width: 575.98px) {
+    .list.market-benefits {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .list.market-cards > .list__item  {
+        flex-basis: 100%;
+        margin-bottom: 10px;
+    }
+
+    .section-header.market .section-header__title,
+    .list.market-cards > .list__item:nth-child(n + 1),
+    .list.market-benefits > .list__item:nth-child(n + 1) {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
  
+ 
+    .section-header.market .section-header__title  {
+        font-size: 24px;
+        line-height: normal;
+    }
 
+    .list.market-benefits .list__item,
+    .section-header.market .section-header__text {
+        font-size: 13px;
+        line-height: normal;
+    }
 
-
-
-
-
-
-
-
-
-
-
+    .list.market-cards .list__item > .list.features + .btn-base {
+       font-size: 13px;
+    }
+}
 
 
 
@@ -179,5 +286,5 @@
     // .list.market-cards > .list__item .text {
     //     font-size: 16px;
     // }
-    
+
 }

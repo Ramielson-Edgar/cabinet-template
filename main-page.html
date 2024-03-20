@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/plugins/splide/splide.min.css">
     <link rel="stylesheet" href="css/plugins/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/form-quick/form-quick.css">
-    <link rel="stylesheet" href="css/lang/lang.css">
     <link rel="stylesheet" href="css/main/main-header/main-header.css">
     <link rel="stylesheet" href="css/main/hero/hero.css">
     <link rel="stylesheet" href="css/main/awards/awards.css">
@@ -31,7 +30,7 @@
 
     <header class="header main">
 
-        <div class="container-fluid">
+        <div class="container xxl">
             <nav class="nav">
                 <a class="logo" href="#">
                     <img class="img-fluid" src="./img/main-page/logo.svg" alt="logo" width="146" height="52">
@@ -74,35 +73,6 @@
                     </a>
                 </div>
 
-
-                <div class="dropdown lang">
-                    <button id="dLabel" class="btn-base" type="button" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">
-                        usa
-
-                    </button>
-
-                    <ul class="dropdown-menu" aria-labelledby="dLabel">
-                        <li class="dropdown-menu__item">
-                            <a href="#" class="link"><img class="img-responsive usa" src="./img/main-page/us.png"
-                                    alt="flag USA" width="29" height="20">en</a>
-                        </li>
-                        <li class="dropdown-menu__item">
-                            <a href="#" class="link"><img class="img-responsive es" src="./img/main-page/es.png"
-                                    alt="flag es" width="29" height="20">es</a>
-                        </li>
-
-                        <li class="dropdown-menu__item">
-                            <a href="#" class="link"><img class="img-responsive pt" src="./img/main-page/pt.png"
-                                    alt="flag pt" width="29" height="20">pt</a>
-                        </li>
-                    </ul>
-
-                </div>
-
-
-
-
             </nav>
         </div>
 
@@ -113,7 +83,15 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-xs-12 visible-xs-block">
+                        <picture>
+                            <source media="(max-width:575px)" sizes="350w" srcset="./img/main-page/hero-xs.png">
+                            <img class="img-responsive hero-devices" src="./img/main-page/hero-sm.png"
+                                alt="devices with allpips platform and mt4" width="678" height="490">
+                        </picture>
+
+                    </div>
+                    <div class="col-lg-6 col-md-10 col-sm-10 col-xs-12">
                         <header class="section-header hero">
                             <h1 class="section-header__title">
                                 <span class="icon">
@@ -123,10 +101,6 @@
                                             d="M18 25.5C16.95 25.5 16.0625 25.1375 15.3375 24.4125C14.6125 23.6875 14.25 22.8 14.25 21.75C14.25 20.7 14.6125 19.8125 15.3375 19.0875C16.0625 18.3625 16.95 18 18 18C19.05 18 19.9375 18.3625 20.6625 19.0875C21.3875 19.8125 21.75 20.7 21.75 21.75C21.75 22.8 21.3875 23.6875 20.6625 24.4125C19.9375 25.1375 19.05 25.5 18 25.5ZM9.525 17.025L6.375 13.8C7.85 12.325 9.5815 11.1565 11.5695 10.2945C13.5575 9.4325 15.701 9.001 18 9C20.3 9 22.444 9.4375 24.432 10.3125C26.42 11.1875 28.151 12.375 29.625 13.875L26.475 17.025C25.375 15.925 24.1 15.0625 22.65 14.4375C21.2 13.8125 19.65 13.5 18 13.5C16.35 13.5 14.8 13.8125 13.35 14.4375C11.9 15.0625 10.625 15.925 9.525 17.025ZM3.15 10.65L0 7.5C2.3 5.15 4.9875 3.3125 8.0625 1.9875C11.1375 0.6625 14.45 0 18 0C21.55 0 24.8625 0.6625 27.9375 1.9875C31.0125 3.3125 33.7 5.15 36 7.5L32.85 10.65C30.925 8.725 28.694 7.219 26.157 6.132C23.62 5.045 20.901 4.501 18 4.5C15.1 4.5 12.3815 5.044 9.8445 6.132C7.3075 7.22 5.076 8.726 3.15 10.65Z"
                                             fill="#fff" />
                                     </svg>
-
-                                    <!-- <svg width="36" height="25">
-                                        <use href="./icons/sprite.svg#icon-wifi"></use>
-                                    </svg> -->
 
 
                                 </span> Online Trading
@@ -173,39 +147,39 @@
             </div>
 
             <div class="inner margin-inline">
-                <div class="container">
 
+                <div class="container"> 
                     <header class="section-header form">
                         <h2 class="section-header__title">quick registration</h2>
                         <p class="section-header__text">Join the community
                             of winning traders</p>
                     </header>
-
+    
                     <form class="form-quick">
                         <label>
                             <input type="text" name="name" placeholder="name">
                             <span class="error"></span>
                         </label>
-
+    
                         <label>
                             <input type="email" name="email" placeholder="email">
                             <span class="error"></span>
                         </label>
-
+    
                         <label>
                             <input type="tel" name="telephone" placeholder="999 888 777">
                             <span class="error"></span>
                         </label>
-
+    
                         <label>
                             <input type="password" name="password" placeholder="*******">
                             <span class="error"></span>
                         </label>
-
+    
                         <button type="button" class="btn-base btn-base-lg btn-outline green" href="#">
                             <span class="text-container">
                                 <span>registration
-
+    
                                     <svg width="23" height="13" viewBox="0 0 24 15" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -227,14 +201,15 @@
                                             fill="#4cd7ab" />
                                     </svg>
                                 </span>
-
+    
                             </span>
                         </button>
-
+    
                     </form>
+    
 
                 </div>
-
+         
             </div>
 
         </section>
@@ -304,11 +279,12 @@
 
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-md-6 col-sm-7 col-xs-12">
                         <header class="section-header platforms">
                             <h2 class="section-header__title">Discover
                                 <span> multiple platforms</span>
                             </h2>
+
                             <p class="section-header__text">
                                 Adrofx offers clients access to leading trading platforms like MetaTrader 4 and AllPips,
                                 which feature cutting-edge technology and a timeless design. Gain access to the global
@@ -336,18 +312,42 @@
                             </ul>
 
 
-
                         </header>
                     </div>
 
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-md-6 col-sm-5 col-xs-12">
 
                         <div class="img-container platforms">
+                            <picture>
+
+                                
+                                <source media="(max-width:575px )" sizes="340w" srcset="./img/main-page/platform-cover-xs.png">
+                                <source media="(max-width:767px )" sizes="560w" srcset="./img/main-page/platform-cover-xl.png">
+                                <source media="(max-width:991px)" sizes="700w" srcset="./img/main-page/platform-cover-md.jpg">
+                                <img class="img-responsive platform-cover" src="./img/main-page/platform-cover-xl.png" alt="" width="560" height="442">
+
+                            </picture>
+                         
+
                             <div class="slide-track">
                                 <div class="slide xs">
                                     <span class="label">allpips</span>
-                                    <img class="img-responsive" src="./img/main-page/allpips-devices.png"
-                                        alt="devices with allpips platform" width="497" height="334">
+                                    <picture>
+                                        <source media="(max-width:575px)" sizes="300w"
+                                        srcset="./img/main-page/allpips-devices-xs.png">
+
+                                        <source media="(max-width:767px)" sizes="700w"
+                                            srcset="./img/main-page/allpips-devices-sm.png">
+
+
+                                        <source media="(max-width:991px)" sizes="890w"
+                                            srcset="./img/main-page/allpips-devices-md.png">
+
+
+                                        <img class="img-responsive" src="./img/main-page/allpips-devices.png"
+                                            alt="devices with allpips platform" width="497" height="334">
+                                    </picture>
+
 
                                     <a class="btn-base btn-base-xxl btn-blue" href="#">
                                         <span class="text-container">
@@ -360,8 +360,21 @@
 
                                 <div class="slide">
                                     <span class="label xs">metatrader 4</span>
-                                    <img class="img-responsive" src="./img/main-page/allpips-devices.png"
-                                        alt="devices with allpips platform" width="497" height="334">
+
+                                    <picture>
+                                        <source media="(max-width:575px)" sizes="340w"
+                                        srcset="./img/main-page/mt4-devices-xs.png">
+                            
+                                        <source media="(max-width:767px)" sizes="700w"
+                                            srcset="./img/main-page/mt4-devices-sm.png">
+
+                                        <source media="(max-width:991px)" sizes="840w"
+                                            srcset="./img/main-page/mt4-devices-md.png">
+
+                                        <img class="img-responsive" src="./img/main-page/mt4-devices-xl.png"
+                                            alt="devices with allpips platform" width="497" height="334">
+                                    </picture>
+
 
                                     <a class="btn-base btn-base-xxl btn-blue" href="#">
                                         <span class="text-container">
@@ -371,10 +384,6 @@
                                     </a>
 
                                 </div>
-
-
-
-
                             </div>
                         </div>
 
@@ -391,7 +400,7 @@
                                         fill="black" />
                                 </svg>
 
-                                apple
+                                aos
 
                             </li>
 
@@ -758,7 +767,7 @@
         <section class="copy-trading">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-7">
+                    <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12 copy-trading-phone">
 
                         <div class="img-container copy">
 
@@ -778,29 +787,28 @@
                                     width="43" height="43">
                             </div>
 
+                            <img class="img-responsive trader" src="./img/main-page/copy-trading-man.png"
+                                alt="phone frame" width="314" height="701">
+
                             <div class="phone-frame">
                                 <img class="img-responsive" src="./img/main-page/phone-frame.png" alt="phone frame"
                                     width="444" height="692">
 
                                 <div class="inner">
-                                    <video class="video copy" autoplay muted loop playsinline>
-                                        <source src="./img/main-page/copy-trading.mp4" type="video/mp4">
-                                        <span>Sorry,your browser does not support the video tag.</span>
-                                    </video>
+                                    <div class="video-container">
+                                        <video class="video copy" autoplay muted loop playsinline>
+                                            <source src="./img/main-page/copy-trading.mp4" type="video/mp4">
+                                            <span>Sorry,your browser does not support the video tag.</span>
+                                        </video>
+                                    </div>
                                 </div>
-
-
                             </div>
-
-
-                            <img class="img-responsive trader" src="./img/main-page/copy-trading-man.png"
-                                alt="phone frame" width="314" height="701">
                         </div>
 
 
                     </div>
 
-                    <div class="col-lg-5">
+                    <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 copy-header">
                         <header class="section-header copy">
                             <h2 class="section-header__title">Copy <span class="blue-500">Traders</span></h2>
 
@@ -819,7 +827,7 @@
             </div>
         </section>
 
-        <section class="global-advantages section-padding">
+       <section class="global-advantages section-padding">
             <div class="container">
                 <h2 class="section-title">
                     Global Trading
@@ -827,7 +835,7 @@
                 </h2>
             </div>
 
-            <div class="myContainer">
+            <div class="container xxl">
 
                 <ul class="list-features advantages">
                     <li class="list-features__item">
@@ -1053,8 +1061,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4">
-                        <img class="img-responsive" src="./img/main-page/support-icon.png" alt="icon planet" width="206"
-                            height="131">
+                        <img class="img-responsive icon-planet" src="./img/main-page/support-icon.png" alt="icon planet"
+                            width="206" height="131">
                     </div>
 
                     <div class="col-lg-8">
@@ -1077,7 +1085,7 @@
                     <div id="first-card" class="country-card">
 
                         <header class="section-header card">
-                            <span class="label">our services</span>
+
                             <h3 class="section-header__title">market analysis</h3>
                             <p class="section-header__text">Our expert market analysis helps traders understand market
                                 trends. We provide daily trading signals and market analysis reports to keep you
@@ -1123,10 +1131,7 @@
                             <img class="img-responsive" src="./img/main-page/market-analysis.png"
                                 alt="market articles with marquee" width="426" height="352">
 
-                            <!-- <video class="video card-video" loop autoplay plasyinline muted>
-                                    <source src="./img/main-page/" type="video/mp4">
-                                    <span>Sorry,your browser does not support the video tag.</span>
-                                </video> -->
+                  
                         </div>
 
                     </div>
@@ -1134,7 +1139,7 @@
                     <div id="second-card" class="country-card">
 
                         <header class="section-header card">
-                            <span class="label">our services</span>
+
                             <h3 class="section-header__title">Bonuses & Rewards</h3>
                             <p class="section-header__text">Enhance your trading experience with our bonus offer! Earn
                                 cashback on every trade and redeem exclusive vouchers. Join Adro's Rewards today!
@@ -1182,10 +1187,7 @@
                                 </span>
                             </a>
 
-                            <!-- <video class="video card-video" loop autoplay plasyinline muted>
-                                    <source src="./img/main-page/" type="video/mp4">
-                                    <span>Sorry,your browser does not support the video tag.</span>
-                                </video> -->
+              
                         </div>
 
                     </div>
@@ -1193,7 +1195,7 @@
                     <div id="third-card" class="country-card">
 
                         <header class="section-header card">
-                            <span class="label">our services</span>
+
                             <h3 class="section-header__title">Education </h3>
                             <p class="section-header__text">Access free education to enhance your trading skills,
                                 regardless of your expertise level. We offer a variety of resources, including articles,
@@ -1235,10 +1237,7 @@
                             <img class="img-responsive" src="./img/main-page/educational.png"
                                 alt="white tags with dark text" width="426" height="352">
 
-                            <!-- <video class="video card-video" loop autoplay plasyinline muted>
-                                    <source src="./img/main-page/" type="video/mp4">
-                                    <span>Sorry,your browser does not support the video tag.</span>
-                                </video> -->
+                  
                         </div>
 
                     </div>
@@ -1246,7 +1245,7 @@
                     <div id="four-card" class="country-card">
 
                         <header class="section-header card">
-                            <span class="label">our services</span>
+
                             <h3 class="section-header__title">Customer support</h3>
                             <p class="section-header__text">
                                 We offer continuous support and detailed account information throughout your journey.
@@ -1295,10 +1294,7 @@
                                     <span>explore more</span>
                                 </span>
                             </a>
-                            <!-- <video class="video card-video" loop autoplay plasyinline muted>
-                                    <source src="./img/main-page/" type="video/mp4">
-                                    <span>Sorry,your browser does not support the video tag.</span>
-                                </video> -->
+              
                         </div>
 
                     </div>
@@ -1462,8 +1458,10 @@
 
                 </div>
             </div>
-        </section>
+        </section> 
     </main>
+
+
 
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"
@@ -1474,7 +1472,6 @@
         crossorigin="anonymous"></script>
     <script src="js/platforms.js"></script>
     <script src="js/splide.min.js"></script>
-    <script type="module" src="js/lang.js"></script>
     <script type="module" src="js/splide-auto-scroll.js"></script>
     <script type="module" src="js/awards.js"></script>
 </body>

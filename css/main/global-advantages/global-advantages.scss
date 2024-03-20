@@ -167,3 +167,78 @@
 .benefits .list+.inner svg {
     margin-right: 9px;
 }
+
+
+@media screen and (max-width: 1198px) {
+    .global-advantages .list-features.advantages .list-features__item {
+        flex-basis: calc(100% / 2 - 10px);
+    }
+
+    .global-advantages .list-features.advantages .list-features__item:nth-child(-n + 2) {
+        margin-bottom: 20px;
+    }
+
+    .list-features.advantages .list-features__body {
+        padding: 30px;
+    }
+
+    .global-advantages .section-title {
+        font-size: 30px;
+        line-height: normal;
+    }
+
+    .list-features.advantages .list-features__title {
+        font-size: 20px;
+    }
+
+    
+    .list-features.advantages .list-features__header .award,
+    .list-features.advantages .list-features__header .planet,
+    .list-features.advantages .list-features__header .regulated,
+    .list-features.advantages .list-features__header .secured {
+        left: 0;
+
+    }
+
+    .list-features.advantages .list-features__header .benefits {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width:575.98px) {
+
+    .global-advantages .section-title {
+        font-size: 24px;
+    }
+
+    .global-advantages .list-features.advantages .list-features__item {
+        flex-basis: 100%;
+        border-radius: 15px;
+    }
+
+    .global-advantages .list-features.advantages .list-features__body {
+        padding: 25px;
+    }
+
+    .list-features.advantages .list-features__title {
+        font-size: 18px;
+    }
+
+    .list-features.advantages .list-features__text,
+    .list-features.advantages .list-features__title {
+        line-height: normal;
+    }
+    
+    .list-features.advantages .list-features__text {
+        font-size: 13px;
+    }
+
+    .global-advantages .list-features.advantages .list-features__item:nth-child(-n + 1) {
+        margin-right: 0;
+    }
+    .global-advantages .list-features.advantages .list-features__item:not(:last-child){
+        margin-bottom: 10px;
+    }
+
+}

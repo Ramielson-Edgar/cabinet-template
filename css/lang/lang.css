@@ -482,6 +482,11 @@ img {
     display: none;
   }
 }
+@media screen and (max-width: 575.98px) {
+  .section-padding {
+    padding: 50px 0;
+  }
+}
 .dropdown.lang > .btn-base {
   position: relative;
   display: block;
@@ -525,7 +530,7 @@ img {
 .dropdown.lang .dropdown-menu {
   overflow: hidden;
   top: 0;
-  left: -50px;
+  left: -80px;
   display: flex;
   flex-direction: column;
   align-items: stretch;

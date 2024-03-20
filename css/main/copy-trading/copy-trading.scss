@@ -2,7 +2,7 @@
 
 .copy-trading {
     background: url('../../../img/main-page/copy-trading-pips.png'), var(--white);
-    @include background-image(no-repeat,center,center,contain,contain);
+    @include background-image(no-repeat, center, center, contain, contain);
     padding-top: 70px;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .section-header.copy .section-header__title,
-.section-header.copy .section-header__text{
+.section-header.copy .section-header__text {
     margin-bottom: 30px;
 }
 
@@ -28,50 +28,74 @@
 }
 
 
-.section-header.copy .section-header__text + .btn-outline.blue {
+.section-header.copy .section-header__text+.btn-outline.blue {
     padding: 14px 50px;
 }
 
- 
 
 .img-container.copy .phone-frame {
     overflow: hidden;
     position: relative;
-    @include center-flex('hor');
 
-    width: 444px;
-    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 67%;
+    height: 100%;
 }
 
 .img-container.copy .phone-frame img {
     position: relative;
+    width: 36.042vw;
     z-index: 2;
 }
 
 .img-container.copy .phone-frame .inner {
     overflow: hidden;
     position: absolute;
-    @extend %absolute-center;
-    top: 56%;
+    top: 1.563vw;
+    left: 50.5%;
+    transform: translateX(-50%);
 
-    @include center-flex('hor');
-    width: calc(100% + 7px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 89%;
+    height: 100%;
+
+    border-top-left-radius: 3.5vw;
+    border-top-right-radius: 3.5vw;
+}
+
+.img-container.copy .phone-frame .inner .video-container {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.img-container.copy .phone-frame .video-container>.video {
+    display: block;
+    width: 100%;
     height: auto;
-
-    padding: 24px;
- 
+    object-fit: contain;
+    object-position: center;
+    aspect-ratio: 9/16;
 }
 
-.img-container.copy .phone-frame .inner video {
-    @extend %object-fit;
-    border-top-right-radius: 30px;
-    border-top-left-radius: 30px;
-}
 
 .img-container.copy .trader {
     position: absolute;
     bottom: 0;
     left: 50%;
+
+    width: auto;
+    height: calc(100% - 50px);
     z-index: 4;
 }
 
@@ -96,4 +120,139 @@
     margin-left: 20px;
     margin-right: 20px;
 }
+
+
+@media screen and (max-width: 1198px) {
+    .img-container.copy .trader {
+        left: 40%;
+    }
+
+    .img-container.copy .animation {
+        left: 20%;
+    }
+}
+
+
+@media screen and (max-width:991.98px) {
+
+    .img-container.copy .trader {
+        display: none;
+    }
+
+
+    .img-container.copy .animation {
+        left: 55%;
+        top: 64px;
+    }
+
+
+    .section-header.copy .section-header__title {
+        font-size: 30px;
+        line-height: normal;
+    }
+
+
+    .img-container.copy .phone-frame {
+        width: 100%;
+    }
+
+
+}
+
+
+@media screen and (max-width:767.98px) {
+
+    .copy-trading .align-items-center {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .copy-trading-phone {
+        order: 1;
+    }
+
+    .copy-header {
+        order: 0;
+    }
+
+    .img-container.copy .phone-frame .inner .video-container,
+    .img-container.copy .phone-frame img {
+        display: block;
+        max-width: 100%;
+        width: 50%;
+        height: auto;
+    }
+
+    .img-container.copy .phone-frame .inner .video {
+        border-top-right-radius: 35px;
+        border-top-left-radius: 35px;
+    }
+    
+    .img-container.copy .phone-frame .inner {
+        top: 3vw;
+        width: 90%;
+        left: 50%;
+    }
+
+
  
+
+    .img-container.copy .animation {
+        top: 0;
+        left: calc(100% / 2 - 74px);
+        margin-left: 0;
+    }
+
+}
+
+@media screen and (max-width:575.98px) {
+    .section-header.copy {
+        margin-bottom: 40px;
+    }
+ 
+    .section-header.copy .section-header__title {
+        font-size: 24px;
+    }
+
+    .section-header.copy .section-header__text +.btn-outline.blue,
+    .section-header.copy .section-header__text {
+        font-size: 13px;
+    }
+
+    .section-header.copy .section-header__title,
+    .section-header.copy .section-header__text {
+        margin-bottom: 18px;
+        line-height: normal;
+    }
+
+    .section-header.copy .section-header__text+.btn-outline.blue {
+        padding: 10px 40px;
+    }
+
+    .img-container.copy .animation {
+        margin-bottom: 30px;
+    }
+
+    .img-container.copy .phone-frame .inner {
+        left: 50.3%;
+    }
+
+    .img-container.copy .phone-frame .inner .video {
+        border-top-right-radius: 10vw;
+        border-top-left-radius: 10vw;
+    }
+ 
+
+    .img-container.copy .phone-frame .inner .video-container,
+    .img-container.copy .phone-frame img {
+        width: 100%;
+    }
+
+
+    .img-container.copy .phone-frame .inner {
+        top: 6vw;
+        width: 90%;
+    }
+
+
+}

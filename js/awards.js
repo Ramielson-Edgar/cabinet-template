@@ -17,13 +17,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 perPage: 5,
             },
             1198: {
-                perPage: 3,
+                perPage: 4,
             },
             991: {
-                perPage: 3,
+                perPage: 4,
             },
             800: {
-                perPage: 2,
+                perPage: 3,
             },
             600: {
                 perPage: 1,
