@@ -121,6 +121,15 @@
     margin-right: 20px;
 }
 
+@media screen and (min-width:1441px) {
+    .img-container.copy .phone-frame .inner {
+        top:30px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        width: 89.9%;
+    }
+}
+
 
 @media screen and (max-width: 1198px) {
     .img-container.copy .trader {

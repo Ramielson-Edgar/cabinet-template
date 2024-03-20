@@ -502,7 +502,7 @@ img {
 
 .form-quick > label input {
   width: 100%;
-  padding: 20px 30px;
+  padding: 13px 20px;
   background: #F5F5F5;
   border-radius: 100px;
 }
@@ -553,18 +553,14 @@ img {
 
 .section-header.form .section-header__text {
   font-size: 24px;
-  max-width: 230px;
 }
 
 @media screen and (max-width: 1198px) {
   .hero.main .form-quick {
-    grid-template-rows: repeat(2, 74px);
+    grid-template-rows: repeat(2, 60px);
   }
 }
 @media screen and (max-width: 991.98px) {
-  .hero.main .form-quick {
-    grid-template-rows: repeat(2, 62px);
-  }
   .form-quick > label input {
     padding: 15px 20px;
   }
