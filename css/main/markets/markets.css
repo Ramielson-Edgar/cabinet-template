@@ -551,6 +551,8 @@ img {
 .section-header.market {
   display: flex;
   align-items: flex-end;
+  justify-content: center;
+  text-align: left;
   margin-bottom: 30px;
 }
 
@@ -570,7 +572,7 @@ img {
 }
 
 .list.market-benefits {
-  justify-content: flex-start;
+  justify-content: center;
   margin-bottom: 50px;
 }
 

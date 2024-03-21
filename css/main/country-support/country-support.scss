@@ -97,8 +97,12 @@
     right: 25px;
 }
 
-.country-card .video-container .btn-outline:hover {
+.country-card .video-container .btn-outline.green:hover {
     color: var(--white);
+}
+
+.country-card .video-container .btn-outline.green:hover::before {
+    transform: translateX(0);
 }
 
 
