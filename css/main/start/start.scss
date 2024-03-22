@@ -1,6 +1,7 @@
 @import '../../templates/template.scss';
 
 
+
 .start {
     background: #F5F5F5;
 }
@@ -18,7 +19,7 @@
 }
 
 .section-header.start,
-.list-features.step{
+.list-features.step {
     margin-bottom: 50px;
 }
 
@@ -38,9 +39,12 @@
 
 
 .list-features.step .list-features__item {
+ 
     display: flex;
     flex-direction: column;
-    flex-basis: calc(100% / 4 - 10px);
+     
+    flex-basis: calc(100% / 3 - 10px);
+    text-align: center;
 
     @extend %padding-card-30;
     @extend %border-radius-30;
@@ -50,11 +54,31 @@
 }
 
 .list-features.step .list-features__header {
-    width: 90px;
-    height: 90px;
+    position: relative;
+    flex: 1 0 160px;
+    @include center-flex('hor');
+    width: 100%;
+}
+
+
+@keyframes progress {
+    to {
+        stroke-dashoffset: var(--target);
+    }
     
-    background: #F6F8FF;
-    margin-bottom: 20px;
+}
+
+.list-features.step .list-features__header .progress-circle {
+    @extend %absolute-center;
+}
+
+.list-features.step .list-features__header .progress-circle > #circle {
+    stroke-width: 5px;
+    stroke: url('#Gradient');
+    fill: none;
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+    stroke-linecap: round;
 }
 
 
@@ -64,7 +88,7 @@
 
 .list-features.step .list-features__title {
     color: var(--dark-800);
-    font-family: "Roboto-bold",sans-serif;
+    font-family: "Roboto-bold", sans-serif;
     font-size: 24px;
     line-height: normal;
     margin-bottom: 15px;
@@ -77,21 +101,16 @@
 }
 
 
-.list-features.step + .buttons-container {
+.list-features.step+.buttons-container {
     text-align: center;
 }
 
-.list-features.step + .buttons-container .btn-outline {
+.list-features.step+.buttons-container .btn-outline {
     padding: 15px 30px;
 }
 
 
 @media screen and (max-width: 1198px) {
-
-    .list-features.step .list-features__item {
-        flex-basis: calc(100% / 4 - 5px);
-        padding: 20px;
-    }
 
     .list-features.step .list-features__item {
         flex-basis: calc(100% / 2 - 5px);
@@ -110,15 +129,12 @@
     .list-features.step .list-features__title {
         line-height: normal;
     }
-    
+
     .list-features.step .list-features__text {
         font-size: 14px;
     }
 
-    .list-features.step .list-features__header {
-        width: 80px;
-        height: 80px;
-    }
+   
 }
 
 
@@ -137,7 +153,7 @@
     .list-features.step .list-features__title {
         font-size: 18px;
         margin-bottom: 9px;
-  
+
     }
 
     .list-features.step .list-features__title,
@@ -165,7 +181,7 @@
         line-height: normal;
     }
 
-    .list-features.step + .buttons-container .btn-base {
+    .list-features.step+.buttons-container .btn-base {
         padding: 12px 20px;
         font-size: 13px;
     }
