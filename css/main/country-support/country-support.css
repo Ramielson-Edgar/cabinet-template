@@ -753,31 +753,23 @@ img {
   margin-bottom: 6px;
 }
 
+.country {
+  height: 100vh;
+  position: relative;
+}
+
 .country .inner {
+  position: relative;
+  top: 0;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24vh;
+  gap: 150px;
+  height: 100%;
 }
 
-.country .inner .country-card {
-  position: sticky;
-  top: 70px;
-}
-
-.country .inner .country-card:nth-child(1n) {
-  z-index: 4;
-}
-
-.country .inner .country-card:nth-child(2n) {
-  z-index: 8;
-}
-
-.country .inner .country-card:nth-child(3n) {
-  z-index: 12;
-}
-
-.country .inner .country-card:nth-child(4n) {
-  z-index: 16;
+.country-card {
+  position: absolute;
+  top: 0;
 }
 
 @media screen and (max-width: 1198px) {

@@ -95,6 +95,7 @@
     position: absolute;
     bottom: 25px;
     right: 25px;
+ 
 }
 
 .country-card .video-container .btn-outline.green:hover {
@@ -180,27 +181,33 @@
 }
 
 
-.country .inner  {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24vh;
+.country {
+    height: 100vh;
+    position: relative;
 }
 
-.country .inner .country-card {
-    position: sticky;
-    top: 70px;
-  
+.country .inner  {
+    position: relative;
+    top: 0;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 150px;
+
+    height: 100%;
+}
+
+
+.country-card {
+   position: absolute;
+   top: 0;
 }
 
  
+ 
 
-@for $i from 1 through 4 {
-    .country .inner .country-card:nth-child(#{$i}n) {
-        z-index: $i * 4;
-    }
-
-}
-
+ 
+ 
 
 @media screen and (max-width: 1198px) {
 
