@@ -788,6 +788,11 @@ img {
   .country-card .video-container .icon {
     display: none;
   }
+  .country-card {
+    position: sticky;
+    top: 330px;
+    height: auto;
+  }
 }
 @media screen and (max-width: 991.98px) {
   .country .icon-planet {
@@ -846,7 +851,9 @@ img {
     font-size: 18px;
     margin-bottom: 9px;
   }
-  .country .inner {
-    gap: 20px;
+  .country-card {
+    position: sticky;
+    top: 300px;
+    height: auto;
   }
 }/*# sourceMappingURL=country-support.css.map */
