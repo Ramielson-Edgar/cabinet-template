@@ -18,10 +18,10 @@ function hasReached(el) {
 function stepCounter() {
     if (!hasReached(firstStep)) return;
 
-    circles.forEach((circle, i) => {
+    circles.forEach((circle,) => {
         let target = +circle.dataset.target;
        
-        let strokeValue = 160 - 160 * (target / 100);
+        let strokeValue = 450 - 450 * (target / 100);
         circle.style.setProperty("--target", strokeValue);
     });
 
