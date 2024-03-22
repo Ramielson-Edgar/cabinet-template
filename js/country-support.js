@@ -3,45 +3,63 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     const cards = gsap.utils.toArray(".country-card");
     const header = document.querySelector('.section-header.supporting-country');
-    const animation = gsap.timeline()
-    let cardHeight;
+    let cardHeight = cards[0].offsetHeight + 150; // Предполагается, что высота карт не изменяется
 
-
+    // Функция инициализации карточек
     function initCards() {
-        animation.clear()
-        cardHeight = cards[0].offsetHeight + 150
+        cardHeight = cards[0].offsetHeight + 150; // Обновляем высоту карт, если она может меняться
+        gsap.set(cards, { clearProps: "all" }); // Сбрасываем стили для корректного перерасчета
 
         cards.forEach((card, index) => {
             if (index > 0) {
-                //increment y value of each card by cardHeight
-                gsap.set(card, { y: index * cardHeight })
-                //animate each card back to 0 (for stacking)
-                animation.to(card, { y: 0, duration: index * 0.5, ease: "none", }, 0)
-                card.style.zIndex = index + 1;
+                // Начальная позиция карточек
+                gsap.set(card, { y: index * cardHeight, zIndex: index + 1 });
             }
-
-        
-        })
+        });
     }
 
-    initCards()
- 
+    // Функция создания анимаций
+    function createAnimations() {
+        initCards(); // Инициализация карточек
 
-    ScrollTrigger.create({
-        trigger: ".country",
-        start: "top top",
-        pin: true,
-        end: () => `+=${(cards.length * cardHeight) + header.offsetHeight}`,
-        scrub: true,
-        animation: animation,
-        invalidateOnRefresh: true,
-    })
+        cards.forEach((card, index) => {
+            if (index > 0) {
+                gsap.to(card, {
+                    y: 0,
+                    duration: 1,
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: ".country",
+                        start: "top top",
+                        end: () => `+=${cardHeight * cards.length}`,
+                        scrub: true,
+                        invalidateOnRefresh: true // Указываем, что нужно инвалидировать при обновлении
+                    }
+                });
+            }
+        });
 
-     
+        ScrollTrigger.create({
+            trigger: ".country",
+            start: "top top",
+            pin: true,
+            // end: () => `+=${(cards.length * cardHeight) + header.offsetHeight}`,
+            end: () => {
+                const dynamicEnd = (cards.length * cardHeight) + header.offsetHeight;
+                const maxHeight = window.innerHeight * 2; // Примерное ограничение, можно настроить
+                return `+=${Math.min(dynamicEnd, maxHeight)}`;
+            },
+            scrub: true,
+            pinSpace: false,
+        });
+    }
 
-    ScrollTrigger.addEventListener("refreshInit", initCards)
+    createAnimations(); // Первоначальный запуск анимаций
+
+    window.addEventListener('resize', () => {
+        clearTimeout(window.resizingFinished);
+        window.resizingFinished = setTimeout(() => {
+            ScrollTrigger.refresh(); // Автоматически пересчитает все ScrollTriggers
+        }, 250);
+    });
 });
-
-
-
-

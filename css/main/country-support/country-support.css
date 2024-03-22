@@ -754,22 +754,30 @@ img {
 }
 
 .country {
-  height: 100vh;
   position: relative;
+  top: 0;
 }
 
 .country .inner {
-  position: relative;
-  top: 0;
   display: grid;
   grid-template-columns: 1fr;
   gap: 150px;
-  height: 100%;
 }
 
 .country-card {
-  position: absolute;
+  position: sticky;
+  top: 200px;
+  height: auto;
+}
+
+.country .top {
+  position: sticky;
   top: 0;
+  width: 100%;
+}
+
+.country .bottom {
+  width: 100%;
 }
 
 @media screen and (max-width: 1198px) {
