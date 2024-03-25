@@ -1,49 +1,35 @@
 @import '../../templates/template.scss';
+@import '../../main/section-header/section-header.scss';
+@import '../../container/container.scss';
 
-
-
+ 
 .start {
     background: #F5F5F5;
 }
-
-.start .myContainer {
-    max-width: 1800px;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
 
 
 .section-header.start {
     text-align: center;
 }
 
-.section-header.start,
+.section-header.start .section-header__title span {
+    display: inline-block;
+}
+
 .list-features.step {
     margin-bottom: 50px;
-}
-
-.section-header.start .section-header__title {
-    font-size: 45px;
-    color: var(--dark-800);
-    font-family: "Roboto-medium", sans-serif;
-    line-height: normal;
-    margin-bottom: 30px;
-}
-
-.section-header.start .section-header__text {
-    font-size: 16px;
-    line-height: normal;
+    counter-reset: step;
 }
 
 
 
 .list-features.step .list-features__item {
- 
     display: flex;
     flex-direction: column;
-     
-    flex-basis: calc(100% / 3 - 10px);
+    align-items: center;
+    justify-content: center;
+
+    flex-basis: calc(100% / 4 - 10px);
     text-align: center;
 
     @extend %padding-card-30;
@@ -53,11 +39,38 @@
     box-shadow: 17px 32px 60px 0px rgba(9, 19, 69, 0.08);
 }
 
+ 
+
 .list-features.step .list-features__header {
     position: relative;
     flex: 1 0 160px;
-    @include center-flex('hor');
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
     width: 100%;
+    height: auto;
+}
+
+
+
+.list-features.step .list-features__header::before {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+
+    display: block;
+
+    counter-increment: step;
+    content: counter(step);
+
+    color: var(--dark-800);
+    font-family: "Roboto-bold", sans-serif;
+    font-size: 40px;
+    line-height: normal;
+    font-weight: 600;
 }
 
 
@@ -65,14 +78,14 @@
     to {
         stroke-dashoffset: var(--target);
     }
-    
+
 }
 
 .list-features.step .list-features__header .progress-circle {
     @extend %absolute-center;
 }
 
-.list-features.step .list-features__header .progress-circle > #circle {
+.list-features.step .list-features__header .progress-circle>#circle {
     stroke-width: 5px;
     stroke: url('#Gradient');
     fill: none;
@@ -134,7 +147,7 @@
         font-size: 14px;
     }
 
-   
+
 }
 
 

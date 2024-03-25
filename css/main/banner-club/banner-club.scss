@@ -1,5 +1,6 @@
-@import '../../templates/template.scss';
-@import '../../keyframes/keyframes.scss';
+@import '../templates/template.scss';
+@import '../keyframes/keyframes.scss';
+@import '../main-header/main-header.scss';
 
 .banner-club {
     background: url('../../../img/main-page/banner-pips.png') #64B5F6;
@@ -37,21 +38,15 @@
 
 
 .section-header.banner-cta .section-header__title {
-    font-family: "Roboto-bold", sans-serif;
     font-size: 100px;
-    line-height: normal;
-    color: var(--dark-800);
     margin-bottom: 10px;
 }
 
-.section-header.banner-cta .section-header__title span {
-    display: block;
-}
+
 
 .section-header.banner-cta .section-header__text {
     max-width: 500px;
     font-size: 20px;
-    line-height: normal;
     margin: 0 auto;
     margin-bottom: 30px;
 }

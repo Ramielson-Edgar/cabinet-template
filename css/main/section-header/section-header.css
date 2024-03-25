@@ -1,0 +1,22 @@
+.section-header {
+  display: block;
+  margin-bottom: 50px;
+}
+
+.section-header__title {
+  color: var(--dark-800);
+  font-family: "Roboto-medium", sans-serif;
+  font-size: 45px;
+  line-height: normal;
+  margin-bottom: 30px;
+}
+
+.section-header__title span {
+  display: block;
+}
+
+.section-header__text {
+  font-size: 16px;
+  line-height: normal;
+  color: var(--dark-500);
+}/*# sourceMappingURL=section-header.css.map */

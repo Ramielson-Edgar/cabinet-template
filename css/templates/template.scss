@@ -35,20 +35,6 @@
 
 
 
-@font-face {
-    font-family: 'Montserrat', sans-serif;
-    src:
-        url("/fonts/montserrat-latin-700-normal.woff2") format("woff2"),
-        url("/fonts/montserrat-latin-700-normal.woff") format("woff");
-}
-
-@font-face {
-    font-family: 'Montserrat', sans-serif;
-    src:
-        url("/fonts/montserrat-latin-300-italic.woff2") format("woff2"),
-        url("/fonts/montserrat-latin-300-italic.woff") format("woff");
-}
-
 
 
 :root {
@@ -182,7 +168,6 @@ h1,
 h2,
 h3 {
     font-family: "Roboto-bold",sans-serif;
-    font-weight: 700;
     text-transform: capitalize;
 }
 
@@ -366,6 +351,12 @@ img {
     margin-right: 10px;
 }
 
+
+.mask,
+.overflow {
+    overflow: hidden;
+}
+
  
 .blue-500 {
     color: var(--blue-500);
@@ -426,7 +417,6 @@ img {
 
     width: 100%;
     height: 100%;
-    // border-radius: 19px;
     border-radius: 100px;
    
     transform-origin: left bottom;
@@ -563,7 +553,7 @@ img {
 }
 
 .btn-outline.white:hover {
-    color: var(--dark-800);
+    color: var(--white);
     border: 1px solid var(--white);
 }
 
@@ -590,11 +580,11 @@ img {
 }
 
 .btn-base-lg {
-    padding: 10px 30px;
+    padding: 12px 30px;
 }
 
 .btn-base-xxl {
-    padding: 10px 40px;
+    padding: 12px 40px;
 }
 
 

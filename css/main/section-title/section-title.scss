@@ -1,0 +1,14 @@
+@import '../../templates/template.scss';
+
+.section-title {
+    color: var(--dark-800);
+    font-family: "Roboto-medium",sans-serif;
+    font-size: 45px;
+    line-height: normal;
+    margin-bottom: 50px;
+}
+
+.section-title  span {
+    display: block;
+}
+ 

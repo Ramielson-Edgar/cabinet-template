@@ -1,4 +1,5 @@
 @import '../../templates/template.scss';
+@import '../../main/section-title/section-title.scss';
 
 .global-advantages {
     color: var(--white);
@@ -14,16 +15,8 @@
     margin-left: auto;
 }
 
-
 .global-advantages .section-title {
-    font-family: "Roboto-medium", sans-serif;
-    font-size: 45px;
-    line-height: normal;
-    margin-bottom: 50px;
-}
-
-.global-advantages .section-title span {
-    display: block;
+    color: var(--white);
 }
 
 

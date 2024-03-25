@@ -1,5 +1,6 @@
 @import '../../templates/template.scss';
 @import '../../container/container.scss';
+@import '../../section-header/section-header.scss';
 
 .markets {
     background: #F9F9F9;
@@ -16,15 +17,11 @@
 
 .section-header.market .section-header__title {
     flex: 0 0 auto;
-    font-family: "Roboto-medium", sans-serif;
-    font-size: 45px;
     margin-right: 30px;
+    margin-bottom: 0;
 }
 
-.section-header.market .section-header__title span {
-    display: block;
-}
-
+ 
 .section-header.market .section-header__text {
     max-width: 350px;
 }

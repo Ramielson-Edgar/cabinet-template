@@ -1,4 +1,5 @@
 @import '../../templates/template.scss';
+@import '../../main/section-header/section-header.scss';
 
 .awards {
     background: url('/img/main-page/olive-branch.svg') #F9F9F9;
@@ -9,26 +10,15 @@
 .section-header.award {
     display: flex;
     align-items: flex-end;
-    margin-bottom: 50px;
 }
 
 .section-header.award .section-header__title {
     flex: 1 0 auto;
-
-    font-family: "Roboto-medium", sans-serif;
-    font-size: 45px;
-    line-height: normal;
-
     margin-right: 30px;
-}
-
-.section-header.award .section-header__title>span {
-    display: block;
+    margin-bottom: 0;
 }
 
 .section-header.award .section-header__text {
-    font-size: 16px;
-    line-height: normal;
     max-width: 580px;
 }
 

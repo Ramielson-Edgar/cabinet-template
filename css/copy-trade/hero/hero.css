@@ -160,6 +160,13 @@ img {
   text-decoration: none;
 }
 
+.hero.copy-trade .container.xxl .bottom .background.bottom {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .list-features__title {
   text-transform: capitalize;
 }
@@ -514,4 +521,49 @@ img {
   .section-padding {
     padding: 50px 0;
   }
-}/*# sourceMappingURL=sidebar.css.map */
+}
+.hero.copy-trade {
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+}
+
+.hero.copy-trade .top {
+  padding-top: 40px;
+  background: url("../../img/copy-trade/icon.png"), url("../../img/copy-trade/hero-top-pips.png"), transparent;
+  background-repeat: no-repeat;
+  background-position: center, center;
+  background-size: cover, cover;
+}
+
+.hero.copy-trade .container.xxl .top .background.top {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100dvw;
+  height: 100%;
+  max-width: 1600px;
+  border-radius: 30px;
+  background: #DFF6FF;
+  z-index: -1;
+}
+
+.hero.copy-trade .container.xxl .bottom .background.bottom {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  width: 100dvw;
+  height: 100%;
+  max-width: 1600px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background: #06283D;
+  z-index: -1;
+}
+
+.hero.copy-trade .bottom .inner > .animation {
+  z-index: 3;
+}/*# sourceMappingURL=hero.css.map */

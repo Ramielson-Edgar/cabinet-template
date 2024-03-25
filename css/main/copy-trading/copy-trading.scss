@@ -1,4 +1,5 @@
 @import '../../templates/template.scss';
+@import '../../main/section-header/section-header.scss';
 
 .copy-trading {
     background: url('../../../img/main-page/copy-trading-pips.png'), var(--white);
@@ -10,21 +11,18 @@
     margin-bottom: 0;
 }
 
-.section-header.copy .section-header__title {
-    color: var(--dark-800);
-    font-family: "Roboto-medium", sans-serif;
-    font-size: 45px;
-    font-weight: 600;
-}
 
 .section-header.copy .section-header__title,
 .section-header.copy .section-header__text {
     margin-bottom: 30px;
 }
 
+.section-header.copy .section-header__title span {
+    display: inline-block;
+}
+
 .section-header.copy .section-header__text {
     max-width: 420px;
-    line-height: normal;
 }
 
 

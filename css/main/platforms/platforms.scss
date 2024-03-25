@@ -1,32 +1,25 @@
 @import '../../templates/template.scss';
+@import '../../main/section-header/section-header.scss';
 
 .platforms {
     background: var(--blue300);
 }
 
 .section-header.platforms {
+    display: block;
     background: transparent;
 }
 
 .section-header.platforms .section-header__title {
-    font-family: "Roboto-medium", sans-serif;
     font-size: 60px;
-    line-height: normal;
 }
-
-.section-header.platforms .section-header__title span {
-    display: block;
-}
-
-.section-header.platforms .section-header__text {
-    font-size: 16px;
-    line-height: normal;
-}
-
 
 .section-header.platforms .section-header__title,
 .section-header.platforms .section-header__text {
     color: var(--white);
+}
+ 
+.section-header.platforms .section-header__text {
     margin-bottom: 30px;
 }
 

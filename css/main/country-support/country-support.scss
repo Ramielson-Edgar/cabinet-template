@@ -1,26 +1,7 @@
 @import '../../templates/template.scss';
 @import '../../keyframes/keyframes.scss';
+@import '../../main/section-header/section-header.scss';
 
-
-.section-header.supporting-country {
-    margin-bottom: 50px;
-}
-
-.section-header.supporting-country .section-header__title {
-    font-size: 45px;
-    margin-bottom: 30px;
-}
-
-.section-header.card .section-header__title,
-.section-header.supporting-country .section-header__title {
-    color: var(--dark-800);
-    font-family: "Roboto-medium", sans-serif;
-    line-height: normal;
-}
-
-.section-header.supporting-country .section-header__title span {
-    display: block;
-}
 
 
 .section-header.supporting-country .section-header__text {
@@ -319,8 +300,5 @@
         top: 300px;
         height: auto;
     }
-
-    // .country .inner {
-    //     gap: 20px;
-    // }
+ 
 }
