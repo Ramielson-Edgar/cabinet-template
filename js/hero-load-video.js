@@ -1,8 +1,8 @@
 window.addEventListener('load', () => {
    const video = document.getElementById('hero-copy-trading');
+ 
 
-   const visible = video.offsetWidth ||
-   video.offsetHeight ||
+   const visible = video.offsetWidth || video.offsetHeight ||
    video.getClientRects().length;
 
    

@@ -724,6 +724,10 @@ img {
   justify-content: center;
 }
 
+.img-container.copy.page .phone-frame .inner > .video.copy {
+  display: block;
+}
+
 .img-container.copy-trading > .badge svg {
   margin-right: 15px;
 }
