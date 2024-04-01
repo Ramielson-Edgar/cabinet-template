@@ -27,6 +27,8 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             600: {
                 perPage: 1,
+                fixedWidth : 280,
+                gap: 15,
             }
         },
   

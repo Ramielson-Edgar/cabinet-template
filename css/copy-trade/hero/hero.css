@@ -1,22 +1,32 @@
 @font-face {
-  font-family: "Roboto-light", sans-serif;
-  src: url("/fonts/roboto-latin-100-normal.woff2") format("woff2"), url("/fonts/roboto-latin-100-normal.woff") format("woff");
+  font-family: "Roboto bold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../fonts/Roboto-Bold.ttf") format("ttf");
 }
 @font-face {
-  font-family: "Roboto-normal", sans-serif;
-  src: url("/fonts/roboto-latin-400-normal.woff2") format("woff2"), url("/fonts/roboto-latin-400-normal.woff") format("woff");
+  font-family: "Roboto normal", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/Roboto-Regular.ttf") format("ttf");
 }
 @font-face {
-  font-family: "Roboto-bold", sans-serif;
-  src: url("/fonts/roboto-latin-700-normal.woff2") format("woff2"), url("/fonts/roboto-latin-700-normal.woff") format("woff");
+  font-family: "Roboto medium", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  src: url("../../fonts/Roboto-medium.ttf") format("ttf");
 }
 @font-face {
-  font-family: "Roboto-medium", sans-serif;
-  src: url("/fonts/roboto-latin-500-normal.woff2") format("woff2"), url("/fonts/roboto-latin-500-normal.woff") format("woff");
+  font-family: "Roboto italic", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/Roboto-Italic.ttf") format("ttf");
 }
 @font-face {
-  font-family: "Roboto-italic", sans-serif;
-  src: url("/fonts/roboto-latin-500-italic.woff2") format("woff2"), url("/fonts/roboto-latin-500-italic.woff") format("woff");
+  font-family: "Montserrat medium", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/Montserrat-Medium.ttf") format("ttf");
 }
 :root {
   --font-size-50-24: clamp(1.5rem, -0.0234rem + 4.0625vw, 3.125rem);
@@ -114,9 +124,8 @@ html {
 
 body {
   position: relative;
-  font-family: "Roboto-normal", sans-serif;
+  font-family: "Roboto normal", sans-serif;
   font-size: 16px;
-  line-height: var(--line-height-30);
   font-weight: 400;
   color: var(--dark-600);
   margin: 0;
@@ -160,13 +169,6 @@ img {
   text-decoration: none;
 }
 
-.hero.copy-trade .container.xxl .bottom .background.bottom {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .list-features__title {
   text-transform: capitalize;
 }
@@ -195,6 +197,10 @@ img {
   stroke: var(--blue-500);
 }
 
+.stroke-dark {
+  stroke: var(--dark-800);
+}
+
 .fill-yellow {
   fill: #FFC452;
 }
@@ -210,6 +216,10 @@ img {
 
 .text-italic {
   font-family: "Roboto-italic", sans-serif;
+}
+
+.m-auto {
+  margin: 0 auto;
 }
 
 .section-padding {
@@ -260,6 +270,7 @@ img {
   color: var(--light);
   text-transform: capitalize;
   text-decoration: none;
+  line-height: 30px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 100px;
@@ -308,7 +319,7 @@ img {
   overflow: hidden;
   word-wrap: break-word;
   white-space: nowrap;
-  height: var(--line-height-30);
+  height: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -516,54 +527,398 @@ img {
   .toogle {
     display: none;
   }
+  .section-padding {
+    padding: 60px 0;
+  }
 }
 @media screen and (max-width: 575.98px) {
+  body {
+    font-size: 13px;
+    line-height: normal;
+  }
   .section-padding {
     padding: 50px 0;
   }
 }
-.hero.copy-trade {
+.section-header {
+  display: block;
+  margin-bottom: 50px;
+}
+
+.section-header__title {
+  color: var(--dark-800);
+  font-family: "Roboto medium", sans-serif;
+  font-size: 45px;
+  line-height: normal;
+  margin-bottom: 30px;
+}
+
+.section-header__title span {
+  display: block;
+}
+
+.section-header__text {
+  font-size: 16px;
+  line-height: normal;
+  color: var(--dark-500);
+}
+
+@media screen and (max-width: 1198px) {
+  .section-header .section-header__title {
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .section-header .section-header__title {
+    font-size: 30px;
+    margin-bottom: 18px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .section-header .section-header__title {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .section-header {
+    margin-bottom: 30px;
+  }
+  .section-header .section-header__title {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  .section-header .section-header__text {
+    font-size: 13px;
+    line-height: normal;
+  }
+}
+.container.xxl {
+  max-width: 1800px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.copy-trading.main {
+  background: #F5F5F5;
+  padding: 0;
+}
+
+.hero.copy-trading {
   overflow: hidden;
   position: relative;
-  z-index: 3;
+  background: #FBFBFB;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 
-.hero.copy-trade .top {
-  padding-top: 40px;
-  background: url("../../img/copy-trade/icon.png"), url("../../img/copy-trade/hero-top-pips.png"), transparent;
-  background-repeat: no-repeat;
-  background-position: center, center;
-  background-size: cover, cover;
+.section-header.hero-copy {
+  flex: 1;
+  margin-bottom: 0;
+  padding-right: 15px;
 }
 
-.hero.copy-trade .container.xxl .top .background.top {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100dvw;
-  height: 100%;
-  max-width: 1600px;
-  border-radius: 30px;
-  background: #DFF6FF;
-  z-index: -1;
-}
-
-.hero.copy-trade .container.xxl .bottom .background.bottom {
-  position: absolute;
-  bottom: 0;
+.section-header.hero-copy .badge {
   display: flex;
-  justify-content: stretch;
-  align-items: stretch;
-  width: 100dvw;
-  height: 100%;
-  max-width: 1600px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  background: #06283D;
-  z-index: -1;
+  align-items: center;
+  justify-content: space-between;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: var(--white);
+  margin-bottom: 40px;
+  padding: 7px;
+  box-shadow: 0px 21.915px 54.789px -9.131px rgba(26, 48, 158, 0.1);
 }
 
-.hero.copy-trade .bottom .inner > .animation {
+.section-header.hero-copy .badge > svg {
+  margin: 0 25px;
+}
+
+.section-header.hero-copy .section-header__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 4.514vw;
+  line-height: 71px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.section-header.hero-copy .section-header__title > span {
+  display: flex;
+  align-items: center;
+}
+
+.section-header.hero-copy .section-header__title > span svg {
+  width: 7.153vw;
+  height: 3.194vw;
+}
+
+.section-header.hero-copy .section-header__text {
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+
+.section-header.hero-copy .section-header__text + .btn-outline.green {
+  font-size: 18px;
+  padding: 20px 30px;
+}
+
+.section-header.hero-copy + .inner.icons {
+  display: block;
+  flex: 1.2;
+}
+
+.section-header.hero-copy + .inner.icons > .icon {
+  position: absolute;
   z-index: 3;
+}
+
+.section-header.hero-copy + .inner.icons > .icon-tesla {
+  top: 50%;
+  right: 0;
+}
+
+.section-header.hero-copy + .inner.icons > .icon-nasdaq {
+  bottom: -50px;
+  right: 10%;
+}
+
+.section-header.hero-copy + .inner.icons > .icon-amazon {
+  left: 0;
+  bottom: -50px;
+}
+
+.section-header.hero-copy + .inner.icons > .icon-google {
+  top: -50px;
+  left: 50%;
+}
+
+.section-header.hero-copy + .inner.icons > .trade {
+  display: none;
+  bottom: -120px;
+  left: 35%;
+  filter: drop-shadow(30px 30px 30px rgba(108, 130, 238, 0.2));
+  z-index: 5;
+}
+
+.img-container.copy.page {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-radius: 71px;
+  background: url("../../../img/copy-trade/hero-img-pips.png"), linear-gradient(201deg, #E3F3FF -24.18%, #42A5F5 173.43%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 70px;
+}
+
+.hero.copy-trading .inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-container.copy-trading > .badge svg {
+  margin-right: 15px;
+}
+
+.img-container.copy.page .phone-frame {
+  width: 42%;
+  height: 100%;
+  margin-left: 7%;
+}
+
+.img-container.copy.page .phone-frame .inner {
+  top: 0.781vw;
+  width: 90%;
+  border-top-right-radius: 1.927vw;
+  border-top-left-radius: 1.927vw;
+}
+
+.img-container.copy.page .trader {
+  right: 7%;
+  left: unset;
+  height: calc(100% - 70px);
+}
+
+@media screen and (min-width: 1920px) {
+  .img-container.copy-trading .phone-frame {
+    width: 444px;
+    height: 692px;
+  }
+  .img-container.copy-trading .phone-frame .inner {
+    top: 27px;
+    width: 100%;
+  }
+  .section-header.hero-copy .section-header__title > span svg {
+    width: 103px;
+    height: 46px;
+  }
+  .img-container.copy-trading .phone-frame .inner video {
+    width: 410px;
+    border-top-right-radius: 35px;
+    border-top-left-radius: 35px;
+  }
+  .section-header.hero-copy .section-header__title {
+    font-size: 70px;
+  }
+  .hero.copy-trading {
+    padding-bottom: 200px;
+  }
+  .section-header.hero-copy + .inner.icons > .trade {
+    display: block;
+  }
+}
+@media screen and (max-width: 1198.98px) {
+  .section-header.hero-copy .section-header__title {
+    font-size: 4.167vw;
+    line-height: 5.843vw;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .section-header.hero-copy .section-header__text + .btn-outline.green {
+    font-size: 16px;
+    padding: 15px 30px;
+  }
+  .section-header.hero-copy .badge {
+    margin-bottom: 30px;
+  }
+  .section-header.hero-copy .section-header__title {
+    font-size: 5vw;
+  }
+  .section-header.hero-copy + .inner.icons {
+    flex: 0.8;
+  }
+  .section-header.hero-copy + .inner.icons > .img-container.copy.page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .section-header.hero-copy + .inner.icons > .icon {
+    width: auto;
+    height: 17%;
+  }
+  .img-container.copy.page .phone-frame {
+    margin-left: 0;
+  }
+  .section-header.hero-copy + .inner.icons > .icon-amazon {
+    bottom: 0;
+    height: 13%;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .hero.copy-trading .inner {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .hero.copy-trading {
+    padding-top: 60px;
+  }
+  .section-header.hero-copy,
+  .section-header.hero-copy + .img-container.copy-trading {
+    width: 100%;
+  }
+  .section-header.hero-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+  }
+  .section-header.hero-copy {
+    margin-bottom: 30px;
+  }
+  .section-header.hero-copy + .inner.icons {
+    flex: 1;
+    width: 100%;
+  }
+  .section-header.hero-copy + .inner.icons .icon-google {
+    left: unset;
+    right: 7%;
+  }
+  .img-container.copy.page .phone-frame .inner {
+    left: 50.5%;
+    top: 1.514vw;
+  }
+  .img-container.copy.page .phone-frame {
+    width: 60%;
+  }
+  .img-container.copy.page .phone-frame .inner .video {
+    border-top-left-radius: 3.027vw;
+    border-top-right-radius: 3.027vw;
+  }
+  .section-header.hero-copy + .inner.icons > .img-container.copy.page {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .img-container.copy.page .trader {
+    display: block;
+    left: 40%;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .hero.copy-trading {
+    padding-top: 50px;
+  }
+  .section-header.hero-copy {
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+  }
+  .section-header.hero-copy .section-header__title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .section-header.hero-copy .section-header__title > span svg {
+    width: 48px;
+    height: 28px;
+  }
+  .section-header.hero-copy + .img-container.copy.page {
+    flex-basis: 100%;
+    border-radius: 24px;
+  }
+  .section-header.hero-copy + .img-container.copy.page {
+    padding-top: 50px;
+  }
+  .img-container.copy.page .phone-frame,
+  .img-container.copy-trading .phone-frame .inner,
+  .section-header.hero-copy + .inner.icons .icon-tesla,
+  .img-container.copy-trading .phone-frame .inner video {
+    display: none;
+  }
+  .section-header.hero-copy + .inner.icons > .img-container.copy.page {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .img-container.copy.page .trader {
+    position: static;
+    top: unset;
+    left: unset;
+    right: unset;
+  }
+  .img-container.copy.page {
+    border-radius: 28px;
+  }
+  .section-header.hero-copy + .inner.icons .icon-google {
+    top: 30px;
+  }
+  .section-header.hero-copy + .inner.icons .icon-nasdaq {
+    bottom: 30px;
+    right: 10px;
+  }
+  .section-header.hero-copy + .inner.icons .icon-amazon {
+    bottom: -50px;
+    height: 10%;
+  }
+  .list.header .list__item .img-container video {
+    display: none;
+  }
 }/*# sourceMappingURL=hero.css.map */

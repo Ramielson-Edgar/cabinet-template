@@ -1,8 +1,6 @@
-"usu strict";
-
 window.addEventListener("scroll", stepCounter);
 
-const circles = document.querySelectorAll('svg #circle')
+const circles = document.querySelectorAll('svg > #circle')
 const firstStep = document.querySelector('.list-features.step .list-features__item:first-child .list-features__header')
 
 function hasReached(el) {

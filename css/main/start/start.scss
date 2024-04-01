@@ -43,15 +43,16 @@
 
 .list-features.step .list-features__header {
     position: relative;
-    flex: 1 0 160px;
-
+    
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
-
+    flex: 1 0 160px;
+    
     width: 100%;
     height: auto;
+
+    margin-bottom: 20px;
 }
 
 
@@ -198,4 +199,5 @@
         padding: 12px 20px;
         font-size: 13px;
     }
+
 }
