@@ -1,6 +1,3 @@
-@import '../../templates/template.scss';
-@import '../../main/section-header/section-header.scss';
-
 .copy-trading {
     background: url('../../../img/main-page/copy-trading-pips.png'), var(--white);
     @include background-image(no-repeat, center, center, contain, contain);

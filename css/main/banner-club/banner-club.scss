@@ -1,7 +1,3 @@
-@import '../templates/template.scss';
-@import '../keyframes/keyframes.scss';
-@import '../main-header/main-header.scss';
-
 .banner-club {
     background: url('../../../img/main-page/banner-pips.png') #64B5F6;
     @include background-image(no-repeat, center, center, cover, cover);

@@ -1,8 +1,3 @@
-@import '../../templates/template.scss';
-@import '../../keyframes/keyframes.scss';
-@import '../../main/section-header/section-header.scss';
-
-
 .section-header.hero {
     display: block;
     margin-top: 7%;
@@ -111,10 +106,6 @@
 
     @extend %blue-500-bg;
 }
-
-
-
- 
 
 
 .hero.main {
