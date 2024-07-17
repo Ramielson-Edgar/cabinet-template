@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ethereum staking</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/scss/main/style.css">
+</head>
+
+<body>
+
+    <main>
+        <button type="button" class="toogle">toogle</button>
+        <div class="main-container">
+            <div class="sidebar" aria-label="sidebar"></div>
+
+            <div class="content-container">
+                <div class="staking-header">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <div class="staking-coin">
+
+                                <div class="coin">
+                                    <h1 class="coin__name">ethereum</h1>
+                                    <div class="coin__icon">
+                                        <img class="img-responsive"
+                                            src="/custom/adrofx_theme/images/icons/ethereum-logo.svg" alt="ethereum"
+                                            width="20" height="23">
+                                    </div>
+                                </div>
+
+                                <div class="total-balance">
+
+                                    <p class="sub-title">total balance
+                                        <button type="button" class="btn btn js-btn-balance">
+                                            <svg class="fill-grey" width="24" height="16">
+                                                <use href="/custom/adrofx_theme/images/icons/sprite.svg#icon-eye"></use>
+                                            </svg>
+                                        </button>
+
+                                    </p>
+
+                                    <p class="title">3.05782 eth</p>
+                                </div>
+
+                                <div class="balance">
+                                    <div class="inner current-balance">
+                                        <p class="title">current balance</p>
+                                        <p class="text">$ 8.878.<span class="text-grey-500">80</span></p>
+                                    </div>
+
+                                    <div class="inner rewards">
+                                        <div class="inner total">
+                                            <p class="title">total rewards</p>
+
+                                            <div class="dropdown date-filter">
+                                                <button class="btn btn-default dropdown-toggle" type="button"
+                                                    id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="true">
+                                                    week
+
+                                                    <svg class="icon-down" width="6" height="4">
+                                                        <use
+                                                            href="./custom/adrofx_theme/images/icons/sprite.svg#icon-arrow-triangle">
+                                                        </use>
+                                                    </svg>
+
+                                                </button>
+
+                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                                    <li class="dropdown-menu__item"><a class="link" href="#">Action</a>
+                                                    </li>
+                                                    <li class="dropdown-menu__item"><a class="link" href="#">Another
+                                                            action</a>
+                                                    </li>
+                                                    <li class="dropdown-menu__item"><a class="link" href="#">Something
+                                                            else
+                                                            here</a></li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <p class="text text-uppercase text-green-500">0.00374 eth <span
+                                                class="icon-dot text-grey-500">$
+                                                6.86</span></p>
+
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <ul class="list funds-actions md">
+                                <li class="list__item">
+                                    <button type="button" class="btn-base btn-base-lg btn-grey-blue">deposit</button>
+                                </li>
+                                <li class="list__item">
+                                    <button type="button" class="btn-base btn-base-lg btn-grey-blue">withdraw</button>
+                                </li>
+                                <li class="list__item">
+                                    <button type="button" class="btn-base btn-base-lg btn-grey-blue">transfer</button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-0 col-md-6 col-lg-6">
+                            <div class="strategy-details md">
+                                <p class="section-title">strategy details</p>
+
+                                <ul class="list-features">
+                                    <li class="list-features__item">
+                                        <div class="list-features__header">
+                                            <img class="img-responsive"
+                                                src="./public/custom/adrofx_theme/images/icons/user-in-circle.svg"
+                                                alt="icon user" width="58" height="58">
+                                        </div>
+                                        <div class="list-features__body">
+                                            <p class="list-features__title">active investors</p>
+                                            <p class="list-features__text">148</p>
+                                        </div>
+                                    </li>
+                                    <li class="list-features__item">
+                                        <div class="list-features__header">
+                                            <img class="img-responsive"
+                                                src="./public/custom/adrofx_theme/images/icons/cup-one.svg"
+                                                alt="icon cup with numeber one" width="58" height="58">
+                                        </div>
+                                        <div class="list-features__body">
+                                            <p class="list-features__title">total rewards</p>
+                                            <p class="list-features__text">20k <span class="text-uppercase">usdt</span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="list-features__item">
+                                        <div class="list-features__header">
+                                            <img class="img-responsive"
+                                                src="./public/custom/adrofx_theme/images/icons/stop-watch.svg"
+                                                alt="icon stop-watch" width="58" height="58">
+                                        </div>
+                                        <div class="list-features__body">
+                                            <p class="list-features__title">track record</p>
+                                            <p class="list-features__text">20 month</p>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <div class="feedback">
+
+                                    <div class="inner">
+                                        <p class="title text-uppercase">256 847.<span class="text-grey-500">80</span>
+                                            usdt
+                                        </p>
+                                        <p class="text text-uppercase">1M usdt</p>
+                                    </div>
+
+
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="30"
+                                            aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                                        </div>
+                                    </div>
+
+
+
+                                    <ul class="list helpers">
+                                        <li class="helpers__item">
+                                            <p class="title">tvl</p>
+
+                                            <a href="#" class="helpers-tooltip" data-toggle="tooltip"
+                                                data-placement="right" title="Some tooltip text!">
+                                                <img src="./public/custom/adrofx_theme/images/icons/icon-info.svg"
+                                                    alt="" width="4" height="10">
+                                            </a>
+
+                                        </li>
+
+                                        <li class="helpers__item">
+                                            <p class="title">hard cap</p>
+                                            <a href="#" class="helpers-tooltip" data-toggle="tooltip"
+                                                data-placement="left" title="Some tooltip text!">
+                                                <img src="./public/custom/adrofx_theme/images/icons/icon-info.svg"
+                                                    alt="" width="4" height="10">
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+
+                            </div>
+                            <ul class="list funds-actions lg">
+                                <li class="list__item">
+                                    <button type="button" class="btn-base btn-base-lg btn-grey-blue">deposit</button>
+                                </li>
+                                <li class="list__item">
+                                    <button type="button" class="btn-base btn-base-lg btn-grey-blue">withdraw</button>
+                                </li>
+                                <li class="list__item">
+                                    <button type="button" class="btn-base btn-base-lg btn-grey-blue">transfer</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="staking-content">
+                    <div class="row">
+                        <div class="col-lg-7 col-xs-12">
+                            <div class="trading-chart"></div>
+                        </div>
+
+                        <div class="col-lg-5 col-xs-5">
+                            <div class="strategy-details lg">
+                                <p class="section-title">strategy details</p>
+
+                                <ul class="list-features">
+                                    <li class="list-features__item">
+                                        <div class="list-features__header">
+                                            <img class="img-responsive"
+                                                src="./public/custom/adrofx_theme/images/icons/user-in-circle.svg"
+                                                alt="icon user" width="58" height="58">
+                                        </div>
+                                        <div class="list-features__body">
+                                            <p class="list-features__title">active investors</p>
+                                            <p class="list-features__text">148</p>
+                                        </div>
+                                    </li>
+                                    <li class="list-features__item">
+                                        <div class="list-features__header">
+                                            <img class="img-responsive"
+                                                src="./public/custom/adrofx_theme/images/icons/cup-one.svg"
+                                                alt="icon cup with numeber one" width="58" height="58">
+                                        </div>
+                                        <div class="list-features__body">
+                                            <p class="list-features__title">total rewards</p>
+                                            <p class="list-features__text">20k <span class="text-uppercase">usdt</span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="list-features__item">
+                                        <div class="list-features__header">
+                                            <img class="img-responsive"
+                                                src="./public/custom/adrofx_theme/images/icons/stop-watch.svg"
+                                                alt="icon stop-watch" width="58" height="58">
+                                        </div>
+                                        <div class="list-features__body">
+                                            <p class="list-features__title">track record</p>
+                                            <p class="list-features__text">20 month</p>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <div class="feedback">
+
+                                    <div class="inner">
+                                        <p class="title text-uppercase">256 847.<span class="text-grey-500">80</span>
+                                            usdt
+                                        </p>
+                                        <p class="text text-uppercase">1M usdt</p>
+                                    </div>
+
+
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="30"
+                                            aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                                        </div>
+                                    </div>
+
+
+
+                                    <ul class="list helpers">
+                                        <li class="helpers__item">
+                                            <p class="title">tvl</p>
+
+                                            <a href="#" class="helpers-tooltip" data-toggle="tooltip"
+                                                data-placement="right" title="Some tooltip text!">
+                                                <img src="./public/custom/adrofx_theme/images/icons/icon-info.svg"
+                                                    alt="" width="4" height="10">
+                                            </a>
+
+                                        </li>
+
+                                        <li class="helpers__item">
+                                            <p class="title">hard cap</p>
+                                            <a href="#" class="helpers-tooltip" data-toggle="tooltip"
+                                                data-placement="left" title="Some tooltip text!">
+                                                <img src="./public/custom/adrofx_theme/images/icons/icon-info.svg"
+                                                    alt="" width="4" height="10">
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+
+
+            let totalBalance = $('.staking-coin .total-balance .title').text();
+
+
+
+
+            function replaceLettersWithStars() {
+                var newText = totalBalance.replace(/[^.\d]/g, '*').replace(/^(\d*\.?)|(\d*)\.?/g, '*');
+                $('.staking-coin .total-balance .title').text(newText);
+            }
+
+
+            function showOriginalText() {
+                $('.staking-coin .total-balance .title').text(totalBalance);
+            }
+
+            replaceLettersWithStars();
+
+
+            $('.js-btn-balance').on('click', function () {
+                var currentText = $('.staking-coin .total-balance .title').text();
+                if (currentText.includes('*')) {
+                    showOriginalText();
+                } else {
+                    replaceLettersWithStars();
+                }
+            });
+        })
+
+        const sideMenu = $('.sidebar');
+        const toggleBtn = $('.toogle');
+
+        $(toggleBtn).on('click', () => {
+
+            if (window.innerWidth <= 760) {
+                sideMenu.removeClass('hide')
+            } else {
+                sideMenu.toggle('hide')
+            }
+
+ 
+        })
+
+
+    </script>
+</body>
+
+</html>

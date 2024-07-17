@@ -1,0 +1,95 @@
+ .strategy-details .list-features {
+     margin-bottom: 30px;
+ }
+
+ .list.funds-actions.md {
+    display: none;
+ }
+
+
+ .strategy-details .list-features .list-features__header {
+     align-items: flex-start;
+     justify-content: flex-start;
+     border-radius: unset;
+     flex: 1 0 60px;
+
+     width: 60px;
+     height: 60px;
+
+     margin-bottom: 15px;
+ }
+
+ .strategy-details .list-features .list-features__body {
+     text-align: left;
+     display: inherit;
+     flex-direction: column;
+     flex: 1 0 120px;
+ }
+
+
+ .strategy-details .list-features .list-features__title {
+     font-size: 16px;
+     line-height: 1.5;
+     color: #949494;
+
+     margin-bottom: 6px;
+ }
+
+
+ .strategy-details .list-features .list-features__text {
+     font-family: "Roboto medium", sans-serif;
+     text-transform: capitalize;
+ }
+
+
+
+ @media screen and (max-width:1198.98px) {
+    .strategy-details .list-features  {
+        margin-bottom: 30px;
+    }
+
+    
+     .strategy-details .list-features .list-features__header {
+         flex: 1 0 20px;
+         width: 20px;
+         height: 20px;
+
+         margin-bottom: 10px;
+     }
+
+     .feedback .helpers .helpers__item .title,
+     .strategy-details .list-features .list-features__title {
+        font-size: 12px;
+     }
+
+     .strategy-details .list-features .list-features__text {
+        font-size: 13px;
+     }
+
+ 
+
+     .list.funds-actions.md {
+        display: flex;
+        margin-left: 0;
+    }
+
+
+     .list.funds-actions.lg {
+         display: none;
+     }
+
+ }
+
+
+ @media  (max-width:575.98px) {
+
+    .strategy-details .list-features {
+        gap: 20px;
+    }
+
+    .strategy-details .list-features .list-features__item {
+        flex-basis: calc(100% / 2 - 10px);
+        flex-wrap: wrap;
+    }
+    
+ }

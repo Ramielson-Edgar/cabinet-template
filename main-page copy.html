@@ -7,17 +7,86 @@
     
     <link rel="stylesheet" href="css/plugins/splide/splide.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <!-- <link rel="stylesheet" href="css/main/main.css"> -->
+<!-- 
+    <link rel="stylesheet" href="css/main/main.css"> -->
  
     <title>main page</title>
 </head>
 
 <body>
+ 
+    <nav class="d-xxl-none d-xl-none d-lg-none d-block navbar mobile bg-white bg-body-tertiary fixed-top">
+        <div class="container-fluid">
 
-    
+          <a class="navbar-brand logo" href="#"><img class="img-fluid" src="./img/main-page/logo.svg" alt="logo" width="146" height="52"></a>
+       
+          <button class="mobile navbar-toggler rounded-circle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+             <svg class="stroke-black" width="20" height="20">
+                <use href="/custom/adrofx_theme/images/icons/sprite.svg#icon-menu"></use>
+             </svg>
+          </button>
 
-    <header class="header main">
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+
+                <a class="navbar-brand logo" href="#"><img class="img-fluid" src="./img/main-page/logo.svg" alt="logo" width="146" height="52"></a>
+            
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body p-4">
+              <ul class="navbar-nav mb-3 justify-content-end flex-grow-1">
+
+                <li class="nav-item w-50 position-releative">
+                  <a class="nav-link active d-inline-block align-middle" aria-current="page" href="#">platforms 
+                    <svg class="stroke-blue icon-arrow" width="15" height="8">
+                        <use href="./custom/adrofx_theme/images/icons/sprite.svg#arrow-right"></use>
+                    </svg>
+                    <span class="badge position-absolute top-50 end-0 translate-middle ml-1 text-bg-primary rounded-phill text-capitalize">new</span></a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#">markets <svg class="stroke-blue icon-arrow" width="15" height="8">
+                    <use href="./custom/adrofx_theme/images/icons/sprite.svg#arrow-right"></use>
+                </svg></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">support <svg class="stroke-blue icon-arrow" width="15" height="8">
+                        <use href="./custom/adrofx_theme/images/icons/sprite.svg#arrow-right"></use>
+                    </svg></a>
+                  </li>
+
+                  <li class="nav-item w-50 position-releative">
+                    <a class="nav-link" href="#">partnership   <svg class="stroke-blue icon-arrow" width="15" height="8">
+                        <use href="./custom/adrofx_theme/images/icons/sprite.svg#arrow-right"></use>
+                    </svg>
+                    <span class="badge position-absolute top-50 end-0 translate-middle ml-1 text-bg-primary rounded-phill text-capitalize">new</span></a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">about us <svg class="stroke-blue icon-arrow" width="15" height="8">
+                        <use href="./custom/adrofx_theme/images/icons/sprite.svg#arrow-right"></use>
+                    </svg></a>
+                  </li>
+
+              </ul>
+
+            <a class="btn-base btn-base-xxl btn-outline blue" href="#">
+                <span class="text-container">
+                    <span>login</span>
+                    <span>login</span>
+                </span>
+            </a>
+ 
+
+
+            </div>
+          </div>
+        </div>
+    </nav> 
+ 
+    <header class="d-xxl-block d-xl-block d-lg-block d-none header main">
 
         <div class="container xxl">
             <nav class="nav">
@@ -27,23 +96,23 @@
 
                 <ul class="list">
                     <li class="list__item">
-                        <a href="#" class="link">platforms</a>
+                        <a href="#" class="link">platforms <span class="badge ml-1 text-bg-primary rounded-phill text-capitalize">new</span></a>
                     </li>
 
                     <li class="list__item">
-                        <a href="#" class="link">markets</a>
+                        <a href="#" class="link">markets <span></span></a>
                     </li>
 
                     <li class="list__item">
-                        <a href="#" class="link">support</a>
+                        <a href="#" class="link">support <span></span></a>
                     </li>
 
                     <li class="list__item">
-                        <a href="#" class="link">partnership</a>
+                        <a href="#" class="link">partnership <span></span></a>
                     </li>
 
                     <li class="list__item">
-                        <a href="#" class="link">about us</a>
+                        <a href="#" class="link">about us <span></span></a>
                     </li>
                 </ul>
 
@@ -67,16 +136,15 @@
 
     </header>  
 
-
     <main>
        <section class="hero main">
 
             <div class="container">
                 <div class="row">
-                    <div class="col d-block d-sm-none">
+                    <div class="col-12 d-block d-sm-none">
                         <picture>
-                            <source media="(max-width:575px)" sizes="350w" srcset="/img/main-page/hero-xs.png">
-                            <img class="img-responsive hero-devices" src="./img/main-page/hero-sm.png"
+                            <source media="(max-width:575px)" sizes="350w" srcset="/sites/all/themes/custom/adrofx_theme/img/main-page/hero-xs.png">
+                            <img class="img-fluid hero-devices" src="/sites/all/themes/custom/adrofx_theme/img/main-page/hero-sm.png"
                                 alt="devices with allpips platform and mt4" width="678" height="490">
                         </picture>
 
@@ -87,7 +155,7 @@
                                 <span class="icon">
 
                                     <svg class="fill-white" width="16" height="11">
-                                        <use href="./icons/sprite/sprite.svg#icon-wifi"></use>
+                                        <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-wifi"></use>
                                     </svg>
 
 
@@ -113,13 +181,13 @@
                                     <span class="text-container icon">
                                         <span>
                                             <svg class="fill-white" width="13" height="13">
-                                                <use href="./icons/sprite/sprite.svg#icon-arrow-up"></use>
+                                                <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-arrow-up"></use>
                                             </svg>
                                         </span>
 
                                         <span>
                                             <svg class="fill-white" width="13" height="13">
-                                                <use href="./icons/sprite/sprite.svg#icon-arrow-up"></use>
+                                                <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-arrow-up"></use>
                                             </svg>
                                         </span>
 
@@ -166,7 +234,7 @@
                                 <span>registration
 
                                     <svg class="fill-white" width="23" height="13">
-                                        <use href="./icons/sprite/sprite.svg#icon-arrow-round-pick"></use>
+                                        <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-arrow-round-pick"></use>
                                     </svg>
 
                                 </span>
@@ -174,7 +242,7 @@
                                 <span>
                                     registration
                                     <svg class="fill-green" width="23" height="13">
-                                        <use href="./icons/sprite/sprite.svg#icon-arrow-round-pick"></use>
+                                        <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-arrow-round-pick"></use>
                                     </svg>
                                 </span>
 
@@ -255,7 +323,7 @@
 
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-xl-6 col-md-6 col-sm-7 col-12">
+                    <div class="col-lg-6 col-md-6 col-sm-7 col-xs-12">
                         <header class="section-header platforms">
                             <h2 class="section-header__title">Discover
                                 <span> multiple platforms</span>
@@ -272,14 +340,14 @@
 
                                 <li class="list__item">
                                     <button type="button" class="btn-base left">
-                                        <img class="img-responsive" src="./img/main-page/allpips-logo.svg"
+                                        <img class="img-fluid" src="/sites/all/themes/custom/adrofx_theme/img/main-page/allpips-logo.svg"
                                             alt="logo allpisp" width="68" height="28">
                                     </button>
                                 </li>
 
                                 <li class="list__item">
                                     <button type="button" class="btn-base right">
-                                        <img class="img-responsive" src="./img/main-page/logo-mt4.svg"
+                                        <img class="img-fluid" src="/sites/all/themes/custom/adrofx_theme/img/main-page/logo-mt4.svg"
                                             alt="logo metatrader 4" width="150" height="24">
                                     </button>
                                 </li>
@@ -291,18 +359,18 @@
                         </header>
                     </div>
 
-                    <div class="col-xl-6 col-md-6 col-sm-5 col-12">
+                    <div class="col-lg-6 col-md-6 col-sm-5 col-xs-12">
 
                         <div class="img-container platforms">
                             <picture>
 
                                 <source media="(max-width:575px)" sizes="340w"
-                                    srcset="./img/main-page/platform-cover-xs.jpg">
+                                    srcset="/sites/all/themes/custom/adrofx_theme/img/main-page/platform-cover-xs.jpg">
                                 <source media="(max-width:767px )" sizes="560w"
-                                    srcset="./img/main-page/platform-cover-xl.jp">
+                                    srcset="/sites/all/themes/custom/adrofx_theme/img/main-page/platform-cover-xl.jp">
                                 <source media="(max-width:991px)" sizes="700w"
-                                    srcset="./img/main-page/platform-cover-md.jpg">
-                                <img class="img-responsive platform-cover" src="./img/main-page/platform-cover-xl.jpg"
+                                    srcset="/sites/all/themes/custom/adrofx_theme/img/main-page/platform-cover-md.jpg">
+                                <img class="img-fluid platform-cover" src="/sites/all/themes/custom/adrofx_theme/img/main-page/platform-cover-xl.jpg"
                                     alt="" width="560" height="442">
 
                             </picture>
@@ -313,17 +381,17 @@
                                     <span class="label">allpips</span>
                                     <picture>
                                         <source media="(max-width:575px)" sizes="300w"
-                                            srcset="./img/main-page/allpips-devices-xs.png">
+                                            srcset="/sites/all/themes/custom/adrofx_theme/img/main-page/allpips-devices-xs.png">
 
                                         <source media="(max-width:767px)" sizes="700w"
-                                            srcset="./img/main-page/allpips-devices-sm.png">
+                                            srcset="/sites/all/themes/custom/adrofx_theme/img/main-page/allpips-devices-sm.png">
 
 
                                         <source media="(max-width:991px)" sizes="890w"
-                                            srcset="./img/main-page/allpips-devices-md.png">
+                                            srcset="/sites/all/themes/custom/adrofx_theme/img/main-page/allpips-devices-md.png">
 
 
-                                        <img class="img-responsive" src="./img/main-page/allpips-devices.png"
+                                        <img class="img-fluid" src="/sites/all/themes/custom/adrofx_theme/img/main-page/allpips-devices.png"
                                             alt="devices with allpips platform" width="497" height="334">
                                     </picture>
 
@@ -342,15 +410,15 @@
 
                                     <picture>
                                         <source media="(max-width:575px)" sizes="340w"
-                                            srcset="./img/main-page/mt4-devices-xs.png">
+                                            srcset="/sites/all/themes/custom/adrofx_theme/img/main-page/mt4-devices-xs.png">
 
                                         <source media="(max-width:767px)" sizes="700w"
-                                            srcset="./img/main-page/mt4-devices-sm.png">
+                                            srcset="/sites/all/themes/custom/adrofx_theme/img/main-page/mt4-devices-sm.png">
 
                                         <source media="(max-width:991px)" sizes="840w"
-                                            srcset="./img/main-page/mt4-devices-md.png">
+                                            srcset="/sites/all/themes/custom/adrofx_theme/img/main-page/mt4-devices-md.png">
 
-                                        <img class="img-responsive" src="./img/main-page/mt4-devices-xl.png"
+                                        <img class="img-fluid" src="/sites/all/themes/custom/adrofx_theme/img/main-page/mt4-devices-xl.png"
                                             alt="devices with allpips platform" width="497" height="334">
                                     </picture>
 
@@ -370,13 +438,13 @@
                         <ul class="list operation-systems">
                             <li class="list__item">
                                 <svg width="14" height="13">
-                                    <use href="./icons/sprite/sprite.svg#icon-apple"></use>
+                                    <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-apple"></use>
                                 </svg>
                                 ios
                             </li>
 
                             <li class="list__item">
-                                <img class="img-responsive" src="./img/main-page/logo-linux.png" alt="logo" width="12"
+                                <img class="img-fluid" src="/sites/all/themes/custom/adrofx_theme/images/img/main-page/logo-linux.png" alt="logo" width="12"
                                     height="14">
                                 linux
                             </li>
@@ -384,14 +452,14 @@
                             <li class="list__item">
 
                                 <svg width="12" height="13">
-                                    <use href="./icons/sprite/sprite.svg#icon-android"></use>
+                                    <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-android"></use>
                                 </svg>
                                 android
                             </li>
 
                             <li class="list__item">
                                 <svg width="13" height="13">
-                                    <use href="./icons/sprite/sprite.svg#icon-windows"></use>
+                                    <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-windows"></use>
                                 </svg>
                                 windows
                             </li>
@@ -418,19 +486,19 @@
                         <ul class="list market-benefits">
                             <li class="list__item">leverage up to 1:500
                                 <svg class="fill-green" width="20" height="20">
-                                    <use href="./icons/sprite/sprite.svg#icon-check-circle"></use>
+                                    <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-check-circle"></use>
                                 </svg>
                             </li>
 
                             <li class="list__item">low spread as 0.4 pips
                                 <svg class="fill-green" width="20" height="20">
-                                    <use href="./icons/sprite/sprite.svg#icon-check-circle"></use>
+                                    <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-check-circle"></use>
                                 </svg>
                             </li>
 
                             <li class="list__item">0 commissions
                                 <svg class="fill-green" width="20" height="20">
-                                    <use href="./icons/sprite/sprite.svg#icon-check-circle"></use>
+                                    <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-check-circle"></use>
                                 </svg>
                             </li>
                         </ul>
@@ -445,7 +513,7 @@
 
                     <li class="list__item">
 
-                        <img class="img-responsive icon-market" src="./img/main-page/forex.png" alt="3d forex icons"
+                        <img class="img-fluid icon-market" src="/sites/all/themes/custom/adrofx_theme/img/main-page/forex.png" alt="3d forex icons"
                             width="208" height="116">
 
 
@@ -458,21 +526,21 @@
                             <li class="list__item">
 
                                 <svg class="fill-blue" width="20" height="20">
-                                    <use href="./icons/sprite/sprite.svg#icon-check-circle"></use>
+                                    <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-check-circle"></use>
                                 </svg>
                                 Major forx
                             </li>
 
                             <li class="list__item">
                                 <svg class="fill-blue" width="20" height="20">
-                                    <use href="./icons/sprite/sprite.svg#icon-check-circle"></use>
+                                    <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-check-circle"></use>
                                 </svg>
                                 Minor forex
                             </li>
 
                             <li class="list__item">
                                 <svg class="fill-blue" width="20" height="20">
-                                    <use href="./icons/sprite/sprite.svg#icon-check-circle"></use>
+                                    <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-check-circle"></use>
                                 </svg>
                                 Exotic Forex
                             </li>
@@ -489,7 +557,7 @@
 
                     <li class="list__item">
 
-                        <img class="icon-market" src="./img/main-page/shares.png" alt="3d icon shares" width="200"
+                        <img class="icon-market" src="/sites/all/themes/custom/adrofx_theme/img/main-page/shares.png" alt="3d icon shares" width="200"
                             height="116">
 
 
@@ -499,40 +567,22 @@
 
                         <ul class="list features">
                             <li class="list__item">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g id="icon-check">
-                                        <rect id="Rectangle 2165" width="20" height="20" rx="10" fill="#42A5F5" />
-                                        <path id="Vector"
-                                            d="M13.3016 7.18732C13.5096 7.43708 13.5096 7.84269 13.3016 8.09245L9.04056 13.2075C8.8325 13.4573 8.49461 13.4573 8.28656 13.2075L6.15604 10.65C5.94799 10.4002 5.94799 9.99463 6.15604 9.74487C6.3641 9.49511 6.70199 9.49511 6.91005 9.74487L8.66439 11.8489L12.5492 7.18732C12.7573 6.93756 13.0952 6.93756 13.3032 7.18732H13.3016Z"
-                                            fill="white" />
-                                    </g>
+                                <svg class="fill-blue" width="20" height="20">
+                                    <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-check-circle"></use>
                                 </svg>
                                 U.S. Shares
                             </li>
 
                             <li class="list__item">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g id="icon-check">
-                                        <rect id="Rectangle 2165" width="20" height="20" rx="10" fill="#42A5F5" />
-                                        <path id="Vector"
-                                            d="M13.3016 7.18732C13.5096 7.43708 13.5096 7.84269 13.3016 8.09245L9.04056 13.2075C8.8325 13.4573 8.49461 13.4573 8.28656 13.2075L6.15604 10.65C5.94799 10.4002 5.94799 9.99463 6.15604 9.74487C6.3641 9.49511 6.70199 9.49511 6.91005 9.74487L8.66439 11.8489L12.5492 7.18732C12.7573 6.93756 13.0952 6.93756 13.3032 7.18732H13.3016Z"
-                                            fill="white" />
-                                    </g>
+                                <svg class="fill-blue" width="20" height="20">
+                                    <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-check-circle"></use>
                                 </svg>
                                 European Shares
                             </li>
 
                             <li class="list__item">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g id="icon-check">
-                                        <rect id="Rectangle 2165" width="20" height="20" rx="10" fill="#42A5F5" />
-                                        <path id="Vector"
-                                            d="M13.3016 7.18732C13.5096 7.43708 13.5096 7.84269 13.3016 8.09245L9.04056 13.2075C8.8325 13.4573 8.49461 13.4573 8.28656 13.2075L6.15604 10.65C5.94799 10.4002 5.94799 9.99463 6.15604 9.74487C6.3641 9.49511 6.70199 9.49511 6.91005 9.74487L8.66439 11.8489L12.5492 7.18732C12.7573 6.93756 13.0952 6.93756 13.3032 7.18732H13.3016Z"
-                                            fill="white" />
-                                    </g>
+                                <svg class="fill-blue" width="20" height="20">
+                                    <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-check-circle"></use>
                                 </svg>
                                 H.K. Shares
                             </li>
@@ -549,7 +599,7 @@
 
                     <li class="list__item">
 
-                        <img class="icon-market" src="./img/main-page/metals.png" alt="3d icon metals" width="129"
+                        <img class="icon-market" src="/sites/all/themes/custom/adrofx_theme/img/main-page/metals.png" alt="3d icon metals" width="129"
                             height="116">
 
 
@@ -560,21 +610,21 @@
                         <ul class="list features">
                             <li class="list__item">
                                 <svg class="fill-blue" width="20" height="20">
-                                    <use href="./icons/sprite/sprite.svg#icon-check-circle"></use>
+                                    <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-check-circle"></use>
                                 </svg>
                                 oil and energy
                             </li>
 
                             <li class="list__item">
                                 <svg class="fill-blue" width="20" height="20">
-                                    <use href="./icons/sprite/sprite.svg#icon-check-circle"></use>
+                                    <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-check-circle"></use>
                                 </svg>
                                 gold
                             </li>
 
                             <li class="list__item">
                                 <svg class="fill-blue" width="20" height="20">
-                                    <use href="./icons/sprite/sprite.svg#icon-check-circle"></use>
+                                    <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-check-circle"></use>
                                 </svg>
                                 precious metals
                             </li>
@@ -592,7 +642,7 @@
 
                     <li class="list__item">
 
-                        <img class="icon-market" src="./img/main-page/indices.png" alt="3d icon indices" width="208"
+                        <img class="icon-market" src="/sites/all/themes/custom/adrofx_theme/img/main-page/indices.png" alt="3d icon indices" width="208"
                             height="116">
 
 
@@ -604,21 +654,21 @@
                         <ul class="list features">
                             <li class="list__item">
                                 <svg class="fill-blue" width="20" height="20">
-                                    <use href="./icons/sprite/sprite.svg#icon-check-circle"></use>
+                                    <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-check-circle"></use>
                                 </svg>
                                 U.S indices
                             </li>
 
                             <li class="list__item">
                                 <svg class="fill-blue" width="20" height="20">
-                                    <use href="./icons/sprite/sprite.svg#icon-check-circle"></use>
+                                    <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-check-circle"></use>
                                 </svg>
                                 european indices
                             </li>
 
                             <li class="list__item">
                                 <svg class="fill-blue" width="20" height="20">
-                                    <use href="./icons/sprite/sprite.svg#icon-check-circle"></use>
+                                    <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-check-circle"></use>
                                 </svg>
                                 asian indices
                             </li>
@@ -637,37 +687,37 @@
 
         </section>
 
-        <!-- <section class="copy-trading">
+       <section class="copy-trading">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-xl-7 col-md-7 col-sm-6 col-12 copy-trading-phone">
 
                         <div class="img-container copy">
 
-                            <div class="animation rounded">
-                                <img class="img-responsive" src="./img/main-page/user-1.png" alt="user master trader"
+                            <div class="animation rounded-phill">
+                                <img class="img-fluid" src="/sites/all/themes/custom/adrofx_theme/img/main-page/user-1.png" alt="user master trader"
                                     width="43" height="43">
 
                                 <svg class="stroke-white" width="18" height="18">
-                                    <use href="./icons/sprite/sprite.svg#icon-change"></use>
+                                    <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-change"></use>
                                 </svg>
 
 
-                                <img class="img-responsive" src="./img/main-page/user-3.png" alt="user master trader"
+                                <img class="img-fluid" src="/sites/all/themes/custom/adrofx_theme/img/main-page/user-3.png" alt="user master trader"
                                     width="43" height="43">
                             </div>
 
-                            <img class="img-responsive trader" src="./img/main-page/copy-trading-man.png"
+                            <img class="img-fluid trader" src="/sites/all/themes/custom/adrofx_theme/img/main-page/copy-trading-man.png"
                                 alt="phone frame" width="314" height="701">
 
                             <div class="phone-frame">
-                                <img class="img-responsive" src="./img/main-page/phone-frame.png" alt="phone frame"
+                                <img class="img-fluid" src="/sites/all/themes/custom/adrofx_theme/img/main-page/phone-frame.png" alt="phone frame"
                                     width="444" height="692">
 
                                 <div class="inner">
                                     <div class="video-container">
                                         <video class="video copy" autoplay muted loop playsinline>
-                                            <source src="./img/main-page/copy-trading.mp4" type="video/mp4">
+                                            <source src="/sites/all/themes/custom/adrofx_theme/img/main-page/copy-trading.mp4" type="video/mp4">
                                             <span>Sorry,your browser does not support the video tag.</span>
                                         </video>
                                     </div>
@@ -695,7 +745,7 @@
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>  
 
         <section class="global-advantages section-padding">
             <div class="container">
@@ -710,28 +760,28 @@
                 <ul class="list-features advantages">
                     <li class="list-features__item">
                         <div class="list-features__header advantages">
-                            <img class="img-responsive icon planet" src="./img/main-page/global.png" alt="planet"
+                            <img class="img-fluid icon planet" src="/sites/all/themes/custom/adrofx_theme/img/main-page/global.png" alt="planet"
                                 width="198" height="198">
 
                             <div class="benefits">
-                                <ul class="list rounded">
+                                <ul class="list rounded-pill">
                                     <li class="list__item">
-                                        <img class="img-fluid" src="./img/main-page/lyvia.png" alt="flag Lyvia"
+                                        <img class="img-fluid" src="/sites/all/themes/custom/adrofx_theme/img/main-page/lyvia.png" alt="flag Lyvia"
                                             width="25" height="25">
                                     </li>
                                     <li class="list__item">
-                                        <img class="img-fluid" src="./img/main-page/britan.png" alt="flag Briant"
+                                        <img class="img-fluid" src="/sites/all/themes/custom/adrofx_theme/img/main-page/britan.png" alt="flag Briant"
                                             width="25" height="25">
                                     </li>
                                     <li class="list__item">
-                                        <img class="img-fluid" src="./img/main-page/europa.png" alt="flag Europa"
+                                        <img class="img-fluid" src="/sites/all/themes/custom/adrofx_theme/img/main-page/europa.png" alt="flag Europa"
                                             width="25" height="25">
                                     </li>
                                 </ul>
 
                                 <div class="inner">
                                     <svg class="fill-green" width="20" height="20">
-                                        <use href="./icons/sprite/sprite.svg#icon-check-circle"></use>
+                                        <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-check-circle"></use>
                                     </svg>
 
                                     <p class="text">
@@ -750,17 +800,17 @@
 
                     <li class="list-features__item">
                         <div class="list-features__header">
-                            <img class="img-responsive icon regulated" src="./img/main-page/regulated.png" alt="planet"
+                            <img class="img-fluid icon regulated" src="/sites/all/themes/custom/adrofx_theme/img/main-page/regulated.png" alt="planet"
                                 width="255" height="162">
 
                             <div class="benefits">
-                                <ul class="list rounded">
+                                <ul class="list rounded-pill">
                                     <li class="list__item">
-                                        <img class="img-fluid" src="./img/main-page/logo-vanuatu.png" alt="logo vanuatu"
+                                        <img class="img-fluid" src="/sites/all/themes/custom/adrofx_theme/img/main-page/logo-vanuatu.png" alt="logo vanuatu"
                                             width="28" height="23">
                                     </li>
                                     <li class="list__item">
-                                        <img class="img-fluid" src="./img/main-page/logo-cbc.png" alt="logo cbc"
+                                        <img class="img-fluid" src="/sites/all/themes/custom/adrofx_theme/img/main-page/logo-cbc.png" alt="logo cbc"
                                             width="43" height="22">
                                     </li>
 
@@ -768,7 +818,7 @@
 
                                 <div class="inner">
                                     <svg class="fill-green" width="20" height="20">
-                                        <use href="./icons/sprite/sprite.svg#icon-check-circle"></use>
+                                        <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-check-circle"></use>
                                     </svg>
 
                                     <p class="text">
@@ -788,12 +838,12 @@
 
                     <li class="list-features__item">
                         <div class="list-features__header">
-                            <img class="img-responsive icon secured" src="./img/main-page/secured.png"
+                            <img class="img-fluid icon secured" src="/sites/all/themes/custom/adrofx_theme/img/main-page/secured.png"
                                 alt="3d bank door" width="194" height="167">
 
 
                             <div class="benefits">
-                                <ul class="list rounded secured">
+                                <ul class="list rounded-pill secured">
                                     <li class="list__item">
                                         &#8727;&#8727;&#8727;
                                     </li>
@@ -807,7 +857,7 @@
 
                                 <div class="inner">
                                     <svg class="fill-green" width="20" height="20">
-                                        <use href="./icons/sprite/sprite.svg#icon-check-circle"></use>
+                                        <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-check-circle"></use>
                                     </svg>
 
                                     <p class="text">
@@ -830,27 +880,27 @@
 
                     <li class="list-features__item">
                         <div class="list-features__header">
-                            <img class="img-responsive icon award" src="./img/main-page/awards.png" alt="3d awards"
+                            <img class="img-fluid icon award" src="/sites/all/themes/custom/adrofx_theme/img/main-page/awards.png" alt="3d awards"
                                 width="241" height="237">
 
 
                             <div class="benefits">
-                                <ul class="list rounded award">
+                                <ul class="list rounded-pill award">
                                     <li class="list__item ">
                                         <svg class="fill-yellow" width="13" height="13">
-                                            <use href="./icons/sprite/sprite.svg#icon-starr"></use>
+                                            <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-starr"></use>
                                         </svg>
                                         <svg class="fill-yellow" width="13" height="13">
-                                            <use href="./icons/sprite/sprite.svg#icon-starr"></use>
+                                            <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-starr"></use>
                                         </svg>
                                         <svg class="fill-yellow" width="13" height="13">
-                                            <use href="./icons/sprite/sprite.svg#icon-starr"></use>
+                                            <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-starr"></use>
                                         </svg>
                                         <svg class="fill-yellow" width="13" height="13">
-                                            <use href="./icons/sprite/sprite.svg#icon-starr"></use>
+                                            <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-starr"></use>
                                         </svg>
                                         <svg class="fill-yellow" width="13" height="13">
-                                            <use href="./icons/sprite/sprite.svg#icon-starr"></use>
+                                            <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-starr"></use>
                                         </svg>
                                     </li>
 
@@ -858,7 +908,7 @@
 
                                 <div class="inner">
                                     <svg class="fill-green" width="20" height="20">
-                                        <use href="./icons/sprite/sprite.svg#icon-check-circle"></use>
+                                        <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-check-circle"></use>
                                     </svg>
 
                                     <p class="text">
@@ -889,7 +939,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-4">
-                            <img class="img-responsive icon-planet" src="./img/main-page/support-icon.png"
+                            <img class="img-fluid icon-planet" src="/sites/all/themes/custom/adrofx_theme/img/main-page/support-icon.png"
                                 alt="icon planet" width="206" height="131">
                         </div>
 
@@ -927,20 +977,20 @@
                             <div class="video-container card">
                                 <div class="icon">
                                     <svg class="fill-black" width="24" height="24">
-                                        <use href="./icons/sprite/sprite.svg#icon-search-code"></use>
+                                        <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-search-code"></use>
                                     </svg>
                                 </div>
 
                                 <div class="list tags">
-                                    <div class="list__item rounded">
+                                    <div class="list__item rounded-pill">
                                         news & blogs
                                     </div>
 
-                                    <div class="list__item rounded">
+                                    <div class="list__item rounded-pill">
                                         daily market analysis
                                     </div>
 
-                                    <div class="list__item rounded">
+                                    <div class="list__item rounded-pill">
                                         economic calendar
                                     </div>
                                 </div>
@@ -952,7 +1002,7 @@
                                     </span>
                                 </a>
 
-                                <img class="img-responsive" src="./img/main-page/market-analysis.png"
+                                <img class="img-fluid" src="/sites/all/themes/custom/adrofx_theme/img/main-page/market-analysis.png"
                                     alt="market articles with marquee" width="426" height="352">
 
 
@@ -975,23 +1025,23 @@
 
                                 <div class="icon">
                                     <svg class="fill-black" width="24" height="24">
-                                        <use href="./icons/sprite/sprite.svg#icon-gift"></use>
+                                        <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-gift"></use>
                                     </svg>
                                 </div>
 
                                 <div class="list tags promotions">
-                                    <div class="list__item rounded">
+                                    <div class="list__item rounded-pill">
                                         bonus
                                     </div>
 
-                                    <div class="list__item rounded">
+                                    <div class="list__item rounded-pill">
                                         promotions
                                     </div>
 
                                 </div>
 
 
-                                <img class="img-responsive" src="./img/main-page/pronotions.png"
+                                <img class="img-fluid" src="/sites/all/themes/custom/adrofx_theme/img/main-page/pronotions.png"
                                     alt="1 dollar in center around him 350deg images with promotions and bonuses"
                                     width="426" height="352">
 
@@ -1022,16 +1072,16 @@
                             <div class="video-container card">
                                 <div class="icon">
                                     <svg class="fill-black" width="20" height="20">
-                                        <use href="./icons/sprite/sprite.svg#icon-people"></use>
+                                        <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-people"></use>
                                     </svg>
 
                                 </div>
                                 <div class="list tags educational">
-                                    <div class="list__item rounded">
+                                    <div class="list__item rounded-pill">
                                         e-book
                                     </div>
 
-                                    <div class="list__item rounded">
+                                    <div class="list__item rounded-pill">
                                         trading video
                                     </div>
 
@@ -1043,7 +1093,7 @@
                                         <span>explore more</span>
                                     </span>
                                 </a>
-                                <img class="img-responsive" src="./img/main-page/educational.png"
+                                <img class="img-fluid" src="/sites/all/themes/custom/adrofx_theme/img/main-page/educational.png"
                                     alt="white tags with dark text" width="426" height="352">
 
 
@@ -1069,31 +1119,31 @@
                             <div class="video-container card">
                                 <div class="icon">
                                     <svg class="fill-black" width="20" height="20">
-                                        <use href="./icons/sprite/sprite.svg#icon-eart"></use>
+                                        <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-eart"></use>
                                     </svg>
                                 </div>
                                 <div class="list tags support">
-                                    <div class="list__item rounded">
+                                    <div class="list__item rounded-pill">
                                         live chat
                                     </div>
 
-                                    <div class="list__item rounded">
+                                    <div class="list__item rounded-pill">
                                         email
                                     </div>
 
-                                    <div class="list__item rounded animation">
-                                        <img class="img-responsive animation-spin xl"
-                                            src="./img/main-page/support-spin.png" alt="text" width="92" height="92">
+                                    <div class="list__item rounded-circle animation">
+                                        <img class="img-fluid animation-spin xl"
+                                            src="/sites/all/themes/custom/adrofx_theme/img/main-page/support-spin.png" alt="text" width="92" height="92">
 
                                         <svg class="fill-black" width="15" height="15">
-                                            <use href="./icons/sprite/sprite.svg#icon-chat-fill"></use>
+                                            <use href="/sites/all/themes/custom/adrofx_theme/images/icons/sprite.svg#icon-chat-fill"></use>
                                         </svg>
 
                                     </div>
                                 </div>
 
 
-                                <img class="img-responsive" src="./img/main-page/support.png"
+                                <img class="img-fluid" src="/sites/all/themes/custom/adrofx_theme/img/main-page/support.png"
                                     alt="market articles with marquee" width="426" height="352">
 
                                 <a class="btn-base btn-base-lg btn-outline green" href="#">
@@ -1115,7 +1165,7 @@
         </section>
 
          <section class="start section-padding">
-            <h2 class="sr-only">steps</h2>
+            <h2 class="visually-hidden">steps</h2>
 
             <div class="container">
                 <header class="section-header start">
@@ -1132,7 +1182,7 @@
                         <div class="list-features__header">
                       
                             <svg class="icon fill-blue" width="48" height="48">
-                                <use href="./icons/sprite/sprite.svg#icon-document"></use>
+                                <use href="/sites/all/themes/custom/adrofx_theme/icons/sprite.svg#icon-document"></use>
                             </svg>
  
                              <svg class="progress-circle" width="160" height="160" viewBox="0 0 160 160">
@@ -1156,8 +1206,8 @@
                     <li class="list-features__item">
                         <div class="list-features__header">
                        
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 65 61" fill="none">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M50.4775 27C57.3811 27 62.9775 21.4036 62.9775 14.5C62.9775 7.59644 57.3811 2 50.4775 2C43.574 2 37.9775 7.59644 37.9775 14.5C37.9775 21.4036 43.574 27 50.4775 27ZM52.9545 28.7893C59.7826 27.614 64.9775 21.6637 64.9775 14.5C64.9775 6.49187 58.4857 0 50.4775 0C43.6679 0 37.9547 4.69407 36.3971 11.0229H12.7045C5.68802 11.0229 0 16.711 0 23.7275V43.7221C0 50.4906 5.48693 55.9775 12.2554 55.9775H12.7833C13.0631 55.9775 13.3259 56.1116 13.4901 56.3381L14.0734 57.1426C17.3364 61.6432 24.1733 61.2172 26.8523 56.3463C26.9774 56.1188 27.2164 55.9775 27.476 55.9775H40.25C47.2665 55.9775 52.9545 50.2895 52.9545 43.2729V28.7893ZM51 28.9908C50.8266 28.9969 50.6524 29 50.4775 29C42.4694 29 35.9775 22.5081 35.9775 14.5C35.9775 13.9858 36.0043 13.4779 36.0565 12.9775H12.7045C6.76748 12.9775 1.95455 17.7904 1.95455 23.7275V43.7221C1.95455 49.4111 6.5664 54.0229 12.2554 54.0229H12.7833C13.6895 54.0229 14.5407 54.4572 15.0725 55.1908L15.6558 55.9953C18.0774 59.3355 23.1514 59.0193 25.1397 55.4044C25.6083 54.5523 26.5036 54.0229 27.476 54.0229H40.25C46.1871 54.0229 51 49.21 51 43.2729V28.9908ZM55.4194 11.278C55.8182 11.6601 55.8317 12.2932 55.4495 12.6919L49.6995 18.6919L48.9927 19.4294L48.2704 18.7071L45.2704 15.7071C44.8799 15.3166 44.8799 14.6834 45.2704 14.2929C45.661 13.9024 46.2941 13.9024 46.6846 14.2929L48.9623 16.5706L54.0056 11.3081C54.3877 10.9094 55.0207 10.8959 55.4194 11.278ZM25.9775 30C28.739 30 30.9775 27.7614 30.9775 25C30.9775 22.2386 28.739 20 25.9775 20C23.2161 20 20.9775 22.2386 20.9775 25C20.9775 27.7614 23.2161 30 25.9775 30ZM25.9775 32C29.8435 32 32.9775 28.866 32.9775 25C32.9775 21.134 29.8435 18 25.9775 18C22.1115 18 18.9775 21.134 18.9775 25C18.9775 28.866 22.1115 32 25.9775 32ZM38.9775 45.5C38.9775 45.6675 38.9742 45.8341 38.9677 46H36.9658C36.9736 45.8343 36.9775 45.6676 36.9775 45.5C36.9775 39.701 32.2765 35 26.4775 35C20.6785 35 15.9775 39.701 15.9775 45.5C15.9775 45.6676 15.9815 45.8343 15.9892 46H13.9874C13.9808 45.8341 13.9775 45.6675 13.9775 45.5C13.9775 38.5964 19.574 33 26.4775 33C33.3811 33 38.9775 38.5964 38.9775 45.5Z" fill="#42A5F5"/>
+                            <svg class="fill-blue" width="48" height="48">
+                                <use href="/sites/all/themes/custom/adrofx_theme/icons/sprite.svg#icon-refer-frend"></use>
                               </svg>
 
                                <svg class="progress-circle" width="160" height="160" viewBox="0 0 160 160">
@@ -1182,7 +1232,7 @@
                         <div class="list-features__header">
                      
                             <svg class="fill-blue" width="45" height="45">
-                                <use href="./icons/sprite/sprite.svg#icon-wallet-stroke"></use>
+                                <use href="/sites/all/themes/custom/adrofx_theme/icons/sprite.svg#icon-wallet-stroke"></use>
                             </svg>
 
                             <svg class="progress-circle" width="160" height="160" viewBox="0 0 160 160">
@@ -1209,7 +1259,7 @@
                         <div class="list-features__header">
                      
                             <svg class="fill-blue" width="45" height="45">
-                                <use href="./icons/sprite/sprite.svg#icon-chart-stroke"></use>
+                                <use href="/sites/all/themes/custom/adrofx_theme/icons/sprite.svg#icon-chart-stroke"></use>
                             </svg>
 
                             <svg class="progress-circle" width="160" height="160" viewBox="0 0 160 160">
@@ -1261,7 +1311,7 @@
                 <div class="inner">
 
                     <div class="logo-container">
-                        <img class="img-responsive icon-logo" src="./img/main-page/logo-circle.png" alt="logo pips"
+                        <img class="img-fluid icon-logo" src="./img/main-page/logo-circle.png" alt="logo pips"
                             width="108" height="108">
                     </div>
 
@@ -1285,6 +1335,8 @@
             </div>
         </section>  
     </main>
+
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

@@ -1,0 +1,99 @@
+.staking-coin {
+  margin-bottom: 40px;
+}
+
+.staking-coin .coin {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 17px;
+       column-gap: 17px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.coin__name {
+  font-family: "Roboto bold", sans-serif;
+  font-weight: 700;
+  flex: 1 0 auto;
+}
+
+.coin__name,
+.staking-coin .total-balance .title {
+  color: #232323;
+  font-size: 50px;
+  line-height: 1.5;
+}
+
+.coin__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #EEEEEE;
+}
+
+.staking-coin .total-balance .sub-title {
+  color: #818181;
+  font-size: 20px;
+  line-height: 1.5;
+  text-transform: capitalize;
+}
+
+.fill-grey {
+  fill: var(--grey300);
+}
+
+.staking-coin .total-balance .js-btn-balance:hover,
+.staking-coin .total-balance .js-btn-balance:focus,
+.staking-coin .total-balance .js-btn-balance {
+  background: transparent;
+  outline: unset;
+  box-shadow: unset;
+}
+
+.staking-coin .total-balance .js-btn-balance:hover .fill-grey,
+.staking-coin .total-balance .js-btn-balance:focus .fill-grey {
+  fill: var(--grey400);
+}
+
+.coin__name::first-letter,
+.staking-coin .total-balance {
+  text-transform: uppercase;
+}
+
+.staking-coin .coin,
+.staking-coin .total-balance {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1198.98px) {
+  .staking-coin {
+    margin-bottom: 20px;
+  }
+  .coin__name,
+  .staking-coin .total-balance .title {
+    font-size: 24px;
+  }
+  .staking-coin .total-balance .sub-title {
+    font-size: 16px;
+  }
+  .coin__icon {
+    flex: 1 0 40px;
+    height: 40px;
+  }
+  .coin__icon > img {
+    max-width: 30%;
+  }
+  .staking-coin .total-balance button {
+    padding: 6px;
+  }
+  .staking-coin .total-balance .js-btn-balance svg {
+    width: 17px;
+    height: 11px;
+  }
+  .staking-coin .coin, .staking-coin .total-balance {
+    margin-bottom: 12px;
+  }
+}/*# sourceMappingURL=staking-coin.css.map */

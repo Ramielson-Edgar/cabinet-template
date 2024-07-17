@@ -1,0 +1,50 @@
+@import './balance/balance.scss';
+@import './staking-coin/staking-coin.scss';
+@import './strategy-details/strategy-details.scss';
+@import './funds-actions/funds-actions.scss';
+ 
+
+.content {
+    background: #fff;
+    padding: 15px;
+}
+
+.trading-chart {
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    width: 100%;
+    height:339px;
+    background: grey;
+}
+ 
+
+.staking-content,
+.staking-header {
+    padding: 0 15px;
+}
+
+.staking-header .row {
+    display: flex;
+    align-items: flex-end;
+}
+
+ 
+@media screen and (max-width:1198px) {
+ 
+    .staking-header .row {
+        display: flex;
+        align-items: flex-start;
+    }
+    
+}
+
+@media screen and (max-width:970px) {
+ 
+    .staking-header .row {
+        display: flex;
+        align-items: unset;
+        flex-wrap: wrap;
+    }
+    
+}

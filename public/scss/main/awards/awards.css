@@ -1,0 +1,164 @@
+.splide__list.awards .splide__slide {
+  border-radius: var(--border-radius-30);
+}
+
+.fill-white {
+  fill: var(--white);
+}
+
+.fill-green {
+  fill: var(--green-500);
+}
+
+.fill-blue {
+  fill: var(--blue-500);
+}
+
+.stroke-white {
+  stroke: var(--white);
+}
+
+.stroke-green {
+  stroke: var(--green-500);
+}
+
+.stroke-blue {
+  stroke: var(--blue-500);
+}
+
+.stroke-dark {
+  stroke: var(--dark-800);
+}
+
+.fill-yellow {
+  fill: #FFC452;
+}
+
+.fill-black {
+  fill: var(--dark-800);
+}
+
+.container {
+  max-width: 1320px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.awards {
+  background: url("./img/main-page/olive-branch.svg") #F9F9F9;
+  background-repeat: no-repeat;
+  background-position: center, center;
+  background-size: cover, cover;
+  padding-top: 70px;
+}
+
+.section-header.award {
+  display: flex;
+  align-items: flex-end;
+}
+
+.section-header.award .section-header__title {
+  flex: 1 0 auto;
+  margin-right: 30px;
+  margin-bottom: 0;
+}
+
+.section-header.award .section-header__text {
+  max-width: 580px;
+}
+
+.splide__list.award-carousel,
+.splide.award-carousel .splide__track {
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.splide.award-carousel .splide__track {
+  padding-bottom: 70px;
+}
+
+.splide__list.awards .splide__slide {
+  overflow: hidden;
+  position: relative;
+  padding: 30px;
+  background: var(--white);
+  box-shadow: 17px 32px 50px -10px rgba(9, 19, 69, 0.05);
+}
+
+.splide__list.awards .splide__slide::before {
+  position: absolute;
+  top: 36px;
+  right: 0;
+  content: "";
+  display: block;
+  width: 105px;
+  height: 216px;
+  opacity: 0.5;
+  background-image: url("../../../icons/icon-branch-stroke.svg");
+  background-repeat: no-repeat;
+  background-position: center, center;
+  background-size: contain, contain;
+}
+
+.splide__list.awards .splide__slide > .title {
+  color: var(--dark-800);
+  font-family: "Roboto-bold", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.splide__list.awards .splide__slide .text {
+  font-family: "Roboto-light", sans-serif;
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: 300;
+  color: var(--grey600);
+  line-height: normal;
+}
+
+@media screen and (max-width: 991.98px) {
+  .section-header.award .section-header__title {
+    font-size: 30px;
+  }
+  .section-header.award .section-header__text {
+    font-size: 14px;
+  }
+  .splide__list.awards .splide__slide > .title {
+    font-size: 18px;
+  }
+  .splide__list.awards .splide__slide > .text {
+    font-size: 16px;
+  }
+  .section-header.award .section-header__text,
+  .splide__list.awards .splide__slide > .text,
+  .splide__list.awards .splide__slide > .title {
+    line-height: normal;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .section-header.award {
+    display: block;
+  }
+  .section-header.award .section-header__title {
+    margin-bottom: 18px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .awards {
+    padding-top: 50px;
+  }
+  .section-header.award .section-header__title {
+    font-size: 24px;
+  }
+  .section-header.platforms .section-header__text,
+  .section-header.award .section-header__text {
+    font-size: 13px;
+    line-height: normal;
+  }
+}/*# sourceMappingURL=awards.css.map */

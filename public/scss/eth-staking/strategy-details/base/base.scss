@@ -1,0 +1,57 @@
+.strategy-details {
+    padding: 20px;
+    
+    border-radius: 10px;
+    background: #F9F9F9;
+}
+
+.strategy-details .section-title {
+    font-family: "Roboto medium",sans-serif;
+    // font-size: 24px;
+    font-size:  clamp(1.44rem, 0.6086rem + 2.3136vw, 2.3438rem);
+    line-height: 1.5;
+    text-transform: capitalize;
+    
+    margin-bottom: 30px;
+}
+ 
+.strategy-details.md {
+    display: none;
+}
+ 
+
+@media screen and (max-width:1198.98px) {
+    .strategy-details .section-title {
+        font-size: 16px;
+    }
+
+    .strategy-details.lg {
+        display: none;
+    }
+    
+    .strategy-details.md {
+        display: block;
+    }
+ 
+}
+
+@media screen and (max-width:970px) {
+    .strategy-details.md {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width:760px) {
+    .strategy-details.md {
+        display: block;
+    }
+    
+}
+
+@media (max-width:575.98px) {
+    .strategy-details {
+        margin-bottom: 30px;
+    }
+    
+}

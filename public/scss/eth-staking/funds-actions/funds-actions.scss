@@ -1,0 +1,30 @@
+.list.funds-actions {
+    position: relative;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    column-gap: 6px;
+
+    width: fit-content;
+
+    margin-left: auto;
+    margin-bottom: 40px;
+}
+
+.list.funds-actions .list__item {
+    display: inherit;
+    flex-basis: calc(100% / 3 - 10px);
+}
+
+.list.funds-actions .list__item .btn-base.btn-base-lg {
+    padding: 8px 20px;
+    font-size: 13px;
+}
+
+@media (max-width:575.98px) {
+    .list.funds-actions .list__item .btn-base.btn-base-lg {
+        padding: 5px 15px;
+    }
+    
+}

@@ -1,0 +1,247 @@
+@import '../label/label.scss';
+@import '../helpers/helpers.scss';
+
+.list.tab {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    width: 75%;
+}
+
+.list.tab,
+.list.os {
+    padding: 10px;
+}
+
+.list.tab,
+.list.operation-systems,
+.img-container.platforms {
+    background: var(--white);
+}
+
+.list.tab .list__item {
+    @include center-flex('hor');
+    flex-basis: calc(100% / 2 - 5px);
+    border: 1px solid var(--grey300);
+}
+
+.list.tab .list__item button {
+    @include center-flex('hor');
+    padding: 15px 20px;
+    width: 100%;
+}
+
+.indicator,
+.list.tab,
+.list.operation-systems,
+.list.tab .list__item {
+    border-radius: 100px;
+}
+
+.indicator {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transform: translateX(0);
+
+    background: var(--green-500);
+    width: calc(100% / 2 - 10px);
+    height: calc(100% - 20px);
+    opacity: 0;
+
+    transition: transform .5s var(--ease-out) 0s, opacity .5s var(--ease-out) .2s;
+}
+
+.indicator.right {
+    transform: translateX(100%);
+}
+
+.img-container.platforms {
+    overflow: hidden;
+    position: relative;
+    @include center-flex('hor');
+    @extend %border-radius-30;
+    @extend %padding-card-30;
+    margin-bottom: 20px;
+}
+
+.img-container.platforms  .platform-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 10;    
+}
+
+.img-container.platforms  .platform-cover.is-hide {
+    display: none;
+} 
+
+ 
+
+.img-container.platforms.active+.list.operation-systems .list__item:nth-child(-n + 2) {
+    display: none;
+}
+
+.list.operation-systems {
+    justify-content: center
+}
+
+.list.operation-systems .list__item {
+    @include center-flex('hor');
+    padding: 10px;
+}
+
+.list.operation-systems .list__item svg {
+    margin-right: 5px;
+}
+
+.list.operation-systems .list__item:not(:last-child) {
+    margin-right: 10px;
+}
+
+
+
+
+.slide-track {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: auto;
+    transform: translateX(0);
+    transition: transform 2s var(--ease-out) 0s;
+}
+
+.slide-track.end {
+    transform: translateX(-106.7%);
+}
+
+
+
+.slide-track .slide {
+    position: relative;
+    flex: 1 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+.slide-track .slide:not(:last-child) {
+    margin-right: 30px;
+}
+
+.slide-track .slide img {
+    @extend %object-fit;
+    object-fit: contain;
+}
+
+.slide-track .slide .label {
+    @include center-flex('hor');
+    font-family: "Roboto-medium", sans-serif;
+    font-size: 16px;
+    line-height: 1.1;
+}
+
+.slide-track .slide .btn-blue,
+.slide-track .slide .label {
+    position: absolute;
+}
+
+.slide-track .slide .label {
+    top: 0;
+    right: 0;
+}
+
+.slide-track .slide .btn-blue {
+    bottom: 0;
+    right: 0;
+
+    padding: 14px 40px;
+}
+
+
+@media screen and (max-width: 1198px) {
+    .slide-track.end {
+        transform: translateX(-110%);
+    }
+}
+
+@media screen and (max-width:991.98px) {
+    .list.tab {
+        width: 90%;
+    }
+
+    .list.operation-systems .list__item img,
+    .list.operation-systems .list__item svg {
+        display: none;
+    }
+
+    .list.operation-systems .list__item {
+        padding: 10px 5px;
+    }
+
+    .slide-track .slide .label {
+        display: none;
+    }
+
+    .slide-track .slide .btn-blue {
+        padding: 10px 30px;
+    }
+
+    .slide-track .slide img {
+        height: 340px;
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .list.operation-systems .list__item img,
+    .list.operation-systems .list__item svg {
+        display: block;
+    }
+
+    .slide-track .slide img {
+        height: auto;
+    }
+}
+
+@media screen and (max-width:575.98px) {
+    .list.tab {
+        width: 100%;
+        align-items: stretch;
+        justify-content: center;
+    }
+
+    .list.tab .list__item button {
+        padding: 10px 0;
+    }
+
+    .list.tab .list__item button > img {
+        width: 100px;
+        height: auto;
+    } 
+
+    .list.tab .list__item .btn-base.left > img {
+        width: 50px;
+    }
+
+    .img-container.platforms {
+        padding: 20px;
+    }
+
+    .slide-track .slide .btn-blue {
+         font-size: 10px;
+         padding: 8px 26px;
+    }
+
+    .list.operation-systems .list__item {
+        font-size: 8px;
+        line-height: normal;
+    }
+}

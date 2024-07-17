@@ -1,0 +1,28 @@
+.list.funds-actions {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  -moz-column-gap: 6px;
+       column-gap: 6px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-bottom: 40px;
+}
+
+.list.funds-actions .list__item {
+  display: inherit;
+  flex-basis: calc(33.3333333333% - 10px);
+}
+
+.list.funds-actions .list__item .btn-base.btn-base-lg {
+  padding: 8px 20px;
+  font-size: 13px;
+}
+
+@media (max-width: 575.98px) {
+  .list.funds-actions .list__item .btn-base.btn-base-lg {
+    padding: 5px 15px;
+  }
+}/*# sourceMappingURL=funds-actions.css.map */

@@ -1,0 +1,295 @@
+.fill-white {
+  fill: var(--white);
+}
+
+.fill-green {
+  fill: var(--green-500);
+}
+
+.fill-blue {
+  fill: var(--blue-500);
+}
+
+.stroke-white {
+  stroke: var(--white);
+}
+
+.stroke-green {
+  stroke: var(--green-500);
+}
+
+.stroke-blue {
+  stroke: var(--blue-500);
+}
+
+.stroke-dark {
+  stroke: var(--dark-800);
+}
+
+.fill-yellow {
+  fill: #FFC452;
+}
+
+.fill-black {
+  fill: var(--dark-800);
+}
+
+.container {
+  max-width: 1320px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.start-step.margin-inline {
+  margin: 20px;
+}
+
+.start-step .top,
+.start-step .bottom {
+  background: var(--white);
+}
+
+.start-step .top {
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+}
+
+.start-step .bottom {
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.section-header.start-step {
+  display: flex;
+  align-items: flex-end;
+  margin: 0;
+}
+
+.section-header.start-step .section-header__title {
+  margin-right: 30px;
+  margin-bottom: 0;
+  flex: 1 0 auto;
+}
+
+.start-step .bottom,
+.list.header .list__item .img-container {
+  background: linear-gradient(103deg, #E3F3FF 4.33%, #42A5F5 177.15%);
+}
+
+.list.header .list__item .img-container {
+  background: url("../../../img/copy-trade/trading-tools-pips.png"), linear-gradient(103deg, #E3F3FF 4.33%, #42A5F5 177.15%);
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: 680px;
+}
+
+.list.header .list__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  width: 100%;
+}
+
+.list.header .list__item::before {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  counter-increment: follow-step;
+  content: "0" counter(follow-step) ".";
+  width: 88px;
+  height: 88px;
+  font-family: "Roboto italic", sans-serif;
+  font-size: 30px;
+  text-align: center;
+  font-style: italic;
+  font-weight: 700;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid #D9D9D9;
+}
+
+.list.header {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 100px;
+  counter-reset: follow-step;
+}
+
+.list.header .list__item .inner {
+  width: 50%;
+  max-width: 350px;
+  margin-left: 11%;
+}
+
+.list.header .list__item .img-container {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  border-radius: 37px;
+  padding: 50px;
+}
+
+.list.header .list__item .img-container > img {
+  display: none;
+}
+
+.list.header .list__item .img-container video {
+  border-radius: 37px;
+}
+
+.list.header .list__item .inner .title {
+  display: flex;
+  align-items: center;
+  font-family: "Roboto bold", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+  color: var(--dark-800);
+}
+
+.list.header .list__item .inner .title > svg {
+  margin-right: 10px;
+}
+
+.list.header .list__item .inner .title,
+.list.header .list__item .inner .text {
+  margin-bottom: 20px;
+}
+
+.list.header .list__item .inner .text {
+  line-height: normal;
+}
+
+.list.header .list__item {
+  position: sticky;
+  top: 50px;
+  background: var(--white);
+  border-radius: 47px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 1198px) {
+  .list.header .list__item .inner .title {
+    font-size: 24px;
+  }
+  .list.header .list__item .img-container {
+    padding: 30px;
+  }
+  .list.header .list__item .img-container video {
+    width: 70%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .list.header .list__item .img-container video {
+    width: 100%;
+    border-radius: 20px;
+  }
+  .list.header .list__item::before {
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .list.header .list__item {
+    gap: 30px;
+  }
+  .section-header.start-step {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .list.header .list__item .inner .title {
+    font-size: 20px;
+  }
+  .list.header .list__item .inner .text {
+    font-size: 14px;
+  }
+  .section-header.start-step .section-header__title {
+    margin-right: 0;
+    margin-bottom: 15px;
+    flex: unset;
+  }
+  .list.header .list__item .inner {
+    margin-left: 0;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .list.header .list__item::before {
+    top: 30px;
+    left: 30px;
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .list.header .list__item {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .list.header .list__item .inner,
+  .list.header .list__item .img-container {
+    width: 100%;
+  }
+  .list.header .list__item .inner {
+    padding: 0;
+  }
+  .start-step.margin-inline {
+    margin: 0;
+  }
+  .start-step .top {
+    border-radius: 0;
+  }
+  .list.header .list__item,
+  .list.header .list__item .img-container {
+    border-radius: 20px;
+  }
+  .list.header .list__item {
+    gap: 20px;
+    padding: 60px 10px 10px 10px;
+  }
+  .list.header .list__item::before {
+    top: 10px;
+    left: 10px;
+  }
+  .list.header .list__item .inner {
+    max-width: 220px;
+  }
+  .list.header .list__item .inner .title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  .list.header .list__item .inner .text {
+    font-size: 13px;
+  }
+  .list.header .list__item .inner .text + .btn-outline {
+    font-size: 13px;
+    padding: 10px 30px;
+  }
+  .start-step .bottom {
+    border-radius: 0;
+  }
+  .start-step .top {
+    padding-top: 0px;
+  }
+  .list.header .list__item .img-container > img {
+    display: block;
+  }
+}/*# sourceMappingURL=step.css.map */
