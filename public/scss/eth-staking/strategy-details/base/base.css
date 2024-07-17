@@ -36,8 +36,6 @@
   .strategy-details.md {
     display: block;
   }
-}
-@media (max-width: 575.98px) {
   .strategy-details {
     margin-bottom: 30px;
   }
