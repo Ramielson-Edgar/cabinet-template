@@ -1,0 +1,152 @@
+.copy-trading.awards  {
+    padding: 0;
+}
+
+.copy-trading.awards .top {
+    position: relative;
+    background: var(--white);
+    z-index: 3;
+}
+
+.copy-trading.awards .bottom {
+    overflow: hidden;
+    position: relative;
+    background: #EAF6FF;
+    padding-top: 70px;
+}
+
+.copy-trading.awards .bottom > .splide.award-carousel {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+.copy-trading.awards .bottom >.splide.award-carousel .splide__slide::before {
+    content: unset;
+}
+
+.copy-trading.awards .bottom::before {
+    @extend %absolute-center;
+
+    display: block;
+    content: "";
+
+    width: 900px;
+    height: 400px;
+
+    background: url('../../../icons/icon-one-branch.svg');
+    @include background-image(no-repeat,center,center,contain,contain);
+
+    z-index: 0;
+}
+
+.section-header.copy.award {
+    display: block;
+    margin-bottom: 0;
+}
+
+.section-header.copy.award .section-header__title {
+    margin-bottom: 30px;
+}
+
+.inner.award-icon {
+    display: flex;
+    align-items: center;
+}
+
+
+.inner.award-icon .img-container {
+    @include center-flex('hor');
+    flex:1 0 93px;
+
+    width: 93px;
+    height: 93px;
+
+    border-radius: 50%;
+    background: #EAF6FF;
+    margin-right: 20px;
+}
+
+ 
+.inner.award-icon .img-container + .title {
+    font-size: 35px;
+    font-family: "Roboto-italic",sans-serif;
+    line-height: normal;
+    color: var(--dark-800);
+
+    font-style: italic;
+}
+
+@media screen and (max-width:1198.98px) {
+    .inner.award-icon .img-container + .title {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width:991.98px) {
+    .inner.award-icon .img-container + .title {
+        font-size: 20px;
+    }
+
+    .copy-trading.awards .bottom::before {
+        width: 90.817vw;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width:767.98px) {
+    .inner.award-icon .img-container {
+        flex: 0 0 93px;
+    }
+
+    .section-header.copy.award .section-header__title span,
+    .inner.award-icon .img-container + .title span {
+        display: block;
+    }
+
+}
+
+
+
+@media screen and (max-width:575.98px) {
+    .section-header.copy.award .section-header__title {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    
+
+
+    .copy-trading.awards .bottom::before {
+        top: 50%;
+        left: 50%;
+
+        width: 100%;
+        height: 100%;
+
+        transform: translate(-50%,-50%) rotate(45deg);
+    }
+
+    .splide__list.awards .splide__slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        flex-basis: 280px;
+        min-height: 200px;
+
+        padding: 50px 20px 20px 20px;
+    }
+
+
+    .splide__list.awards.copy-trading .splide__slide > .title {
+        margin-bottom: 15px;
+    }
+
+
+}
+
+ 

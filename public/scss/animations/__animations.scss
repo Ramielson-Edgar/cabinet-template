@@ -1,0 +1,26 @@
+// @import '../keyframes/keyframes.scss';
+
+.fly-smooth.xl {
+    animation: fly-smooth 5s ease 0s infinite;
+}
+
+.fly-smooth.lg {
+    animation: fly-smooth 4s ease 0s infinite;
+}
+
+.fly-smooth.md {
+    animation: fly-smooth 3s ease 0s infinite;
+}
+
+.fly-smooth.small {
+    animation: fly-smooth 2s ease 0s infinite;
+}
+
+.fly-smooth.xs {
+    animation: fly-smooth 1s ease 0s infinite;
+}
+
+
+.animation-spin.xl {
+    animation: spin 4s linear 0s infinite;
+}

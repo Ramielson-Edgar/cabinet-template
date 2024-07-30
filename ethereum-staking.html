@@ -7,8 +7,7 @@
     <title>ethereum staking</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
         integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="./public/scss/main/style.css">
+        <link rel="stylesheet" href="/scss/style.css">
 </head>
 
 <body>
@@ -28,8 +27,8 @@
                                     <h1 class="coin__name">ethereum</h1>
                                     <div class="coin__icon">
                                         <img class="img-responsive"
-                                            src="./public/custom/adrofx_theme/images/icons/ethereum-logo.svg" alt="ethereum"
-                                            width="20" height="23">
+                                            src="./public/custom/adrofx_theme/images/icons/ethereum-logo.svg"
+                                            alt="ethereum" width="20" height="23">
                                     </div>
                                 </div>
 
@@ -38,7 +37,9 @@
                                     <p class="sub-title">total balance
                                         <button type="button" class="btn btn js-btn-balance">
                                             <svg class="fill-grey" width="24" height="16">
-                                                <use href="./public/custom/adrofx_theme/images/icons/sprite.svg#icon-eye"></use>
+                                                <use
+                                                    href="./public/custom/adrofx_theme/images/icons/sprite.svg#icon-eye">
+                                                </use>
                                             </svg>
                                         </button>
 
@@ -336,8 +337,6 @@
             let totalBalance = $('.staking-coin .total-balance .title').text();
 
 
-
-
             function replaceLettersWithStars() {
                 var newText = totalBalance.replace(/[^.\d]/g, '*').replace(/^(\d*\.?)|(\d*)\.?/g, '*');
                 $('.staking-coin .total-balance .title').text(newText);
@@ -372,7 +371,7 @@
                 sideMenu.toggle('hide')
             }
 
- 
+
         })
 
 

@@ -1,0 +1,61 @@
+@import '../helpers/helpers.scss';
+
+.navbar.mobile {
+    position: relative;
+    top: unset;
+    left: unset;
+    right: unset;
+
+    background-color: var(--white);
+    background: var(--white);
+    z-index: auto;
+}
+
+.mobile.navbar-toggler:focus,
+.navbar.mobile .navbar-toggler {
+    border-radius: unset;
+    border: 1px solid transparent;
+    box-shadow: none;
+}
+
+.mobile.navbar-toggler {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius:50%;
+    transition: background-color .3s var(--ease-in-out) 0s;
+ 
+}
+.mobile.navbar-toggler:hover {
+    background: var(--grey300);
+}
+
+
+.navbar-nav .nav-item {
+    position: relative
+}
+
+.navbar-nav .nav-item .nav-link {
+    @extend %text-capitalize;
+}
+
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item .nav-link:focus{
+    color: var(--blue400);
+}
+
+.navbar-nav .nav-item>.nav-link>svg {
+    transform: translateX(0px);
+    opacity: 0;
+    transition: transform .3s var(--ease-out-slow) 0s, opacity .3s var(--ease-out-slow) 0s;
+    stroke-width: .5px;
+}
+
+.navbar-nav .nav-item>.nav-link:hover>svg {
+    opacity: 1;
+    transform: translateX(8px);
+}

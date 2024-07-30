@@ -1,0 +1,239 @@
+ .form-quick .inner>label {
+     font-family: "Roboto-normal", sans-serif;
+     font-weight: 400;
+     margin-bottom: 0;
+ }
+
+ .hero.main .form-quick {
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+
+     max-width: 1160px;
+ }
+
+ .hero.main .form-quick .inner {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     flex-wrap: wrap;
+     gap: 7px;
+
+     padding: 0;
+ }
+
+
+ .hero.main .form-quick .inner label {
+     flex: 1 1 230px;
+ }
+
+
+
+ .section-title.form,
+ .hero.main .form-quick>.inner {
+     margin-bottom: 26px;
+ }
+
+ .form-quick .inner>label,
+ .form-quick .inner>label input {
+     position: relative;
+     outline: none;
+     border: 1px solid transparent;
+ }
+
+ .form-quick .inner>label input {
+     width: 100%;
+     padding: 15px 20px;
+     // background: #F5F5F5;
+     background: #E9F5FF;
+     border-radius: 100px;
+ }
+
+ .form-quick .inner>label input:focus {
+     border: 1px solid var(--blue-500);
+ }
+
+ .form-quick .inner>label input::placeholder {
+     font-size: 13px;
+     color: #232323;
+     line-height: normal;
+     text-transform: capitalize;
+ }
+
+ .form-quick .inner>.btn-outline.green svg {
+     margin-left: 10px;
+ }
+
+
+
+
+ .section-title.form {
+     font-size: 24px;
+     line-height: 1.5;
+ }
+
+
+
+ .form-quick .privacy-policy {
+     display: flex;
+     align-items: center;
+     justify-content: flex-end;
+     column-gap: 30px;
+ }
+
+
+ .form-quick .privacy-policy .text {
+     max-width: 520px;
+
+     text-align: right;
+     font-size: 12px;
+     line-height: 14px;
+     color: #232323;
+ }
+
+ .form-quick .privacy-policy .checkbox {
+     width: fit-content;
+ }
+
+
+ .form-quick .privacy-policy .checkbox__label {
+     display: flex;
+     align-items: center;
+     column-gap: 10px;
+     margin-top: 10px;
+
+     text-transform: capitalize;
+ }
+
+ .form-quick .privacy-policy .checkbox .link {
+     font-size: 13px;
+     line-height: 1.3;
+ }
+
+
+
+
+ @media screen and (max-width: 1198px) {
+     .hero.main .form-quick .inner label {
+         flex: 1 1 230px;
+     }
+ }
+
+
+ @media screen and (max-width: 991.98px) {
+
+     .hero.main .form-quick .inner label {
+         flex: 1 1 150px;
+     }
+
+     .form-quick>label input {
+         padding: 15px 20px;
+     }
+
+     .hero.main .form-quick .btn-outline.green {
+         padding: 15px 20px;
+     }
+ }
+
+
+ @media screen and (max-width:767.98px) {
+     .form-quick .privacy-policy {
+         flex-direction: column;
+         flex-wrap: wrap;
+         align-items: center;
+         justify-content: center;
+
+     }
+
+     .form-quick .privacy-policy .text {
+         order: 1;
+         text-align: center;
+     }
+
+ }
+
+
+
+ @media screen and (max-width:575.98px) {
+
+     .form-quick .privacy-policy .checkbox__label {
+         margin-top: 0;
+     }
+
+     .form-quick .privacy-policy .checkbox {
+         margin-bottom: 10px;
+     }
+
+     .hero.main .form-quick .inner {
+        flex-direction: column;
+        flex-basis: 100%;
+        align-items: unset;
+        justify-content: unset;
+     }
+
+     .hero.main .form-quick .inner > label {
+        flex: 100%;
+    } 
+
+     .section-title.form,
+     .hero.main .form-quick>.inner {
+         margin-bottom: 15px;
+     }
+
+     .form-quick .privacy-policy {
+         align-items: flex-start;
+         justify-content: flex-start;
+     }
+
+     .hero.main .form-quick .inner {
+         padding: 0;
+     }
+
+
+     .form-quick .privacy-policy .text,
+     .form-quick .privacy-policy .checkbox .link {
+         font-size: 10px;
+         line-height: 10px;
+         text-align: left;
+     }
+
+     .form-quick .privacy-policy .text {
+         font-size: 10px;
+     }
+
+     .section-header.form {
+         display: block;
+     }
+
+     .section-header.form {
+         text-align: center;
+     }
+
+     .section-header.form .section-header__title {
+         font-size: 18px;
+         margin-bottom: 18px;
+         margin-right: 0;
+     }
+
+
+     .section-header.form .section-header__title,
+     .section-header.form .section-header__text {
+         line-height: normal;
+     }
+
+     .section-header.form .section-header__text {
+         font-size: 13px;
+         max-width: 100%;
+     }
+
+     .form-quick>label input,
+     .hero.main .form-quick .btn-outline.green {
+         padding: 10px 20px;
+     }
+
+     .hero.main .form-quick {
+         grid-template-rows: 54px;
+         gap: 5px;
+     }
+
+ }
