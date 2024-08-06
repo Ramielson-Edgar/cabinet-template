@@ -1,0 +1,146 @@
+ 
+
+.account-card.create-new {
+    @include center-flex("ver");
+    padding: 28px;
+}
+
+.account-card.create-new .account-card__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    flex: 1 0 52px;
+
+    color: var(--dark-800);
+    border-bottom: 1px solid var(--dark-50);
+}
+
+.account-card.create-new .account-card__header,
+.account-card.create-new .account-card__body {
+    padding: 0;
+}
+
+.account-card.create-new .title {
+    font-size: 18px;
+}
+
+.account-card.create-new .text {
+    color: var(--dark-300);
+    font-size: 13px;
+    line-height: 1.2;
+    text-align: left;
+}
+
+
+.account-card.create-new .link {
+    position: relative;
+    overflow: hidden;
+    @include center-flex("hor");
+    flex-grow: 1;
+
+    z-index: 1;
+}
+
+.account-card.create-new .link::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+
+    display: inline-block;
+    content: "";
+
+    width: 30px;
+    height: 30px;
+
+    opacity: 0.3;
+    border-radius: 50%;
+    background: var(--blue-500);
+    animation: 2s pulse ease-in 0s infinite;
+}
+
+.account-card.create-new .link:hover::before {
+    animation: none;
+}
+
+.account-card.create-new .link:hover .icon-plus .vertical,
+.account-card.create-new .link:hover .icon-plus .horizontal {
+    transform: translate(-50%, -50%);
+}
+
+.account-card.create-new .account-card__body .icon-plus {
+    overflow: hidden;
+    @extend %absolute-center;
+
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50%;
+    background: transparent;
+
+    z-index: 2;
+}
+
+.account-card.create-new .icon-plus span {
+    border-radius: 5px;
+    background: #363853;
+    z-index: 4;
+}
+
+.account-card.create-new .account-card__body::before,
+.account-card.create-new .icon-plus span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.account-card.create-new .icon-plus .horizontal {
+    transform: translate(-280%, -50%);
+
+    width: 25px;
+    height: 5px;
+
+    transition: transform 0.5s var(--transition);
+}
+
+.account-card.create-new .icon-plus .vertical {
+    transform: translate(-50%, -280%);
+
+    width: 5px;
+    height: 25px;
+
+    transition: transform 0.5s var(--transition) 0.2s;
+}
+
+.account-card.create-new .account-card__body {
+    position: relative;
+    @include center-flex("ver");
+
+    flex: 5 0 auto;
+    flex-basis: 234px;
+}
+
+.account-card.create-new .account-card__body::before {
+    transform: translateX(70%);
+
+    display: inline-block;
+    content: "";
+
+    width: 72px;
+    height: 120px;
+
+    background: url("/icons/arrow-curve.svg");
+    @include background-image(no-repeat, center, center, contain, contain);
+
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+@media screen and (max-width:575.98px) {
+    .account-card.create-new {
+        display: none;
+    }
+    
+}

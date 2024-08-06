@@ -1,0 +1,223 @@
+ 
+
+.account-card {
+    overflow: hidden;
+    @extend %border-radius-30;
+    background: var(--white);
+}
+
+.account-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 30px 30px 60px 0px rgba(9, 19, 69, 0.08);
+}
+
+.account-card {
+    transform: translateY(0);
+    box-shadow: 0 0 0 transparent;
+    transition: all 0.3s var(--transition);
+}
+
+
+.account-card.allpips-trading .account-card__header {
+    background: var(--violet-900);
+}
+
+.account-card.allpips-demo .account-card__header {
+    background: var(--violet-500);
+}
+
+.account-card.mt4-trading .account-card__header {
+    background: #008dff;
+}
+
+.account-card.mt4-demo .account-card__header {
+    background: var(--blue-500);
+}
+
+
+
+.account-card__header {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    color: var(--white);
+    padding: 20px 15px 20px 15px;
+}
+
+
+.account-card__header .profile {
+    flex: 1 1 auto;
+}
+
+
+.account-card__header .profile .name {
+    font-size: 18px;
+    line-height: 27px;
+
+    margin-bottom: 6px;
+}
+
+
+.account-card__header .profile .number {
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.account-card__header .profile .name,
+.account-card__header .profile .number {
+    color: var(--white);
+}
+
+
+
+.account-card .account-card__body {
+    padding: 15px;
+    margin-bottom: 0;
+}
+
+
+.account-card .account-card__body .inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.account-card .menu .list__item:not(:last-child),
+.account-card .account-card__body .inner:not(:last-child) {
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--dark-50);
+    margin-bottom: 13px;
+}
+
+
+
+.account-card.create-new .account-card__body .text span,
+.account-card.create-new .account-card__body .text {
+    display: block;
+}
+
+.account-card .account-card__body .title,
+.account-card .account-card__body .text {
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--dark-500);
+    margin-bottom: 0;
+}
+
+.account-card .account-card__body .title {
+    font-weight: 400;
+}
+
+.account-card .account-card__body .text {
+    text-transform: capitalize;
+}
+
+
+.account-card .btn-button.account-setting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 1 30px;
+
+    height: 100%;
+}
+
+.account-card .btn-button.account-setting .icon-setting {
+    transform: rotate(90deg);
+    transition: transform 0.5s var(--transition) 0.1s;
+    margin-bottom: 13px;
+}
+
+.account-card .btn-button.account-setting:hover .icon-setting {
+    transform: rotate(180deg);
+}
+
+.account-card .btn-button.account-setting .icon-setting {
+    width: 24px;
+    height: 24px;
+}
+
+.account-card .btn-button.account-setting .text {
+    display: block;
+
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: capitalize;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+.account-card .menu .name,
+.account-card .menu .number {
+    color: var(--white);
+}
+
+.account-card .menu.is-active {
+    border-radius: 0%;
+    transform: translateY(0%);
+}
+
+.account-card .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    width: 100%;
+    height: 110%;
+
+    border-radius: 50%;
+    background: var(--white);
+
+    transform-origin: bottom center;
+    transform: translateY(100%);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.2) 0.2s;
+
+    z-index: 5;
+}
+
+
+.account-card .menu .account-card__body,
+.account-card .menu {
+    overflow: hidden;
+}
+
+
+.account-card .menu .account-card__header {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.account-card .menu .account-card__body {
+    height: 100%;
+    padding: 15px;
+}
+
+@media screen and (max-width: 575.98px) {
+
+    .account-card__header {
+        justify-content: space-between;
+    }
+
+    .account-card__header .profile {
+        flex: 0 1 auto;
+    }
+
+    .account-card__header .profile .name,
+    .account-card__header .profile .number,
+    .account-card .btn-button.account-setting .text {
+        font-size: 13px;
+        line-height: 21px;
+    }
+
+    .account-card__header .profile .name {
+        font-size: 16px;
+        margin-bottom: 11px;
+    }
+
+    .account-card .account-card__body .title, 
+    .account-card .account-card__body .text {
+        font-size: 13px;
+    }
+}

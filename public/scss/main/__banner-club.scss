@@ -1,7 +1,7 @@
- 
+@import '../helpers/helpers.scss'; 
 
 .banner-club {
-    background: url('../../../img/main-page/banner-pips.png') #64B5F6;
+    background: url('./../custom/adrofx_theme//img/main-page/banner-pips.png') #64B5F6;
     @include background-image(no-repeat, center, center, cover, cover);
 }
 

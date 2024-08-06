@@ -1,0 +1,104 @@
+ 
+
+.account-feedback {
+    padding: 30px 0;
+}
+
+.account-feedback,
+.list.account-feedback,
+.account-feedback .buttons-container {
+    display: flex;
+}
+
+.account-feedback,
+.account-feedback .buttons-container {
+    align-items: center;
+}
+
+
+.account-feedback {
+    justify-content: space-between;
+}
+
+.list.account-feedback .list__item {
+    margin-right: 3px;
+}
+
+.list.account-feedback {
+    justify-content: flex-start;
+}
+
+.list.account-feedback .list__item .link {
+    display: inline-block;
+    font-size: 13px;
+    color: var(--dark-500);
+    font-weight: 600;
+    text-transform: capitalize;
+
+    padding: 5px 30px;
+    border-radius: 30px;
+    border: 1px solid var(--dark-500);
+}
+
+.list.account-feedback .list__item .text {
+    font-weight: 700;
+}
+
+
+.account-feedback .buttons-container .btn-green,
+.list.account-feedback .list__item .title {
+    margin-right: 10px;
+}
+
+
+@media screen and (max-width: 991.98px) {
+
+    .account-feedback,
+    .account-feedback .buttons-container {
+        align-items: flex-start;
+    }
+}
+
+
+@media screen and (max-width: 575.98px) {
+    .account-feedback,
+    .account-feedback .buttons-container .btn-base {
+        padding: 12px 20px;
+    }
+
+    .account-feedback,
+    .account-feedback .buttons-container {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+
+    .account-feedback .buttons-container,
+    .account-feedback .list.account-feedback {
+        gap: 5px;
+    }
+
+
+    .account-feedback .buttons-container .btn-green,
+    .list.account-feedback .list__item .title {
+        margin-right: 0;
+    }
+
+
+    .account-feedback,
+    .account-feedback.buttons-container {
+        padding: 0;
+    }
+
+    .account-feedback {
+        padding: 30px 0;
+    }
+
+    .account-feedback .list.account-feedback .link {
+        font-size: 13px;
+        line-height: 21px;
+        padding: 8px 20px;
+    }
+
+
+}

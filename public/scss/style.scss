@@ -1,13 +1,12 @@
 @import '../scss/templates/template.scss';
-@import '../scss/helpers/helpers.scss';
 @import '../scss/container/container.scss';
+
 @import '../scss/main/__section-title.scss';
 @import '../scss/main/__section-header.scss';
 @import '../scss/animations/__animations.scss';
 @import '../scss/keyframes/__keyframes';
-
  
+@import '../scss/eth-staking/eth-main.scss';
+@import './account-page/account-page.scss';
+@import '../scss/copy-trade/copy-trade.scss';
 @import '../scss/main/main.scss';
-
-// @import '../scss/copy-trade/copy-trade.scss';
-// @import '../scss/eth-staking/eth-main.scss';

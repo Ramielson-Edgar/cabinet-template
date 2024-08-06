@@ -10,7 +10,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="/scss/plugins/splide/splide.min.css">
 
-    <link rel="stylesheet" href="/scss/main/style.css">
+    <link rel="stylesheet" href="/scss/style.css">
 
 
 </head>
@@ -61,26 +61,19 @@
                 <div class="inner">
 
                     <header class="section-header hero-copy">
-                        <div class="badge rounded">
-                            <img class="img-responsive" src="./img/copy-trade/user-1.png" alt="trader user" width="40"
-                                height="40">
 
-                            <svg class="stroke-dark" width="19" height="19">
-                                <use href="/custom/adrofx_theme/images/icons/sprite/sprite.svg#icon-change"></use>
-                            </svg>
+                        <img class="img-responsive icon-users" src="/custom/adrofx_theme/img/copy-trade/icon-users.png" alt="trader user"
+                            width="158" height="50">
 
-                            <img class="img-responsive" src="./img/copy-trade/user-2.png" alt="trader user" width="40"
-                                height="40">
-                        </div>
 
                         <h1 class="section-header__title">
                             <span>the p<svg class="fill-dark" width="103" height="46">
-                                    <use href="./icons/sprite/sprite.svg#letter-o"></use>
+                                    <use href="/custom/adrofx_theme/images/icons/sprite.svg#letter-o"></use>
                                 </svg>wer of</span>
 
 
                             <span class="blue-500">c<svg class="fill-blue" width="103" height="46">
-                                    <use href="./icons/sprite/sprite.svg#letter-o"></use>
+                                    <use href="/custom/adrofx_theme/images/icons/sprite.svg#letter-o"></use>
                                 </svg>py trading</span>
                         </h1>
                         <p class="section-header__text">Learn about Copy trading and how it can help you understand
@@ -98,40 +91,42 @@
 
                     <div class="inner icons">
 
-                        <img class="img-responsive icon icon-google" src="./img/copy-trade/icon-google.png" alt=""
-                            width="72" height="78">
-                        <img class="img-responsive icon icon-tesla" src="./img/copy-trade/icon-tesla.png" alt=""
-                            width="102" height="90">
-                        <img class="img-responsive icon icon-nasdaq" src="./img/copy-trade/icon-nasdaq.png" alt=""
-                            width="85" height="79">
-                        <img class="img-responsive icon icon-amazon" src="./img/copy-trade/icon-amazon.png" alt=""
-                            width="63" height="58">
-                        <img class="img-responsive icon trade" src="./img/copy-trade/hero-trade.png" alt="" width="314"
+                        <img class="img-responsive icon icon-google"
+                            src="/custom/adrofx_theme/img/copy-trade/icon-google.png" alt="" width="72"
+                            height="78">
+                        <img class="img-responsive icon icon-tesla"
+                            src="/custom/adrofx_theme/img/copy-trade/icon-tesla.png" alt="" width="102"
+                            height="90">
+                        <img class="img-responsive icon icon-nasdaq"
+                            src="/custom/adrofx_theme/img/copy-trade/icon-nasdaq.png" alt="" width="85"
+                            height="79">
+                        <img class="img-responsive icon icon-amazon"
+                            src="/custom/adrofx_theme/img/copy-trade/icon-amazon.png" alt="" width="63"
+                            height="58">
+                        <img class="img-responsive icon trade"
+                            src="/custom/adrofx_theme/img/copy-trade/hero-trade.png" alt="" width="314"
                             height="173">
 
-                        <div class="img-container copy page">
-                            <div class="phone-frame">
-                                <img class="img-responsive" src="./img/main-page/phone-frame.png" alt="phone frame"
-                                    width="444" height="692">
 
-                                <div class="inner">
-                                    <div class="video-container">
-                                        <video id="hero-copy-trading" class="video copy" autoplay muted loop
-                                            playsinline>
-                                            <source data-src="./img/main-page/copy-trading.mp4" type="video/mp4">
-                                            <span>Sorry,your browser does not support the video tag.</span>
-                                        </video>
-                                    </div>
-                                </div>
-                            </div>
+
+
+                        <div class="img-container copy page">
 
                             <picture>
                                 <source media="(max-width:575px)"
-                                    srcset="./img/copy-trade/hero-320.png, ./img/copy-trade/hero-320@x1-5.png 1.5x, ./img/copy-trade/hero-320@x2.png 2x">
-
-                                <img class="img-responsive trader" src="./img/copy-trade/man.png" alt="phone frame">
+                                srcset="/custom/adrofx_theme/img/copy-trade/hero-320.png, /custom/adrofx_theme/img/copy-trade/hero-320@x1-5.png 1.5x, /custom/adrofx_theme/img/copy-trade/hero-320@x2.png 2x">
+                                <source media="(max-width:1198px)" srcset="/custom/adrofx_theme/img/copy-trade/man-lg.png">
+                                <img class="img-responsive trader"
+                                    src="/custom/adrofx_theme/img/copy-trade/man.png" alt="phone frame">
                             </picture>
 
+                            <div class="video-container">
+                                <video class="video page" autoplay muted loop playsinline>
+                                    <source src="/custom/adrofx_theme/img/main-page/copy-trade.webm"
+                                        type="video/webm">
+                                    <span>Sorry,your browser does not support the video tag.</span>
+                                </video>
+                            </div>
                         </div>
 
                     </div>
@@ -140,7 +135,7 @@
 
         </section>
 
-        <section class="copy-trading awards">
+        <!-- <section class="copy-trading awards">
             <div class="top section-padding">
                 <div class="container">
                     <div class="row">
@@ -557,7 +552,7 @@
                 </div>
 
             </section>
-        </div>
+        </div> -->
 
         <!-- <section class="top-choose section-padding">
 
@@ -809,11 +804,11 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
-    <script type="module" src="/custom/adrofx_theme/js/hero-load-video.js"></script>
-    <script type="module" src="/custom/adrofx_theme/js/splide.min.js"></script> 
+    <!-- <script type="module" src="/custom/adrofx_theme/js/hero-load-video.js"></script> -->
+    <script type="module" src="/custom/adrofx_theme/js/splide.min.js"></script>
 
     <script type="module" src="/custom/adrofx_theme/js/splide-auto-scroll.js"></script>
-    <script type="module" src="/custom/adrofx_theme/js/awards.js"></script> 
+    <script type="module" src="/custom/adrofx_theme/js/awards.js"></script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>

@@ -52,14 +52,6 @@
   fill: var(--dark-800);
 }
 
-.container {
-  max-width: 1320px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
 @font-face {
   font-family: "Roboto bold", sans-serif;
   font-style: normal;
@@ -316,6 +308,14 @@ img {
   margin-right: 10px;
 }
 
+.container {
+  max-width: 1320px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .mask,
 .overflow {
   overflow: hidden;
@@ -361,7 +361,7 @@ img {
   border-radius: 100px;
 }
 
-.rounded {
+.rounded-100 {
   border-radius: 100px;
 }
 
@@ -638,7 +638,28 @@ img {
     display: none;
   }
 }
+.pt-5 {
+  padding-top: 50px;
+}
+
+.pb-5 {
+  padding-bottom: 50px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--dark-50);
+}
+
 @media screen and (max-width: 767.98px) {
+  .sidebar.hide {
+    width: 0;
+  }
+  .sidebar {
+    width: 0;
+  }
+  .toogle {
+    display: none;
+  }
   .section-padding {
     padding: 60px 0;
   }

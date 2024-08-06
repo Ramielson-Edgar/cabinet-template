@@ -1,4 +1,4 @@
-@import "../../css/templates/template.scss";
+@import '../helpers/helpers.scss';
 
 .dropdown.lang>.btn-base {
     position: relative;
@@ -25,7 +25,7 @@
     height: 14px;
 
     cursor: pointer;
-    background: url("../../icons/icon-arrow-triangle.svg");
+    background: url("../../custom/adrofx_theme/images/icons/icon-arrow-triangle.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;

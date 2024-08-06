@@ -1,0 +1,496 @@
+.staking-coin .balance {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.staking-coin .balance .inner .title {
+  font-size: 18px;
+  line-height: 1.5;
+  text-transform: capitalize;
+}
+
+.staking-coin .balance .inner .text {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.staking-coin .balance .inner.current-balance {
+  border-right: 1px solid var(--grey200);
+  padding-right: 20px;
+}
+
+.staking-coin .balance .inner.rewards {
+  padding-left: 20px;
+}
+
+.staking-coin .balance .inner.rewards > .title {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+.dropdown.date-filter button {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey500);
+  text-transform: capitalize;
+  padding: 3px 8px;
+  border: unset;
+}
+
+.dropdown.date-filter svg {
+  margin-left: 10px;
+}
+
+.dropdown.date-filter .dropdown-menu {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 10px 10px 30px -5px var(--grey300);
+  padding: unset;
+  margin: unset;
+  border: unset;
+}
+
+.dropdown.date-filter.open .dropdown-menu {
+  top: 0;
+  left: 110%;
+}
+
+.dropdown.date-filter .dropdown-menu .link {
+  padding: 10px;
+}
+
+.dropdown.date-filter .dropdown-menu .link:hover {
+  color: #fff;
+  background-color: var(--blue-500);
+}
+
+.dropdown.date-filter .dropdown-menu .dropdown-menu__item:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.dropdown.date-filter .dropdown-menu .dropdown-menu__item:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.staking-coin .inner.rewards > .inner {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+}
+
+.staking-coin .inner.rewards .icon-dot {
+  position: relative;
+  display: inline-block;
+  margin-left: 17px;
+}
+
+.staking-coin .inner.rewards .icon-dot::before {
+  position: absolute;
+  top: 45%;
+  left: -8.5px;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--grey600);
+}
+
+.staking-coin .balance .inner.current-balance .title,
+.staking-coin .balance .inner.total {
+  margin-bottom: 7px;
+}
+
+@media screen and (max-width: 1198.98px) {
+  .staking-coin .balance .inner .text {
+    font-size: 16px;
+  }
+  .staking-coin .balance .inner .title,
+  .staking-coin .balance .inner.rewards > .title {
+    font-size: 14px;
+  }
+}
+@media (max-width: 575.98px) {
+  .dropdown.date-filter.open .dropdown-menu {
+    top: 40px;
+    left: -88px;
+  }
+  .dropdown.date-filter .dropdown-menu,
+  .staking-coin .balance .inner .title,
+  .staking-coin .balance .inner.rewards > .title {
+    font-size: 13px;
+  }
+  .staking-coin .balance .inner.current-balance {
+    padding-right: 10px;
+  }
+  .staking-coin .balance .inner.rewards {
+    padding-left: 10px;
+  }
+  .staking-coin .inner.rewards .icon-dot {
+    margin-left: 17px;
+  }
+}
+.strategy-details {
+  padding: 20px;
+  border-radius: 10px;
+  background: #F9F9F9;
+}
+
+.strategy-details .section-title {
+  font-family: "Roboto medium", sans-serif;
+  font-size: clamp(1.44rem, 0.6086rem + 2.3136vw, 2.3438rem);
+  line-height: 1.5;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+}
+
+.strategy-details.md {
+  display: none;
+}
+
+@media screen and (max-width: 1198.98px) {
+  .strategy-details .section-title {
+    font-size: 16px;
+  }
+  .strategy-details.lg {
+    display: none;
+  }
+  .strategy-details.md {
+    display: block;
+  }
+}
+@media screen and (max-width: 970px) {
+  .strategy-details.md {
+    display: none;
+  }
+}
+@media screen and (max-width: 760px) {
+  .strategy-details.md {
+    display: block;
+  }
+  .strategy-details {
+    margin-bottom: 30px;
+  }
+}
+.content {
+  background: #fff;
+  padding: 15px;
+}
+
+.trading-chart {
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  width: 100%;
+  height: 339px;
+  background: grey;
+}
+
+.staking-content,
+.staking-header {
+  padding: 0 15px;
+}
+
+.staking-header .row {
+  display: flex;
+  align-items: flex-end;
+}
+
+@media screen and (max-width: 1198px) {
+  .staking-header .row {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+@media screen and (max-width: 970px) {
+  .staking-header .row {
+    display: flex;
+    align-items: unset;
+    flex-wrap: wrap;
+  }
+}
+.feedback .helpers .inner {
+  display: flex;
+  align-items: center;
+}
+
+.feedback .helpers,
+.feedback > .inner,
+.feedback .currencies {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.feedback > .inner .text,
+.feedback > .inner .title {
+  font-size: 24px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.feedback .progress {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 4px;
+  border-radius: 10px;
+  background: #D9D9D9;
+  margin: 9px 0;
+  box-shadow: unset;
+  font-size: unset;
+  line-height: unset;
+  float: unset;
+}
+
+.feedback .progress .progress-bar {
+  width: 100%;
+  height: 100%;
+  background: #4CD7AB;
+}
+
+.feedback .helpers {
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+
+.feedback .helpers .helpers__item {
+  display: flex;
+  align-items: center;
+}
+
+.feedback .helpers .helpers__item .helpers-tooltip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #E6E6E6;
+  padding: 0;
+}
+
+.feedback .helpers .helpers__item .title {
+  text-transform: uppercase;
+  color: var(--grey500);
+  margin-bottom: 0;
+  margin-right: 8px;
+}
+
+@media screen and (max-width: 1198.98px) {
+  .feedback > .inner .text,
+  .feedback > .inner .title {
+    font-size: 19px;
+  }
+}
+@media (max-width: 575.98px) {
+  .feedback > .inner .text, .feedback > .inner .title {
+    font-size: 15px;
+  }
+}
+.list.funds-actions {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  -moz-column-gap: 6px;
+       column-gap: 6px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-bottom: 40px;
+}
+
+.list.funds-actions .list__item {
+  display: inherit;
+  flex-basis: calc(33.3333333333% - 10px);
+}
+
+.list.funds-actions .list__item .btn-base.btn-base-lg {
+  padding: 8px 20px;
+  font-size: 13px;
+}
+
+@media (max-width: 575.98px) {
+  .list.funds-actions .list__item .btn-base.btn-base-lg {
+    padding: 5px 15px;
+  }
+}
+.strategy-details .list-features {
+  margin-bottom: 30px;
+}
+
+.list.funds-actions.md {
+  display: none;
+}
+
+.strategy-details .list-features .list-features__header {
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-radius: unset;
+  flex: 1 0 60px;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.strategy-details .list-features .list-features__body {
+  text-align: left;
+  display: inherit;
+  flex-direction: column;
+  flex: 1 0 120px;
+}
+
+.strategy-details .list-features .list-features__title {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #949494;
+  margin-bottom: 6px;
+}
+
+.strategy-details .list-features .list-features__text {
+  font-family: "Roboto medium", sans-serif;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 1198.98px) {
+  .strategy-details .list-features {
+    margin-bottom: 30px;
+  }
+  .strategy-details .list-features .list-features__header {
+    flex: 1 0 20px;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+  }
+  .feedback .helpers .helpers__item .title,
+  .strategy-details .list-features .list-features__title {
+    font-size: 12px;
+  }
+  .strategy-details .list-features .list-features__text {
+    font-size: 13px;
+  }
+  .list.funds-actions.md {
+    display: flex;
+    margin-left: 0;
+  }
+  .list.funds-actions.lg {
+    display: none;
+  }
+}
+@media (max-width: 575.98px) {
+  .strategy-details .list-features {
+    gap: 20px;
+  }
+  .strategy-details .list-features .list-features__item {
+    flex-basis: calc(50% - 10px);
+    flex-wrap: wrap;
+  }
+}
+.staking-coin {
+  margin-bottom: 40px;
+}
+
+.staking-coin .coin {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 17px;
+       column-gap: 17px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.coin__name {
+  font-family: "Roboto bold", sans-serif;
+  font-weight: 700;
+  flex: 1 0 auto;
+}
+
+.coin__name,
+.staking-coin .total-balance .title {
+  color: #232323;
+  font-size: 50px;
+  line-height: 1.5;
+}
+
+.coin__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #EEEEEE;
+}
+
+.staking-coin .total-balance .sub-title {
+  color: #818181;
+  font-size: 20px;
+  line-height: 1.5;
+  text-transform: capitalize;
+}
+
+.fill-grey {
+  fill: var(--grey300);
+}
+
+.staking-coin .total-balance .js-btn-balance:hover,
+.staking-coin .total-balance .js-btn-balance:focus,
+.staking-coin .total-balance .js-btn-balance {
+  background: transparent;
+  outline: unset;
+  box-shadow: unset;
+}
+
+.staking-coin .total-balance .js-btn-balance:hover .fill-grey,
+.staking-coin .total-balance .js-btn-balance:focus .fill-grey {
+  fill: var(--grey400);
+}
+
+.coin__name::first-letter,
+.staking-coin .total-balance {
+  text-transform: uppercase;
+}
+
+.staking-coin .coin,
+.staking-coin .total-balance {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1198.98px) {
+  .staking-coin {
+    margin-bottom: 20px;
+  }
+  .coin__name,
+  .staking-coin .total-balance .title {
+    font-size: 24px;
+  }
+  .staking-coin .total-balance .sub-title {
+    font-size: 16px;
+  }
+  .coin__icon {
+    flex: 1 0 40px;
+    height: 40px;
+  }
+  .coin__icon > img {
+    max-width: 30%;
+  }
+  .staking-coin .total-balance button {
+    padding: 6px;
+  }
+  .staking-coin .total-balance .js-btn-balance svg {
+    width: 17px;
+    height: 11px;
+  }
+  .staking-coin .coin, .staking-coin .total-balance {
+    margin-bottom: 12px;
+  }
+}/*# sourceMappingURL=eth-main.css.map */

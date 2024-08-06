@@ -1,6 +1,5 @@
 @import '../helpers/helpers.scss';
 
-
 @font-face {
     font-family: 'Roboto bold', sans-serif;
     font-style: normal;
@@ -287,9 +286,54 @@ img {
 }
 
 
-// .section-padding {
-//     padding: 30px 0;
-// }
+.container {
+    max-width: 1320px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+ 
+.stroke-white {
+    @extend %stroke-white;
+}
+
+.stroke-green {
+    @extend %stroke-green;
+}
+
+.stroke-blue {
+    @extend %stroke-blue;
+}
+
+
+.stroke-dark {
+    @extend %stroke-dark;
+}
+
+
+
+.fill-white {
+    @extend %fill-white;
+}
+
+.fill-green {
+    @extend %fill-green;
+}
+
+.fill-blue {
+    @extend %fill-blue;
+}
+
+.fill-yellow {
+    @extend %fill-yellow;
+}
+
+.fill-black {
+    @extend %fill-black;
+}
+
 
 .mask,
 .overflow {
@@ -348,7 +392,7 @@ img {
     border-radius: 100px;
 }
 
-.rounded {
+.rounded-100 {
     border-radius: 100px;
 }
 
@@ -673,34 +717,30 @@ img {
     }
  }
  
-// .pt-5 {
-//     padding-top: 50px;
-// }
+.pt-5 {
+    padding-top: 50px;
+}
 
-// .pb-5 {
-//     padding-bottom: 50px;
-// }
+.pb-5 {
+    padding-bottom: 50px;
+}
 
-// .border-bottom {
-//     border-bottom: 1px solid var(--dark-50);
-// }
-
-// .account-dashboard {
-//     width: 100%;
-// }
-
+.border-bottom {
+    border-bottom: 1px solid var(--dark-50);
+}
+ 
 
 @media screen and (max-width:767.98px) {
-    // .sidebar.hide {
-    //     width: 0;
-    // }
-    // .sidebar {
-    //     width: 0;
-    // }
+    .sidebar.hide {
+        width: 0;
+    }
+    .sidebar {
+        width: 0;
+    }
 
-    // .toogle {
-    //     display: none;
-    // }
+    .toogle {
+        display: none;
+    }
 
     .section-padding {
         padding: 60px 0;

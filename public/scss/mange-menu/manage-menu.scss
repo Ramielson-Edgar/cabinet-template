@@ -1,4 +1,5 @@
-@import "../templates/template.scss";
+
+@import '../helpers/helpers.scss';
 
 .list.manage-menu {
     justify-content: space-between;
@@ -33,13 +34,14 @@
 }
 
 
+.section-header > .link:hover .icon-arrow,
 .list.manage-menu .link .icon-arrow {
     opacity: 0;
     transform: translateX(-5px);
     transition: opacity, transform 0.4s var(--transition) -0.15s;
 }
 
-.section-header .link:hover .icon-arrow,
+.section-header > .link:hover .icon-arrow,
 .list.manage-menu .link:hover .icon-arrow {
     opacity: 1;
     transform: translateX(10px);

@@ -1,5 +1,14 @@
- 
- 
+@import '../helpers/helpers.scss';
+
+.top-choose {
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+
+    background: var(--white);
+    border-radius: 50px;
+}
+
 .section-header.top-choose {
     display: flex;
     flex-direction: column;
@@ -20,61 +29,61 @@
 
 
 
-.sticky-container,
-.top-choose {
-    background: var(--white);
-    border-radius: 50px;
-
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-
-.sticky  {
+.top-choose>.top {
     position: sticky;
-    top: 0;
-
-    width: 100%;
+    top: 10px;
 }
- 
 
- 
+.top-choose>.bottom {
+    height: 200vh;
+}
+
+.top-choose>.bottom>.sticky {
+    overflow: hidden;
+    position: sticky;
+    top: 350px;
+
+    height: 430px;
+}
+
+
 .list-features.horizontal-scroll {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 13%;
 
-    display: flex;
-    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: repeat(4, 522px);
+    justify-content: flex-start;
+    gap: 15px;
+
+    height: 100%;
+    width: 150vw;
+
+    padding: 30px 0;
+    background: var(--white);
+
     will-change: transform;
-    
-    margin-left: 40%;
 }
 
-.list-features.horizontal-scroll .list-features__item:not(:last-child) {
-    margin-right: 10px;
-}
 
 .list-features.horizontal-scroll .list-features__item {
     overflow: hidden;
     position: relative;
 
-    display: inherit;
+    display: flex;
     flex-direction: column;
-    flex-shrink: 0;
-    flex-basis: 552px;
-    height: 359px;
- 
-    padding: 30px;
+
+    padding: 20px 20px 40px 20px;
     border-radius: 37px;
     background: #F5F5F5;
-
- 
 }
 
 .list-features.horizontal-scroll .list-features__header {
     position: relative;
     align-items: center;
     justify-content: flex-start;
-    flex: 1 0 200px;
+    flex: 1 1 200px;
 
     width: 100%;
     height: auto;
@@ -82,8 +91,6 @@
     border-radius: unset;
     margin-bottom: 20px;
 }
-
- 
 
 .list-features.horizontal-scroll .list-features__item:hover .icon-hover {
     transform: translateY(10px) rotate(3.728deg);
@@ -162,39 +169,68 @@
 
 
 
+
+
+@media screen and (min-width:1920px) {
+    .top-choose>.bottom>.sticky {
+        max-height: 50vh;
+        height: 400px;
+    }
+
+    .list-features.horizontal-scroll {
+        left: 30%;
+    }
+}
+
 @media screen and (max-width:1198px) {
- .list-features__title {
+    .list-features.horizontal-scroll .list-features__title {
         font-size: 20px;
     }
+
+    // .top-choose>.bottom>.sticky {
+    //     height: 32vh;
+    // }
 }
 
 @media screen and (max-width:991.98px) {
-    .list-features.horizontal-scroll {
-        margin-left: 0;
+    .top-choose>.bottom {
+        height: 350vh;
     }
+
+    .list-features.horizontal-scroll {
+        width: 350vw;
+    }
+
+    .top-choose>.bottom>.sticky {
+        top: 300px;
+    }
+
+ 
+
 }
 
 @media screen and (max-width:767.98px) {
-    .list-features.horizontal-scroll .list-features__item {
-        flex-basis: 450px;
-        height: auto;
+    .top-choose>.bottom>.sticky {
+        height: 400px;
     }
+
+    .top-choose>.bottom {
+        height: 400vh;
+    }
+
+    .list-features.horizontal-scroll {
+        width: 400vw;
+        left: 7%;
+    }
+
+
 }
 
-
 @media screen and (max-width:575.98px) {
-    .sticky-container {
+    .top-choose {
         margin: 0;
         border-radius: 0;
     }
-    .list-features.horizontal-scroll {
-        margin-top: 50px;
-    }
-
-    .list-features.horizontal-scroll .list-features__item {
-        flex-basis: 280px;
-        height: auto;
-    } 
 
     .section-header.top-choose {
         align-items: flex-start;
@@ -203,13 +239,36 @@
         margin-bottom: 0;
     }
 
+    .top-choose>.top {
+        position: static;
+        height: auto;
+    }
+
+    .top-choose>.bottom {
+        height: auto;
+    }
+
+    .top-choose>.bottom>.sticky {
+        overflow: auto;
+        position: static;
+        height: auto;
+    }
+
+
+    .list-features.horizontal-scroll {
+        position: static;
+
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
 
     .list-features.horizontal-scroll .list-features__header {
         display: flex;
         align-items: center;
         justify-content: center;
 
-        flex: 1 1 100px;
+        flex: 1 1 170px;
         height: 170px;
     }
 

@@ -92,53 +92,6 @@
     fill: var(--dark-800)
 }
 
-.stroke-white {
-    @extend %stroke-white;
-}
-
-.stroke-green {
-    @extend %stroke-green;
-}
-
-.stroke-blue {
-    @extend %stroke-blue;
-}
-
-
-.stroke-dark {
-    @extend %stroke-dark;
-}
-
-
-
-.fill-white {
-    @extend %fill-white;
-}
-
-.fill-green {
-    @extend %fill-green;
-}
-
-.fill-blue {
-    @extend %fill-blue;
-}
-
-.fill-yellow {
-    @extend %fill-yellow;
-}
-
-.fill-black {
-    @extend %fill-black;
-}
-
-.container {
-    max-width: 1320px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
 
 
 @mixin background-image($repeat, $top-bottom, $left-right, $width, $height) {

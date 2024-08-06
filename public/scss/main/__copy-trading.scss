@@ -1,6 +1,7 @@
- 
+@import '../helpers/helpers.scss';
+
 .copy-trading {
-    background: url('../../../img/main-page/copy-trading-pips.png'), var(--white);
+    background: url('../../custom/adrofx_theme//img/main-page/copy-trading-pips.png'), var(--white);
     @include background-image(no-repeat, center, center, contain, contain);
     padding-top: 70px;
 }
@@ -28,103 +29,84 @@
     padding: 14px 50px;
 }
 
-
-.img-container.copy .phone-frame {
-    overflow: hidden;
+.img-container.copy {
     position: relative;
-
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
 
-    width: 67%;
-    height: 100%;
-}
-
-.img-container.copy .phone-frame img {
-    position: relative;
-    width: 36.042vw;
-    z-index: 2;
-}
-
-.img-container.copy .phone-frame .inner {
-    overflow: hidden;
-    position: absolute;
-    top: 1.563vw;
-    left: 50.5%;
-    transform: translateX(-50%);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-    width: 89%;
-    height: 100%;
-
-    border-top-left-radius: 3.5vw;
-    border-top-right-radius: 3.5vw;
-}
-
-.img-container.copy .phone-frame .inner .video-container {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-.img-container.copy .phone-frame .video-container>.video {
-    display: block;
     width: 100%;
     height: auto;
+}
+
+.img-container.copy .video-container {
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.img-container.copy .video-container .video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 444px;
+    height: 692px;
+
     object-fit: contain;
     object-position: center;
-    aspect-ratio: 9/16;
+    aspect-ratio: 16/9;
 }
+
 
 
 .img-container.copy .trader {
     position: absolute;
     bottom: 0;
-    left: 50%;
+    right: 10%;
 
     width: auto;
     height: calc(100% - 50px);
     z-index: 4;
 }
 
-
-.img-container.copy .animation {
+.img-container.copy .icon-users {
     position: relative;
     top: 100px;
-    left: 50px;
-
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-
-    width: max-content;
-    padding: 7px;
-
-    background: var(--green-500);
-    margin-left: auto;
+    left: calc(100% - 102px);
 }
 
-.img-container.copy .animation svg {
-    margin-left: 20px;
-    margin-right: 20px;
-}
+// .img-container.copy .animation {
+//     position: relative;
+//     top: 100px;
+//     left: 0;
 
-@media screen and (min-width:1441px) {
-    .img-container.copy .phone-frame .inner {
-        top:30px;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-        width: 89.9%;
-    }
-}
+//     display: flex;
+//     align-items: center;
+//     justify-content: flex-start;
+
+//     width: max-content;
+//     padding: 7px;
+
+//     background: var(--green-500);
+//     margin-left: auto;
+// }
+
+// .img-container.copy .animation svg {
+//     margin-left: 20px;
+//     margin-right: 20px;
+// }
+
+// @media screen and (min-width:1441px) {
+//     .img-container.copy .phone-frame .inner {
+//         top: 30px;
+//         border-top-left-radius: 15px;
+//         border-top-right-radius: 15px;
+//         width: 89.9%;
+//     }
+// }
 
 
 @media screen and (max-width: 1198px) {
@@ -140,73 +122,34 @@
 
 @media screen and (max-width:991.98px) {
 
+    .img-container.copy .animation,
     .img-container.copy .trader {
         display: none;
     }
 
-
-    .img-container.copy .animation {
-        left: 55%;
-        top: 64px;
+    .img-container.copy {
+        @include center-flex('ver');
+        @include center-flex('hor')
     }
-
 
     .section-header.copy .section-header__title {
         font-size: 30px;
         line-height: normal;
     }
 
-
-    .img-container.copy .phone-frame {
-        width: 100%;
+    .img-container.copy .icon-users {
+        position: static;
     }
 
-
+    .img-container.copy > .video-container > .video {
+        width: 44.803vw;
+        height: 69.828vw;
+    }
 }
 
 
 @media screen and (max-width:767.98px) {
-
-    .copy-trading .align-items-center {
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-
-    .copy-trading-phone {
-        order: 1;
-    }
-
-    .copy-header {
-        order: 0;
-    }
-
-    .img-container.copy .phone-frame .inner .video-container,
-    .img-container.copy .phone-frame img {
-        display: block;
-        max-width: 100%;
-        width: 50%;
-        height: auto;
-    }
-
-    .img-container.copy .phone-frame .inner .video {
-        border-top-right-radius: 35px;
-        border-top-left-radius: 35px;
-    }
-    
-    .img-container.copy .phone-frame .inner {
-        top: 3vw;
-        width: 90%;
-        left: 50%;
-    }
-
-
  
-
-    .img-container.copy .animation {
-        top: 0;
-        left: calc(100% / 2 - 74px);
-        margin-left: 0;
-    }
 
 }
 
@@ -214,12 +157,12 @@
     .section-header.copy {
         margin-bottom: 40px;
     }
- 
+
     .section-header.copy .section-header__title {
         font-size: 24px;
     }
 
-    .section-header.copy .section-header__text +.btn-outline.blue,
+    .section-header.copy .section-header__text+.btn-outline.blue,
     .section-header.copy .section-header__text {
         font-size: 13px;
     }
@@ -238,26 +181,12 @@
         margin-bottom: 30px;
     }
 
-    .img-container.copy .phone-frame .inner {
-        left: 50.3%;
-    }
-
-    .img-container.copy .phone-frame .inner .video {
-        border-top-right-radius: 10vw;
-        border-top-left-radius: 10vw;
-    }
- 
-
-    .img-container.copy .phone-frame .inner .video-container,
-    .img-container.copy .phone-frame img {
+    .img-container.copy .video-container .video {
         width: 100%;
+        max-width: 100%;
+        height: 100%;
+        max-height: 100%;
+        aspect-ratio: 9/16;
     }
-
-
-    .img-container.copy .phone-frame .inner {
-        top: 6vw;
-        width: 90%;
-    }
-
 
 }
