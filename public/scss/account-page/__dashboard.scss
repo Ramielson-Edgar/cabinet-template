@@ -198,6 +198,10 @@
         min-height: 100%;
     }
 
+    .content-container {
+        overflow: unset;
+    }
+
     .sidebar {
         display: none;
         width: 0;
