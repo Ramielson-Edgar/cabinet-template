@@ -12,5 +12,11 @@
  }
 
  
-
+ @media (max-width: 575.98px) {
+   .banner.eth-staking {
+      min-height: 100px;
+      align-items: flex-end;
+      margin-bottom: 30px;
+   }
+ }
  

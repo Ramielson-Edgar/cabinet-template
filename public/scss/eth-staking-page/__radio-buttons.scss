@@ -1,0 +1,94 @@
+@import '../helpers/helpers.scss';
+
+.list.radio-buttons {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.563vw;
+    gap: 12px;
+}
+
+.list.radio-buttons .list__item {
+    display: inherit;
+    flex-basis: calc(100% / 3 - 12px);
+    @include center-flex("hor");
+}
+
+
+.list.radio-buttons .list__item label,
+.buttons-container +.btn-outline-blue {
+    width: 100%;
+}
+
+.list.radio-buttons .list__item label,
+.buttons-container +.btn-outline-blue {
+    border-radius: 6px;
+}
+
+.list.radio-buttons .list__item label {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #6B7C94;
+    border: 1px solid #A1AAB8;
+    padding: 0.781vw;
+    @extend %text-capitalize;
+}
+
+.list.radio-buttons .list__item label:hover{
+    color: #113252;
+    background: var(--blue50);
+    border-color: var(--blue50);
+}
+
+.list.radio-buttons .list__item input{
+    display: none;
+}
+
+.list.radio-buttons .list__item input:checked+label {
+    color: var(--white);
+    background: var(--blue500);
+    border-color: transparent;
+}
+
+
+
+.buttons-container + .btn-blue:hover {
+    background: var(--blue700);
+}
+
+
+
+@media screen and (min-width:1441px) {
+    .list.radio-buttons .list__item label {
+        padding: 11px;
+    }
+
+    .list.radio-buttons  {
+        margin-bottom: 30px;
+    }
+    
+}
+
+
+
+@media (max-width: 575.98px) {
+    .list.radio-buttons {
+        margin-bottom: 10px;
+        gap: 8px;
+    }
+
+    .list.radio-buttons .list__item label {
+        font-size: 13px;
+        padding: 7px 14px;
+        margin: 0;
+    }
+
+    .list.radio-buttons .list__item {
+        flex: 1 0 auto;
+    }
+    
+}
+
+
+
+ 

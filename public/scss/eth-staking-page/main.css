@@ -1,4 +1,4 @@
-.list.radio-buttons .inner label {
+.list.radio-buttons .list__item label {
   text-transform: capitalize;
 }
 
@@ -17,6 +17,13 @@
   justify-content: center;
 }
 
+@media (max-width: 575.98px) {
+  .banner.eth-staking {
+    min-height: 100px;
+    align-items: flex-end;
+    margin-bottom: 30px;
+  }
+}
 .section-header.eth-staking {
   margin-bottom: 2.865vw;
 }
@@ -39,32 +46,62 @@
   text-transform: capitalize;
 }
 
-.list.radio-buttons .inner label {
+@media screen and (min-width: 1441px) {
+  .section-header.eth-staking {
+    margin-bottom: 55px;
+  }
+  .section-header.eth-staking .section-header__title {
+    margin-bottom: 24px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .section-header.eth-staking .section-header__title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 574px) {
+  .section-header.eth-staking {
+    margin-bottom: 28px;
+  }
+  .section-header.eth-staking .section-header__title {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+}
+.list.radio-buttons .list__item label {
   text-transform: capitalize;
 }
 
 .form.eth-staking {
   width: 100%;
+  margin-bottom: 0;
+}
+
+.form.eth-staking > .inner,
+.form.eth-staking > .inner + .inner {
+  margin-bottom: 18px;
 }
 
 .form.eth-staking .inner {
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-bottom: 18px;
 }
 
 .form.eth-staking .inner .button-amount {
   position: absolute;
-  top: calc(50% + 9px);
+  top: calc(50% - 12px);
   right: 0;
-  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 50px;
+  height: 50px;
   background: transparent;
   border: unset;
+  box-shadow: unset;
+  padding: 3px;
 }
 
 .form.eth-staking .inner .button-amount:active,
@@ -72,10 +109,22 @@
 .form.eth-staking .inner .button-amount:focus {
   outline: none;
   border: unset;
+  background: transparent;
+  box-shadow: unset;
 }
 
 .form.eth-staking .inner .button-amount svg {
   position: absolute;
+  width: 30px;
+  height: 30px;
+}
+
+.form.eth-staking .inner .button-amount .icon.is-open {
+  display: block;
+}
+
+.form.eth-staking .inner .button-amount .icon {
+  display: none;
 }
 
 .form.eth-staking .inner,
@@ -92,6 +141,23 @@
   margin-bottom: 9px;
 }
 
+@media (max-width: 575.98px) {
+  .form.eth-staking .inner label {
+    font-size: 11px;
+  }
+  .form.eth-staking > .inner,
+  .form.eth-staking > .inner + .inner {
+    margin-bottom: 17px;
+  }
+  .form.eth-staking .buttons-container {
+    margin-bottom: 20px;
+  }
+  .form.eth-staking .inner .button-amount {
+    top: 23px;
+    width: 40px;
+    height: 40px;
+  }
+}
 .dropdown.network-select .dropdown-menu {
   border-radius: 7px;
   background: var(--white);
@@ -173,18 +239,15 @@ input[type=number] {
   color: hsla(215, 16%, 50%, 0.4);
 }
 
-.input::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  content: "";
-  width: 30px;
-  height: 30px;
-  background: red;
+@media (max-width: 575.98px) {
+  .input::-moz-placeholder {
+    font-size: 13px;
+  }
+  .input::placeholder {
+    font-size: 13px;
+  }
 }
-
-.list.radio-buttons .inner label {
+.list.radio-buttons .list__item label {
   text-transform: capitalize;
 }
 
@@ -192,9 +255,10 @@ input[type=number] {
   display: flex;
   align-items: center;
   margin-bottom: 1.563vw;
+  gap: 12px;
 }
 
-.list.radio-buttons .inner {
+.list.radio-buttons .list__item {
   display: inherit;
   flex-basis: calc(33.3333333333% - 12px);
   display: flex;
@@ -202,17 +266,17 @@ input[type=number] {
   justify-content: center;
 }
 
-.list.radio-buttons .inner label,
+.list.radio-buttons .list__item label,
 .buttons-container + .btn-outline-blue {
   width: 100%;
 }
 
-.list.radio-buttons .inner label,
+.list.radio-buttons .list__item label,
 .buttons-container + .btn-outline-blue {
   border-radius: 6px;
 }
 
-.list.radio-buttons .inner label {
+.list.radio-buttons .list__item label {
   text-align: center;
   font-size: 16px;
   line-height: 1.5;
@@ -221,17 +285,17 @@ input[type=number] {
   padding: 0.781vw;
 }
 
-.list.radio-buttons .inner label:hover {
+.list.radio-buttons .list__item label:hover {
   color: #113252;
   background: var(--blue50);
   border-color: var(--blue50);
 }
 
-.list.radio-buttons .inner input {
+.list.radio-buttons .list__item input {
   display: none;
 }
 
-.list.radio-buttons .inner input:checked + label {
+.list.radio-buttons .list__item input:checked + label {
   color: var(--white);
   background: var(--blue500);
   border-color: transparent;
@@ -241,10 +305,38 @@ input[type=number] {
   background: var(--blue700);
 }
 
+@media screen and (min-width: 1441px) {
+  .list.radio-buttons .list__item label {
+    padding: 11px;
+  }
+  .list.radio-buttons {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 575.98px) {
+  .list.radio-buttons {
+    margin-bottom: 10px;
+    gap: 8px;
+  }
+  .list.radio-buttons .list__item label {
+    font-size: 13px;
+    padding: 7px 14px;
+    margin: 0;
+  }
+  .list.radio-buttons .list__item {
+    flex: 1 0 auto;
+  }
+}
 .eth-staking {
   margin-bottom: 5.208vw;
 }
 
 .eth-staking.section-padding {
   padding-top: 20px;
+}
+
+@media screen and (min-width: 1441px) {
+  .eth-staking {
+    margin-bottom: 100px;
+  }
 }/*# sourceMappingURL=main.css.map */

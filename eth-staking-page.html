@@ -40,15 +40,15 @@
              
                         <div class="inner">
                             <label for="amount-ethereum">Amount Ethereum</label>
-                            <input class="input" type="number" id="amount-ethereum" name="amount"
+                            <input class="input" type="number" id="amount-ethereum" name="amount" value=""
                             placeholder="0.005 ETH" required/>
 
                             <button type="button" class="btn button-amount js-eth-amount">
-                                <svg width="24" height="24">
+                                <svg class="icon icon-open" width="24" height="24">
                                     <use href="./public/custom/adrofx_theme/images/icons/sprite.svg#icon-eye-open"></use>
                                 </svg>
 
-                                <svg width="24" height="24">
+                                <svg class="icon icon-close is-open" width="24" height="24">
                                     <use href="./public/custom/adrofx_theme/images/icons/sprite.svg#icon-eye-close"></use>
                                 </svg>
                             </button>
@@ -141,19 +141,19 @@
 
                             <div class="list radio-buttons">
 
-                                <div class="inner">
+                                <div class="list__item">
                                     <input class="radio-button" type="radio" id="flexible"  
                                         value="flexible" required />
                                     <label class="radio-button__label" for="flexible">Flexible</label>
                                 </div>
 
-                                <div class="inner">
+                                <div class="list__item">
                                     <input class="radio-button" type="radio" id="locked-3-6-months"
                                         name="middle" value="locked-3-6" />
                                     <label class="radio-button__label" for="locked-3-6-months">Locked 3-6 Months</label>
                                 </div>
 
-                                <div class="inner">
+                                <div class="list__item">
                                     <input class="radio-button" type="radio" id="locked-6-12-months"
                                         name="long" value="locked-6-12" />
                                     <label class="radio-button__label" for="locked-6-12-months">Locked 6-12
