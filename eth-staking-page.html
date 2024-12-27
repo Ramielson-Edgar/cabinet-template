@@ -34,15 +34,13 @@
                             to secure the ethereum network</p>
                     </header>
 
-                    <!-- class="form eth-staking" action="/submit-staking" method="POST" -->
-
-
+                
                     <form  class="form eth-staking" action="/submit-staking" method="POST">
 
-                        <!-- Поле ввода для суммы -->
+             
                         <div class="inner">
                             <label for="amount-ethereum">Amount Ethereum</label>
-                            <input class="input" type="text" id="amount-ethereum" name="amount" value=""
+                            <input class="input" type="number" id="amount-ethereum" name="amount"
                             placeholder="0.005 ETH" required/>
 
                             <button type="button" class="btn button-amount js-eth-amount">
@@ -56,8 +54,7 @@
                             </button>
                         </div>
 
-
-                        <!-- Выпадающий список для выбора сети -->
+ 
                         <div class="inner">
                             <label for="network">Network</label>
                             <div class="dropdown network-select">
@@ -82,8 +79,7 @@
 
                                 </button>
 
-                                <!-- <input class="input serch" type="text" name="search" placeholder="search"> -->
-
+ 
                                 <ul class="dropdown-menu icon" aria-labelledby="network">
                                     <li class="dropdown-item border-bottom">
                                         <a class="link" href="#">
@@ -139,7 +135,7 @@
                         </div>
 
 
-                        <!-- Кнопки выбора времени блокировки -->
+ 
                         <fieldset class="buttons-container">
                             <legend class="sr-only">Staking Period</legend>
 
@@ -169,7 +165,7 @@
                         </fieldset>
 
 
-                        <!-- Кнопка отправки -->
+          
                         <button class="btn-base btn-base-lg btn-outline-blue text-capitalize" type="submit"
                             name="button">submit application</button>
                     </form>
@@ -177,7 +173,6 @@
             </div>
 
         </div>
-
 
     </section>
 

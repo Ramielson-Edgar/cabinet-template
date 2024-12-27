@@ -3,8 +3,12 @@ window.addEventListener('DOMContentLoaded', () => {
     const animation = document.getElementById('staking-banner');
     const selectItems = document.querySelectorAll('.dropdown.network-select .dropdown-menu .dropdown-item');
     const menu = document.querySelector('.currnet-chain');
-    const ethAmount = document.getElementById("amount-ethereum");
+    const ethInputElement = document.getElementById("amount-ethereum");
     const btnHideAmount = document.querySelector('.js-eth-amount');
+
+    let isHideAmount = false;
+    let inputValue = null;
+ 
 
 
     const params = {
@@ -16,7 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     function runLottieAnimationBanner() {
-        const instance = lottie.loadAnimation(params);
+        return lottie.loadAnimation(params);
     }
 
     runLottieAnimationBanner()
@@ -31,55 +35,48 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function onHandleCopyContent(item) {
         item.addEventListener('click', () => {
+
             const content = item.querySelector('.link');
-            const clone = content.cloneNode(true);
-            menu.innerHTML = '';
-            menu.appendChild(clone);
-        })
-    }
-
-    //При нажатии на кнопку необходимо заменять текущий текст//
-    // в поле на звёздочки//
-
-
-    //1. Поклику получить доступ к числу//
-
-    //2. Заменить текст//
-
-    function getEthInputAmount() {
-        ethAmount.addEventListener('change', (e) => {
-            const amount = e.currentTarget.value;
-            onClickGetInputAmunt(amount)
-        })
-    };
-
-    getEthInputAmount();
-
-
-    function onClickGetInputAmunt(amount) {
-        let isHideAmount = false;
-
-        btnHideAmount.addEventListener('click', () => {
-            const inputAmount = amount;
-
-            if (isHideAmount === false) {
-                isHideAmount = true;
-                replaceAmountToSymbol(inputAmount);
-            } else {
-                isHideAmount = true;
-               return inputAmount;
+            if (content) {
+                const clone = content.cloneNode(true);
+                if (menu) {
+                    menu.innerHTML = '';
+                    menu.appendChild(clone);
+                }
             }
         })
+
     }
 
 
-    function replaceAmountToSymbol(inputAmount) {
-        const replaced = inputAmount.replace(/\d/g, '*');
-        console.log(replaced)
+ 
+    function getEthInputAmount() {
+        ethInputElement.addEventListener('change', (e) => {
+            inputValue = e.target.value;  
+        });
+    }
+ 
+    function onClickGetInputAmount() {
+        btnHideAmount.addEventListener('click', () => {
+            if (!isHideAmount) {
+                isHideAmount = true;
+                replaceAmountToSymbol(inputValue);  и
+            } else {
+                isHideAmount = false;
+                ethInputElement.value = inputValue;  
+            }
+        });
+    }
+ 
+    function replaceAmountToSymbol(value) {
+        if (!value) return;         
+        const text = String(value);
+        const sumbols = text.replace(/\d/g, '*');
+        ethInputElement.type ='text';
+        ethInputElement.value = sumbols; 
     }
 
-
-
-
-
+ 
+    getEthInputAmount();
+    onClickGetInputAmount();
 })
