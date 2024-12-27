@@ -51,7 +51,7 @@
 .list.market-cards > .list__item .text,
 .section-header.market .section-header__text,
 .section-header.market .section-header__title, .list.market-benefits .list__item,
-.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .label, .list-features__title {
+.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .label, .list.radio-buttons .inner label, .list-features__title {
   text-transform: capitalize;
 }
 
@@ -134,10 +134,6 @@
   --line-height-30: 30px;
   --line-height-24: 24px;
   --line-height-21: 21px;
-  --blue-500: #42a5f5;
-  --blue-900: #008DFF;
-  --blue-100: #7F9FF;
-  --green-500: #4CD7AB;
   --violet-900: #430F96;
   --violet-500: #6C25DE;
   --red-100: #ffdddc;
@@ -195,6 +191,7 @@
   --ease-out-slow: cubic-bezier(0.33, 1, 0.68, 1);
   --ease-in: cubic-bezier(0.12, 0, 0.39, 0);
   --ease-in-out: cubic-bezier(0.86, 0, 0.07, 1);
+  --ease-in-out-smooth: cubic-bezier(0.4, 0, 0.2, 1);
   --border-radius-100: 100px;
   --border-radius-30: 30px;
   --border-radius-24: 24px;
@@ -360,8 +357,8 @@ img {
   overflow: hidden;
 }
 
-.blue-500 {
-  color: var(--blue-500);
+.blue500 {
+  color: var(--blue500);
 }
 
 .white {
@@ -435,7 +432,9 @@ img {
 }
 
 .btn-base:hover {
-  transition: background-color 0.2s var(--transition) 0s, transform 0.6s var(--transition) 0.2s;
+  transition-duration: 0.4s;
+  transition-property: background-color, color;
+  transition-timing-function: var(--ease-in-out-smooth);
 }
 
 .btn-base .text-container {
@@ -458,7 +457,7 @@ img {
 }
 
 .btn-outline {
-  border: 1px solid var(--blue-500);
+  border: 1px solid var(--blue500);
   border-radius: 100px;
   transition: color border 0.5s var(--transition) 0.4s;
 }
@@ -470,39 +469,39 @@ img {
 
 .btn-outline.dark:hover {
   color: var(--white);
-  border: 1px solid var(--blue-500);
+  border: 1px solid var(--blue500);
 }
 
 .btn-outline.dark::before {
-  background: var(--blue-500);
+  background: var(--blue500);
 }
 
 .btn-outline.fill.blue {
-  border: 1px solid var(--blue-500);
-  color: var(--blue-500);
+  border: 1px solid var(--blue500);
+  color: var(--blue500);
 }
 
 .btn-outline.fill.blue::before {
-  background: var(--blue-500);
+  background: var(--blue500);
 }
 
 .btn-outline.fill.blue:hover {
   color: var(--white);
-  border: 1px solid var(--blue-500);
+  border: 1px solid var(--blue500);
 }
 
 .btn-outline.blue {
-  border: 1px solid var(--blue-500);
+  border: 1px solid var(--blue500);
   color: var(--white);
 }
 
 .btn-outline.blue::before {
-  background: var(--blue-500);
+  background: var(--blue500);
 }
 
 .btn-outline.blue:hover {
-  color: var(--blue-500);
-  border: 1px solid var(--blue-500);
+  color: var(--blue500);
+  border: 1px solid var(--blue500);
 }
 
 .btn-outline.green {
@@ -535,13 +534,26 @@ img {
 
 .btn-blue {
   color: var(--white);
-  background: var(--blue-500);
+  background: var(--blue500);
 }
 
 .btn-blue:focus,
 .btn-blue:hover {
   color: var(--white);
   background: var(--green-500);
+}
+
+.btn-outline-blue {
+  color: var(--blue500);
+  border-color: var(--blue500);
+}
+
+.btn-outline-blue:focus,
+.btn-outline-blue:hover {
+  color: var(--white);
+  background: var(--blue500);
+  border-color: var(--blue500);
+  outline: var(--blue500);
 }
 
 .btn-base.btn-grey-blue {
@@ -553,7 +565,7 @@ img {
 .btn-grey-blue:hover,
 .btn-grey-blue:focus {
   color: var(--white);
-  background-color: var(--blue-500);
+  background-color: var(--blue500);
 }
 
 .btn-base-xs {
@@ -624,7 +636,7 @@ img {
   }
   .align-items-lg-start {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
   }
   .flex-md-wrap {
     flex-wrap: wrap;
@@ -786,7 +798,7 @@ img {
 .list.market-cards > .list__item .text,
 .section-header.market .section-header__text,
 .section-header.market .section-header__title, .list.market-benefits .list__item,
-.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .label, .list-features__title {
+.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .label, .list.radio-buttons .inner label, .list-features__title {
   text-transform: capitalize;
 }
 
@@ -979,6 +991,524 @@ img {
     transform: translateX(0) rotate(0);
   }
 }
+.grid.account-item, .list,
+.list-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header.main .list .link:hover,
+.header.main .list .link:focus, .list.nav-menu .list__item .link, .btn-base, .btn-base:hover {
+  text-decoration: none;
+}
+.header.main .list .link:focus, .list.nav-menu .list__item .link:focus, .btn-base:focus, .list.nav-menu .list__item .link:active, .btn-base:active, .header.main .list .link:hover, .list.nav-menu .list__item .link:hover, .btn-base:hover {
+  text-decoration: none;
+}
+
+.slide-track .slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.list-features.step .list-features__header .progress-circle, .copy-trading.awards .bottom::before, .account-card.create-new .account-card__body .icon-plus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.list-features.step .list-features__item, .img-container.platforms, .country-card, .list-features.advantages .list-features__header, .list-features.advantages .list-features__item, .list.market-cards > .list__item, .splide__list.awards .splide__slide, .account-card {
+  border-radius: var(--border-radius-30);
+}
+
+.list.market-benefits .list__item, .label {
+  border-radius: var(--border-radius-100);
+}
+
+.list-features.step .list-features__item, .img-container.platforms, .country-card, .list-features.advantages .list-features__body, .list.market-cards > .list__item {
+  padding: var(--padding-card-30);
+}
+
+.section-header.hero .buttons-container .btn-blue, .section-header.hero .section-header__title .icon::before {
+  background: var(--blue-500);
+}
+
+.list.tags .list__item, .country-card .section-header.card .label, .benefits .list + .inner .text, .list-features.advantages .list-features__title,
+.list.market-cards > .list__item .title,
+.list.market-cards > .list__item .text,
+.section-header.market .section-header__text,
+.section-header.market .section-header__title, .list.market-benefits .list__item,
+.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .label, .list.radio-buttons .inner label, .list-features__title {
+  text-transform: capitalize;
+}
+
+.fill-white {
+  fill: var(--white);
+}
+
+.fill-green {
+  fill: var(--green-500);
+}
+
+.fill-blue {
+  fill: var(--blue-500);
+}
+
+.stroke-white {
+  stroke: var(--white);
+}
+
+.stroke-green {
+  stroke: var(--green-500);
+}
+
+.stroke-blue {
+  stroke: var(--blue-500);
+}
+
+.stroke-dark {
+  stroke: var(--dark-800);
+}
+
+.fill-yellow {
+  fill: #FFC452;
+}
+
+.fill-black {
+  fill: var(--dark-800);
+}
+
+.banner.eth-staking {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  border-radius: 12px;
+  background: #F1F9FF;
+}
+
+.banner.eth-staking #staking-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-header.eth-staking {
+  margin-bottom: 2.865vw;
+}
+
+.section-header.eth-staking .section-header__title {
+  font-size: 60px;
+  line-height: 1.2;
+  color: #0F2E4B;
+  margin-bottom: 1.302vw;
+}
+
+.section-header.eth-staking .section-header__text {
+  line-height: 1.5;
+  color: #415B75;
+  max-width: 282px;
+  margin-inline: auto;
+}
+
+.section-header.eth-staking .section-header__text::first-letter {
+  text-transform: capitalize;
+}
+
+.grid.account-item, .list,
+.list-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header.main .list .link:hover,
+.header.main .list .link:focus, .list.nav-menu .list__item .link, .btn-base, .btn-base:hover {
+  text-decoration: none;
+}
+.header.main .list .link:focus, .list.nav-menu .list__item .link:focus, .btn-base:focus, .list.nav-menu .list__item .link:active, .btn-base:active, .header.main .list .link:hover, .list.nav-menu .list__item .link:hover, .btn-base:hover {
+  text-decoration: none;
+}
+
+.slide-track .slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.list-features.step .list-features__header .progress-circle, .copy-trading.awards .bottom::before, .account-card.create-new .account-card__body .icon-plus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.list-features.step .list-features__item, .img-container.platforms, .country-card, .list-features.advantages .list-features__header, .list-features.advantages .list-features__item, .list.market-cards > .list__item, .splide__list.awards .splide__slide, .account-card {
+  border-radius: var(--border-radius-30);
+}
+
+.list.market-benefits .list__item, .label {
+  border-radius: var(--border-radius-100);
+}
+
+.list-features.step .list-features__item, .img-container.platforms, .country-card, .list-features.advantages .list-features__body, .list.market-cards > .list__item {
+  padding: var(--padding-card-30);
+}
+
+.section-header.hero .buttons-container .btn-blue, .section-header.hero .section-header__title .icon::before {
+  background: var(--blue-500);
+}
+
+.list.tags .list__item, .country-card .section-header.card .label, .benefits .list + .inner .text, .list-features.advantages .list-features__title,
+.list.market-cards > .list__item .title,
+.list.market-cards > .list__item .text,
+.section-header.market .section-header__text,
+.section-header.market .section-header__title, .list.market-benefits .list__item,
+.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .label, .list.radio-buttons .inner label, .list-features__title {
+  text-transform: capitalize;
+}
+
+.fill-white {
+  fill: var(--white);
+}
+
+.fill-green {
+  fill: var(--green-500);
+}
+
+.fill-blue {
+  fill: var(--blue-500);
+}
+
+.stroke-white {
+  stroke: var(--white);
+}
+
+.stroke-green {
+  stroke: var(--green-500);
+}
+
+.stroke-blue {
+  stroke: var(--blue-500);
+}
+
+.stroke-dark {
+  stroke: var(--dark-800);
+}
+
+.fill-yellow {
+  fill: #FFC452;
+}
+
+.fill-black {
+  fill: var(--dark-800);
+}
+
+.form.eth-staking {
+  width: 100%;
+}
+
+.form.eth-staking .inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.form.eth-staking .inner .button-amount {
+  position: absolute;
+  top: calc(50% + 9px);
+  right: 0;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: unset;
+}
+
+.form.eth-staking .inner .button-amount:active,
+.form.eth-staking .inner .button-amount:hover,
+.form.eth-staking .inner .button-amount:focus {
+  outline: none;
+  border: unset;
+}
+
+.form.eth-staking .inner .button-amount svg {
+  position: absolute;
+}
+
+.form.eth-staking .inner,
+.form.eth-staking .inner .input {
+  width: 100%;
+}
+
+.form.eth-staking label {
+  font-family: "Roboto-regular", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.3;
+  color: #113252;
+  margin-bottom: 9px;
+}
+
+.dropdown.network-select .dropdown-menu {
+  border-radius: 7px;
+  background: var(--white);
+  box-shadow: 18px 228px 64px 0px rgba(112, 112, 112, 0), 11px 146px 59px 0px rgba(112, 112, 112, 0.01), 6px 82px 49px 0px rgba(112, 112, 112, 0.05), 3px 37px 37px 0px rgba(112, 112, 112, 0.09), 1px 9px 20px 0px rgba(112, 112, 112, 0.1);
+}
+
+.dropdown.network-select .dropdown-menu,
+.dropdown.network-select > button {
+  width: 100%;
+}
+
+.dropdown.network-select > button:active,
+.dropdown.network-select .dropdown-item:hover {
+  background: #f3faff;
+}
+
+.dropdown.network-select .dropdown-item.border-bottom {
+  border-bottom: 1px solid rgba(196, 203, 212, 0.34);
+}
+
+.dropdown.network-select .dropdown-item .link {
+  padding: 15px;
+}
+
+.dropdown.network-select > button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 7px;
+  border: 1px solid #6B7C94;
+  background: transparent;
+  padding: 12px 20px;
+}
+
+.dropdown.network-select > button:focus {
+  outline-offset: inherit;
+  outline-color: var(--blue500);
+  box-shadow: unset;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.input {
+  color: #113252;
+  border-radius: 7px;
+  border: 1px solid #6B7C94;
+  padding: 12px 20px;
+}
+
+.input:-moz-placeholder-shown {
+  border-color: #6B7C94;
+}
+
+.input:placeholder-shown {
+  border-color: #6B7C94;
+}
+
+.input:focus {
+  outline-color: var(--blue500);
+}
+
+.input::-moz-placeholder {
+  font-size: 16px;
+  line-height: 1.5;
+  color: hsla(215, 16%, 50%, 0.4);
+}
+
+.input::placeholder {
+  font-size: 16px;
+  line-height: 1.5;
+  color: hsla(215, 16%, 50%, 0.4);
+}
+
+.input::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: red;
+}
+
+.grid.account-item, .list,
+.list-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header.main .list .link:hover,
+.header.main .list .link:focus, .list.nav-menu .list__item .link, .btn-base, .btn-base:hover {
+  text-decoration: none;
+}
+.header.main .list .link:focus, .list.nav-menu .list__item .link:focus, .btn-base:focus, .list.nav-menu .list__item .link:active, .btn-base:active, .header.main .list .link:hover, .list.nav-menu .list__item .link:hover, .btn-base:hover {
+  text-decoration: none;
+}
+
+.slide-track .slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.list-features.step .list-features__header .progress-circle, .copy-trading.awards .bottom::before, .account-card.create-new .account-card__body .icon-plus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.list-features.step .list-features__item, .img-container.platforms, .country-card, .list-features.advantages .list-features__header, .list-features.advantages .list-features__item, .list.market-cards > .list__item, .splide__list.awards .splide__slide, .account-card {
+  border-radius: var(--border-radius-30);
+}
+
+.list.market-benefits .list__item, .label {
+  border-radius: var(--border-radius-100);
+}
+
+.list-features.step .list-features__item, .img-container.platforms, .country-card, .list-features.advantages .list-features__body, .list.market-cards > .list__item {
+  padding: var(--padding-card-30);
+}
+
+.section-header.hero .buttons-container .btn-blue, .section-header.hero .section-header__title .icon::before {
+  background: var(--blue-500);
+}
+
+.list.tags .list__item, .country-card .section-header.card .label, .benefits .list + .inner .text, .list-features.advantages .list-features__title,
+.list.market-cards > .list__item .title,
+.list.market-cards > .list__item .text,
+.section-header.market .section-header__text,
+.section-header.market .section-header__title, .list.market-benefits .list__item,
+.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .label, .list.radio-buttons .inner label, .list-features__title {
+  text-transform: capitalize;
+}
+
+.fill-white {
+  fill: var(--white);
+}
+
+.fill-green {
+  fill: var(--green-500);
+}
+
+.fill-blue {
+  fill: var(--blue-500);
+}
+
+.stroke-white {
+  stroke: var(--white);
+}
+
+.stroke-green {
+  stroke: var(--green-500);
+}
+
+.stroke-blue {
+  stroke: var(--blue-500);
+}
+
+.stroke-dark {
+  stroke: var(--dark-800);
+}
+
+.fill-yellow {
+  fill: #FFC452;
+}
+
+.fill-black {
+  fill: var(--dark-800);
+}
+
+.list.radio-buttons {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.563vw;
+}
+
+.list.radio-buttons .inner {
+  display: inherit;
+  flex-basis: calc(33.3333333333% - 12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list.radio-buttons .inner label,
+.buttons-container + .btn-outline-blue {
+  width: 100%;
+}
+
+.list.radio-buttons .inner label,
+.buttons-container + .btn-outline-blue {
+  border-radius: 6px;
+}
+
+.list.radio-buttons .inner label {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #6B7C94;
+  border: 1px solid #A1AAB8;
+  padding: 0.781vw;
+}
+
+.list.radio-buttons .inner label:hover {
+  color: #113252;
+  background: var(--blue50);
+  border-color: var(--blue50);
+}
+
+.list.radio-buttons .inner input {
+  display: none;
+}
+
+.list.radio-buttons .inner input:checked + label {
+  color: var(--white);
+  background: var(--blue500);
+  border-color: transparent;
+}
+
+.buttons-container + .btn-blue:hover {
+  background: var(--blue700);
+}
+
+.eth-staking {
+  margin-bottom: 5.208vw;
+}
+
+.eth-staking.section-padding {
+  padding-top: 20px;
+}
+
 .staking-coin .balance {
   position: relative;
   display: flex;
@@ -1528,7 +2058,7 @@ img {
 .list.market-cards > .list__item .text,
 .section-header.market .section-header__text,
 .section-header.market .section-header__title, .list.market-benefits .list__item,
-.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .label, .list-features__title {
+.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .label, .list-features__title, .list.radio-buttons .inner label {
   text-transform: capitalize;
 }
 
@@ -1716,7 +2246,7 @@ img {
 .list.market-cards > .list__item .text,
 .section-header.market .section-header__text,
 .section-header.market .section-header__title, .list.market-benefits .list__item,
-.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .list-features__title, .label {
+.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .list-features__title, .list.radio-buttons .inner label, .label {
   text-transform: capitalize;
 }
 
@@ -1864,7 +2394,7 @@ img {
 .list.market-cards > .list__item .text,
 .section-header.market .section-header__text,
 .section-header.market .section-header__title, .list.market-benefits .list__item,
-.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .list-features__title, .label {
+.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .list-features__title, .list.radio-buttons .inner label, .label {
   text-transform: capitalize;
 }
 
@@ -2031,7 +2561,7 @@ img {
 .list.market-cards > .list__item .text,
 .section-header.market .section-header__text,
 .section-header.market .section-header__title, .list.market-benefits .list__item,
-.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .list-features__title, .label {
+.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .list-features__title, .list.radio-buttons .inner label, .label {
   text-transform: capitalize;
 }
 
@@ -2840,7 +3370,7 @@ img {
 .list.market-cards > .list__item .text,
 .section-header.market .section-header__text,
 .section-header.market .section-header__title, .list.market-benefits .list__item,
-.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .list-features__title, .label {
+.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .list-features__title, .list.radio-buttons .inner label, .label {
   text-transform: capitalize;
 }
 
@@ -2933,7 +3463,7 @@ img {
 .list.market-cards > .list__item .text,
 .section-header.market .section-header__text,
 .section-header.market .section-header__title, .list.market-benefits .list__item,
-.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .list-features__title, .label {
+.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .list-features__title, .list.radio-buttons .inner label, .label {
   text-transform: capitalize;
 }
 
@@ -3095,7 +3625,7 @@ img {
 .list.market-cards > .list__item .text,
 .section-header.market .section-header__text,
 .section-header.market .section-header__title, .list.market-benefits .list__item,
-.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .list-features__title, .label {
+.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .list-features__title, .list.radio-buttons .inner label, .label {
   text-transform: capitalize;
 }
 
@@ -3309,7 +3839,7 @@ img {
 .list.market-cards > .list__item .text,
 .section-header.market .section-header__text,
 .section-header.market .section-header__title, .list.market-benefits .list__item,
-.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .list-features__title, .label {
+.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .list-features__title, .list.radio-buttons .inner label, .label {
   text-transform: capitalize;
 }
 
@@ -3450,7 +3980,7 @@ img {
 .list.market-cards > .list__item .text,
 .section-header.market .section-header__text,
 .section-header.market .section-header__title, .list.market-benefits .list__item,
-.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .list-features__title, .label {
+.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .list-features__title, .list.radio-buttons .inner label, .label {
   text-transform: capitalize;
 }
 
@@ -3865,7 +4395,7 @@ img {
 .list.market-cards > .list__item .text,
 .section-header.market .section-header__text,
 .section-header.market .section-header__title, .list.market-benefits .list__item,
-.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .list-features__title, .label {
+.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .list-features__title, .list.radio-buttons .inner label, .label {
   text-transform: capitalize;
 }
 
@@ -4209,7 +4739,7 @@ img {
 .list.market-cards > .list__item .text,
 .section-header.market .section-header__text,
 .section-header.market .section-header__title, .list.market-benefits .list__item,
-.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .list-features__title, .label {
+.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .list-features__title, .list.radio-buttons .inner label, .label {
   text-transform: capitalize;
 }
 
@@ -4529,7 +5059,7 @@ img {
 .list.market-cards > .list__item .text,
 .section-header.market .section-header__text,
 .section-header.market .section-header__title, .list.market-benefits .list__item,
-.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .list-features__title, .label {
+.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .list-features__title, .list.radio-buttons .inner label, .label {
   text-transform: capitalize;
 }
 
@@ -4825,7 +5355,7 @@ img {
 .list.market-cards > .list__item .text,
 .section-header.market .section-header__text,
 .section-header.market .section-header__title, .list.market-benefits .list__item,
-.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .list-features__title, .label {
+.list.market-cards .list__item > .list.features .list__item, .navbar-nav .nav-item .nav-link, .list-features__title, .list.radio-buttons .inner label, .label {
   text-transform: capitalize;
 }
 
@@ -4970,7 +5500,7 @@ img {
 .list.market-cards > .list__item .text,
 .section-header.market .section-header__text,
 .section-header.market .section-header__title, .list.market-benefits .list__item,
-.list.market-cards .list__item > .list.features .list__item, .list-features__title, .label, .navbar-nav .nav-item .nav-link {
+.list.market-cards .list__item > .list.features .list__item, .list-features__title, .list.radio-buttons .inner label, .label, .navbar-nav .nav-item .nav-link {
   text-transform: capitalize;
 }
 
@@ -5303,7 +5833,7 @@ img {
 .list.market-cards > .list__item .text,
 .section-header.market .section-header__text,
 .section-header.market .section-header__title, .list.market-benefits .list__item,
-.list.market-cards .list__item > .list.features .list__item, .list-features__title, .label, .navbar-nav .nav-item .nav-link {
+.list.market-cards .list__item > .list.features .list__item, .list-features__title, .list.radio-buttons .inner label, .label, .navbar-nav .nav-item .nav-link {
   text-transform: capitalize;
 }
 
@@ -5512,7 +6042,7 @@ img {
 .list.market-cards > .list__item .text,
 .section-header.market .section-header__text,
 .section-header.market .section-header__title, .list.market-benefits .list__item,
-.list.market-cards .list__item > .list.features .list__item, .list-features__title, .label, .navbar-nav .nav-item .nav-link {
+.list.market-cards .list__item > .list.features .list__item, .list-features__title, .list.radio-buttons .inner label, .label, .navbar-nav .nav-item .nav-link {
   text-transform: capitalize;
 }
 
@@ -5795,7 +6325,7 @@ img {
   background: var(--blue-500);
 }
 
-.list.tags .list__item, .country-card .section-header.card .label, .benefits .list + .inner .text, .list-features.advantages .list-features__title, .list-features__title, .label, .navbar-nav .nav-item .nav-link, .list.market-benefits .list__item,
+.list.tags .list__item, .country-card .section-header.card .label, .benefits .list + .inner .text, .list-features.advantages .list-features__title, .list-features__title, .list.radio-buttons .inner label, .label, .navbar-nav .nav-item .nav-link, .list.market-benefits .list__item,
 .list.market-cards .list__item > .list.features .list__item,
 .list.market-cards > .list__item .title,
 .list.market-cards > .list__item .text,
@@ -6072,7 +6602,7 @@ img {
   background: var(--blue-500);
 }
 
-.list.tags .list__item, .country-card .section-header.card .label, .list-features__title, .label, .navbar-nav .nav-item .nav-link, .list.market-benefits .list__item,
+.list.tags .list__item, .country-card .section-header.card .label, .list-features__title, .list.radio-buttons .inner label, .label, .navbar-nav .nav-item .nav-link, .list.market-benefits .list__item,
 .list.market-cards .list__item > .list.features .list__item,
 .list.market-cards > .list__item .title,
 .list.market-cards > .list__item .text,
@@ -6301,7 +6831,7 @@ img {
   background: var(--blue-500);
 }
 
-.list.tags .list__item, .country-card .section-header.card .label, .list-features__title, .label, .navbar-nav .nav-item .nav-link, .list.market-benefits .list__item,
+.list.tags .list__item, .country-card .section-header.card .label, .list-features__title, .list.radio-buttons .inner label, .label, .navbar-nav .nav-item .nav-link, .list.market-benefits .list__item,
 .list.market-cards .list__item > .list.features .list__item,
 .list.market-cards > .list__item .title,
 .list.market-cards > .list__item .text,
@@ -6469,7 +6999,7 @@ img {
   background: var(--blue-500);
 }
 
-.list.tags .list__item, .country-card .section-header.card .label, .list-features__title, .label, .navbar-nav .nav-item .nav-link, .list.market-benefits .list__item,
+.list.tags .list__item, .country-card .section-header.card .label, .list-features__title, .list.radio-buttons .inner label, .label, .navbar-nav .nav-item .nav-link, .list.market-benefits .list__item,
 .list.market-cards .list__item > .list.features .list__item,
 .list.market-cards > .list__item .title,
 .list.market-cards > .list__item .text,
@@ -6696,7 +7226,7 @@ img {
   background: var(--blue-500);
 }
 
-.list.tags .list__item, .country-card .section-header.card .label, .list-features__title, .label, .navbar-nav .nav-item .nav-link, .list.market-benefits .list__item,
+.list.tags .list__item, .country-card .section-header.card .label, .list-features__title, .list.radio-buttons .inner label, .label, .navbar-nav .nav-item .nav-link, .list.market-benefits .list__item,
 .list.market-cards .list__item > .list.features .list__item,
 .list.market-cards > .list__item .title,
 .list.market-cards > .list__item .text,
@@ -7033,7 +7563,7 @@ img {
   background: var(--blue-500);
 }
 
-.list-features__title, .label, .navbar-nav .nav-item .nav-link, .list.market-benefits .list__item,
+.list-features__title, .list.radio-buttons .inner label, .label, .navbar-nav .nav-item .nav-link, .list.market-benefits .list__item,
 .list.market-cards .list__item > .list.features .list__item,
 .list.market-cards > .list__item .title,
 .list.market-cards > .list__item .text,
@@ -7568,7 +8098,7 @@ img {
   background: var(--blue-500);
 }
 
-.list-features__title, .label, .navbar-nav .nav-item .nav-link, .list.market-benefits .list__item,
+.list-features__title, .list.radio-buttons .inner label, .label, .navbar-nav .nav-item .nav-link, .list.market-benefits .list__item,
 .list.market-cards .list__item > .list.features .list__item,
 .list.market-cards > .list__item .title,
 .list.market-cards > .list__item .text,
@@ -7805,4 +8335,61 @@ img {
   border: solid var(--blue-500);
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
+}
+
+.eth-message {
+  padding: 70px 0;
+}
+
+@keyframes fly-smooth {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.eth-icon {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 137px;
+  height: 137px;
+  border-radius: 50%;
+  background: #D5ECFF;
+  margin-bottom: 40px;
+}
+
+.eth-icon svg {
+  filter: drop-shadow(-20px 20px 23.4px rgba(99, 157, 205, 0.5));
+  animation: fly-smooth 4s linear infinite;
+}
+
+.section-header.eth-message {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+.section-header.eth-message .section-header__title {
+  font-size: 32px;
+  line-height: 1.2;
+  color: #232323;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.section-header.eth-message .section-header__description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #464646;
 }/*# sourceMappingURL=style.css.map */

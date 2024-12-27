@@ -1,0 +1,54 @@
+@import '../helpers/helpers.scss';
+
+.form.eth-staking {
+    width: 100%;
+}
+
+.form.eth-staking .inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.form.eth-staking .inner .button-amount {
+    position: absolute;
+    top:calc(50% + 9px);
+    right: 0;
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    border: unset;
+}
+
+
+.form.eth-staking .inner .button-amount:active,
+.form.eth-staking .inner .button-amount:hover,
+.form.eth-staking .inner .button-amount:focus{
+    outline: none;
+    border: unset;
+}
+
+
+.form.eth-staking .inner .button-amount svg {
+    position: absolute;
+}
+
+.form.eth-staking .inner,
+.form.eth-staking .inner .input {
+    width: 100%;
+}
+
+.form.eth-staking label {
+    font-family: "Roboto-regular", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.3;
+    color: #113252;
+    margin-bottom: 9px;
+}

@@ -1,0 +1,45 @@
+.dropdown.network-select .dropdown-menu {
+  border-radius: 7px;
+  background: var(--white);
+  box-shadow: 18px 228px 64px 0px rgba(112, 112, 112, 0),
+    11px 146px 59px 0px rgba(112, 112, 112, 0.01),
+    6px 82px 49px 0px rgba(112, 112, 112, 0.05),
+    3px 37px 37px 0px rgba(112, 112, 112, 0.09),
+    1px 9px 20px 0px rgba(112, 112, 112, 0.1);
+}
+
+.dropdown.network-select .dropdown-menu,
+.dropdown.network-select > button {
+    width: 100%;
+}
+ 
+.dropdown.network-select > button:active,
+.dropdown.network-select .dropdown-item:hover {
+  background: #f3faff;
+}
+
+.dropdown.network-select .dropdown-item.border-bottom {
+  border-bottom: 1px solid rgba(196, 203, 212, 0.34);
+}
+
+.dropdown.network-select .dropdown-item .link {
+  padding: 15px;
+}
+
+.dropdown.network-select > button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 7px;
+    border: 1px solid #6B7C94;
+    background: transparent;
+    padding: 12px 20px;
+}
+
+.dropdown.network-select > button:focus {
+    outline-offset: inherit;
+    outline-color: var(--blue500);
+    box-shadow: unset;
+}
+
+ 

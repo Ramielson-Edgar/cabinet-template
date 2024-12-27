@@ -1,0 +1,22 @@
+.section-header.eth-staking {
+    margin-bottom: 2.865vw;
+}
+
+.section-header.eth-staking .section-header__title {
+    // font-size: clamp(2.5rem, -2.5rem + 8.0645vw, 3.75rem);
+    font-size: 60px;
+    line-height: 1.2;
+    color: #0F2E4B;
+    margin-bottom: 1.302vw;
+}
+
+.section-header.eth-staking .section-header__text {
+    line-height: 1.5;
+    color: #415B75;
+    max-width: 282px;
+    margin-inline: auto;
+}
+
+.section-header.eth-staking .section-header__text::first-letter {
+    text-transform: capitalize;
+}

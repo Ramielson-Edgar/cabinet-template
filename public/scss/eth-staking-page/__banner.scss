@@ -1,0 +1,16 @@
+ @import '../helpers/helpers.scss';
+
+ .banner.eth-staking {
+    @include center-flex('hor');
+     min-height: 200px;
+     border-radius: 12px;
+     background: #F1F9FF;
+ }
+
+ .banner.eth-staking #staking-banner {
+    @include center-flex('hor');
+ }
+
+ 
+
+ 

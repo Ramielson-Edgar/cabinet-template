@@ -4,9 +4,80 @@
 @import '../scss/main/__section-title.scss';
 @import '../scss/main/__section-header.scss';
 @import '../scss/animations/__animations.scss';
-@import '../scss/keyframes/__keyframes';
- 
+@import '../scss/keyframes/__keyframes.scss';
+
+@import '../scss/eth-staking-page/main.scss';
 @import '../scss/eth-staking/eth-main.scss';
 @import './account-page/account-page.scss';
 @import '../scss/copy-trade/copy-trade.scss';
 @import '../scss/main/main.scss';
+
+
+ 
+
+.eth-message {
+    padding: 70px 0;
+}
+
+@keyframes fly-smooth {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.eth-icon {
+    overflow: hidden;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 137px;
+    height: 137px;
+    border-radius: 50%;
+    background: #D5ECFF;
+
+    margin-bottom: 40px;
+}
+
+.eth-icon  svg {
+    filter: drop-shadow(-20px 20px 23.4px rgba(99, 157, 205, 0.5));
+    animation: fly-smooth 4s linear infinite;
+}
+
+
+.section-header.eth-message {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    max-width: 500px;
+    margin-inline: auto;
+}
+
+.section-header.eth-message .section-header__title {
+    font-size: 32px;
+    line-height: 1.2;
+    color: #232323;
+    font-weight: 500;
+
+    margin-bottom: 15px;
+}
+
+.section-header.eth-message .section-header__description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #464646;
+}
+ 

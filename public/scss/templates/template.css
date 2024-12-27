@@ -95,10 +95,6 @@
   --line-height-30: 30px;
   --line-height-24: 24px;
   --line-height-21: 21px;
-  --blue-500: #42a5f5;
-  --blue-900: #008DFF;
-  --blue-100: #7F9FF;
-  --green-500: #4CD7AB;
   --violet-900: #430F96;
   --violet-500: #6C25DE;
   --red-100: #ffdddc;
@@ -156,6 +152,7 @@
   --ease-out-slow: cubic-bezier(0.33, 1, 0.68, 1);
   --ease-in: cubic-bezier(0.12, 0, 0.39, 0);
   --ease-in-out: cubic-bezier(0.86, 0, 0.07, 1);
+  --ease-in-out-smooth: cubic-bezier(0.4, 0, 0.2, 1);
   --border-radius-100: 100px;
   --border-radius-30: 30px;
   --border-radius-24: 24px;
@@ -321,8 +318,8 @@ img {
   overflow: hidden;
 }
 
-.blue-500 {
-  color: var(--blue-500);
+.blue500 {
+  color: var(--blue500);
 }
 
 .white {
@@ -396,7 +393,9 @@ img {
 }
 
 .btn-base:hover {
-  transition: background-color 0.2s var(--transition) 0s, transform 0.6s var(--transition) 0.2s;
+  transition-duration: 0.4s;
+  transition-property: background-color, color;
+  transition-timing-function: var(--ease-in-out-smooth);
 }
 
 .btn-base .text-container {
@@ -419,7 +418,7 @@ img {
 }
 
 .btn-outline {
-  border: 1px solid var(--blue-500);
+  border: 1px solid var(--blue500);
   border-radius: 100px;
   transition: color border 0.5s var(--transition) 0.4s;
 }
@@ -431,39 +430,39 @@ img {
 
 .btn-outline.dark:hover {
   color: var(--white);
-  border: 1px solid var(--blue-500);
+  border: 1px solid var(--blue500);
 }
 
 .btn-outline.dark::before {
-  background: var(--blue-500);
+  background: var(--blue500);
 }
 
 .btn-outline.fill.blue {
-  border: 1px solid var(--blue-500);
-  color: var(--blue-500);
+  border: 1px solid var(--blue500);
+  color: var(--blue500);
 }
 
 .btn-outline.fill.blue::before {
-  background: var(--blue-500);
+  background: var(--blue500);
 }
 
 .btn-outline.fill.blue:hover {
   color: var(--white);
-  border: 1px solid var(--blue-500);
+  border: 1px solid var(--blue500);
 }
 
 .btn-outline.blue {
-  border: 1px solid var(--blue-500);
+  border: 1px solid var(--blue500);
   color: var(--white);
 }
 
 .btn-outline.blue::before {
-  background: var(--blue-500);
+  background: var(--blue500);
 }
 
 .btn-outline.blue:hover {
-  color: var(--blue-500);
-  border: 1px solid var(--blue-500);
+  color: var(--blue500);
+  border: 1px solid var(--blue500);
 }
 
 .btn-outline.green {
@@ -496,13 +495,26 @@ img {
 
 .btn-blue {
   color: var(--white);
-  background: var(--blue-500);
+  background: var(--blue500);
 }
 
 .btn-blue:focus,
 .btn-blue:hover {
   color: var(--white);
   background: var(--green-500);
+}
+
+.btn-outline-blue {
+  color: var(--blue500);
+  border-color: var(--blue500);
+}
+
+.btn-outline-blue:focus,
+.btn-outline-blue:hover {
+  color: var(--white);
+  background: var(--blue500);
+  border-color: var(--blue500);
+  outline: var(--blue500);
 }
 
 .btn-base.btn-grey-blue {
@@ -514,7 +526,7 @@ img {
 .btn-grey-blue:hover,
 .btn-grey-blue:focus {
   color: var(--white);
-  background-color: var(--blue-500);
+  background-color: var(--blue500);
 }
 
 .btn-base-xs {
@@ -585,7 +597,7 @@ img {
   }
   .align-items-lg-start {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
   }
   .flex-md-wrap {
     flex-wrap: wrap;
