@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
         redenr: 'svg',
         autoplay: true,
         loop: true,
-        path: `/custom/adrofx_theme/lottie-json/ethereum.json`,
+        path: `./public/custom/adrofx_theme/lottie-json/ethereum.json`,
     }
 
     function runLottieAnimationBanner() {
