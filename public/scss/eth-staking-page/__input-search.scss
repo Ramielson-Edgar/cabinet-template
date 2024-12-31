@@ -1,0 +1,28 @@
+
+.dropdown.network-select .inner.search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.dropdown.network-select .inner.search label {
+    padding: 10px;
+    margin-bottom: 0;
+}
+
+
+.dropdown.network-select .inner.search input {
+    width: 100%;
+    padding: 12px 50px 12px 20px;
+    border: 1px solid transparent;
+}
+
+ 
+.dropdown.network-select .inner.search input:focus,
+.dropdown.network-select .inner.search input:hover{
+    background: none;
+    border: 1px solid transparent;
+    outline: none;
+}
+

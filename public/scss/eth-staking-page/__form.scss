@@ -1,8 +1,13 @@
 @import '../helpers/helpers.scss';
 
 .form.eth-staking {
-    width: 100%;
     margin-bottom: 0;
+}
+
+.form.eth-staking,
+.form.eth-staking .inner,
+.form.eth-staking .inner .input {
+    width: 100%;
 }
 
 .form.eth-staking>.inner,
@@ -61,10 +66,7 @@
     display: none;
 }
 
-.form.eth-staking .inner,
-.form.eth-staking .inner .input {
-    width: 100%;
-}
+ 
 
 .form.eth-staking label {
     font-family: "Roboto-regular", sans-serif;

@@ -34,6 +34,7 @@
     @extend %text-capitalize;
 }
 
+
 .list.radio-buttons .list__item label:hover{
     color: #113252;
     background: var(--blue50);
@@ -50,6 +51,7 @@
     border-color: transparent;
 }
 
+ 
 
 
 .buttons-container + .btn-blue:hover {

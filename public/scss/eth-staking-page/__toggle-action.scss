@@ -1,0 +1,20 @@
+.dropdown.network-select{
+    display: flex;
+    align-items: flex-start;
+    border-radius: 7px;
+    border: 1px solid #6B7C94;
+    outline: 1px solid transparent;
+}
+
+.dropdown.network-select:focus-within {
+    border-color: var(--blue500);
+    outline-color: var(--blue500);
+}
+
+ 
+
+ 
+
+
+
+  

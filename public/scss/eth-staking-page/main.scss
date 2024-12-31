@@ -3,6 +3,8 @@
 @import './__form.scss';
 @import './__select.scss';
 @import '../input/input.scss';
+@import './__input-search';
+@import './__toggle-action.scss';
 @import './__radio-buttons.scss';
 
 .eth-staking {
@@ -19,5 +21,3 @@
         margin-bottom: 100px;
     }
 }
-
- 

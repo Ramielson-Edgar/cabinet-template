@@ -2,178 +2,218 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>staking page</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
-        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="./public/scss/style.css">
+    <link rel="stylesheet" href="./public/scss/style.css" />
 </head>
 
 <body>
 
+
+
+
+
     <section class="eth-staking section-padding">
+ 
         <h1 class="setion-title sr-only">ethereum staking page</h1>
 
         <div class="container-fluid">
             <div class="banner eth-staking overflow-hidden" role="banner">
                 <div id="staking-banner" data-target="staking-banner"></div>
             </div>
-
         </div>
-
+ 
         <div class="container">
-
-            <div class="row">
+            <div class="row js-container">
                 <div class="col-lg-6 col-lg-offset-3">
                     <header class="section-header eth-staking text-center">
-                        <p class="section-header__title text-center text-capitalize">ethereum staking</p>
-                        <p class="section-header__text text-center">earn eth staking rewards while helping
-                            to secure the ethereum network</p>
+                        <p class="section-header__title text-center text-capitalize">
+                            ethereum staking
+                        </p>
+                        <p class="section-header__text text-center">
+                            earn eth staking rewards while helping to secure the ethereum
+                            network
+                        </p>
                     </header>
 
-                
-                    <form  class="form eth-staking" action="/submit-staking" method="POST">
+ 
 
-             
+                    <form class="form eth-staking" action="/submit-staking" method="POST">
                         <div class="inner">
+
                             <label for="amount-ethereum">Amount Ethereum</label>
-                            <input class="input" type="number" id="amount-ethereum" name="amount" value=""
-                            placeholder="0.005 ETH" required/>
+                            <input class="input" type="number" id="amount-ethereum" name="amount"
+                                placeholder="0.005 ETH" required />
 
                             <button type="button" class="btn button-amount js-eth-amount">
                                 <svg class="icon icon-open" width="24" height="24">
-                                    <use href="./public/custom/adrofx_theme/images/icons/sprite.svg#icon-eye-open"></use>
+                                    <use href="./public/custom/adrofx_theme/images/icons/sprite.svg#icon-eye-open">
+                                    </use>
                                 </svg>
 
                                 <svg class="icon icon-close is-open" width="24" height="24">
-                                    <use href="./public/custom/adrofx_theme/images/icons/sprite.svg#icon-eye-close"></use>
+                                    <use href="./public/custom/adrofx_theme/images/icons/sprite.svg#icon-eye-close">
+                                    </use>
                                 </svg>
                             </button>
                         </div>
 
- 
                         <div class="inner">
                             <label for="network">Network</label>
                             <div class="dropdown network-select">
-                                <button class="btn" type="button" id="network" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-
-                                    <div class="currnet-chain">
-                                        <a class="link" href="#">
-                                            <svg width="90" height="24">
-                                                <use href="./public/custom/adrofx_theme/images/logos/logos.svg#arbitrum-one">
-                                                </use>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                     
-
-                                    <svg width="24" height="24">
-                                        <use href="./public/custom/adrofx_theme/images/icons/sprite.svg#icon-arrow-up-bird">
-                                        </use>
-                                    </svg>
-                                 
-
+                                <button class="btn btn-default js-dropdown-button" type="button"
+                                    id="network">
+                                    <span class="text text-capitalize">choose network</span>
                                 </button>
 
- 
-                                <ul class="dropdown-menu icon" aria-labelledby="network">
+                                <div class="inner search">
+                                    <label for="eth-search">
+                                        <img src="./public/custom/adrofx_theme/images/icons/coco-duotone-search.svg"
+                                            alt="" width="24" height="24">
+                                    </label>
+                                    <input id="eth-search" class="input serarch" type="text"
+                                        placeholder="Ethereum network" />
+                                </div>
+                                <ul class="dropdown-menu icon" >
+
                                     <li class="dropdown-item border-bottom">
                                         <a class="link" href="#">
-                                            <svg width="90" height="24">
-                                                <use href="./public/custom/adrofx_theme/images/logos/logos.svg#arbitrum-one">
+                                            <span class="js-search-label sr-only">ethereum</span>
+                                            <svg width="97" height="24">
+                                                <use
+                                                    href="./public/custom/adrofx_theme/images/logos/logos.svg#ethereum">
                                                 </use>
                                             </svg>
                                         </a>
                                     </li>
 
-                                    <!--item-->
                                     <li class="dropdown-item border-bottom">
                                         <a class="link" href="#">
-                                            <svg width="65" height="24">
-                                                <use href="./public/custom/adrofx_theme/images/logos/logos.svg#blast"></use>
+                                            <span class="js-search-label sr-only">arbitrum-one</span>
+
+                                            <svg width="138" height="24">
+                                                <use
+                                                    href="./public/custom/adrofx_theme/images/logos/logos.svg#arbitrum-one">
+                                                </use>
                                             </svg>
                                         </a>
                                     </li>
 
-                                    <!--item-->
                                     <li class="dropdown-item border-bottom">
                                         <a class="link" href="#">
-                                            <svg width="59" height="25">
-                                                <use href="./public/custom/adrofx_theme/images/logos/logos.svg#base"></use>
+                                            <span class="js-search-label sr-only">blast</span>
+
+                                            <svg width="94" height="24">
+                                                <use href="./public/custom/adrofx_theme/images/logos/logos.svg#blast">
+                                                </use>
                                             </svg>
                                         </a>
                                     </li>
 
-
-                                    <!--item-->
                                     <li class="dropdown-item border-bottom">
                                         <a class="link" href="#">
-                                            <svg width="65" height="24">
-                                                <use href="./public/custom/adrofx_theme/images/logos/logos.svg#linea"></use>
+                                            <span class="js-search-label sr-only">base</span>
+                                            <svg width="63" height="24">
+                                                <use href="./public/custom/adrofx_theme/images/logos/logos.svg#base">
+                                                </use>
                                             </svg>
                                         </a>
                                     </li>
 
+                                    <li class="dropdown-item border-bottom">
+                                        <a class="link" href="#">
+                                            <span class="js-search-label sr-only">linea</span>
+                                            <svg width="74" height="24">
+                                                <use href="./public/custom/adrofx_theme/images/logos/logos.svg#linea">
+                                                </use>
+                                            </svg>
+                                        </a>
+                                    </li>
 
-                                    <!--item-->
+                                    <li class="dropdown-item border-bottom">
+                                        <a class="link" href="#">
+                                            <span class="js-search-label sr-only">bnb</span>
+                                            <svg width="106" height="24">
+                                                <use href="./public/custom/adrofx_theme/images/logos/logos.svg#bnb">
+                                                </use>
+                                            </svg>
+                                        </a>
+                                    </li>
+
+                                    <li class="dropdown-item border-bottom">
+                                        <a class="link" href="#">
+                                            <span class="js-search-label sr-only">avalanche</span>
+                                            <svg width="131" height="24">
+                                                <use
+                                                    href="./public/custom/adrofx_theme/images/logos/logos.svg#avalanche">
+                                                </use>
+                                            </svg>
+                                        </a>
+                                    </li>
+
+                                    <li class="dropdown-item border-bottom">
+                                        <a class="link" href="#">
+                                            <span class="js-search-label sr-only">solona</span>
+                                            <svg width="104" height="24">
+                                                <use href="./public/custom/adrofx_theme/images/logos/logos.svg#solona">
+                                                </use>
+                                            </svg>
+                                        </a>
+                                    </li>
+
                                     <li class="dropdown-item">
                                         <a class="link" href="#">
-                                            <svg width="103" height="24">
-                                                <use href="./public/custom/adrofx_theme/images/logos/logos.svg#op-mainnet">
+                                            <span class="js-search-label sr-only">op-mainnet</span>
+                                            <svg width="102" height="24">
+                                                <use
+                                                    href="./public/custom/adrofx_theme/images/logos/logos.svg#op-mainnet">
                                                 </use>
                                             </svg>
                                         </a>
                                     </li>
-
                                 </ul>
                             </div>
-
                         </div>
 
-
- 
                         <fieldset class="buttons-container">
                             <legend class="sr-only">Staking Period</legend>
 
-                            <div class="list radio-buttons">
-
-                                <div class="list__item">
-                                    <input class="radio-button" type="radio" id="flexible"  
-                                        value="flexible" required />
+                            <ul class="list radio-buttons">
+                                <li class="list__item">
+                                    <input class="radio-button" type="radio" id="flexible" value="flexible" name="group" required />
                                     <label class="radio-button__label" for="flexible">Flexible</label>
-                                </div>
+                                </li>
 
-                                <div class="list__item">
-                                    <input class="radio-button" type="radio" id="locked-3-6-months"
-                                        name="middle" value="locked-3-6" />
+                                <li class="list__item">
+                                    <input class="radio-button" type="radio" id="locked-3-6-months" name="group"
+                                        value="locked-3-6" />
                                     <label class="radio-button__label" for="locked-3-6-months">Locked 3-6 Months</label>
-                                </div>
+                                </li>
 
-                                <div class="list__item">
-                                    <input class="radio-button" type="radio" id="locked-6-12-months"
-                                        name="long" value="locked-6-12" />
+                                <li class="list__item">
+                                    <input class="radio-button" type="radio" id="locked-6-12-months" name="group"
+                                        value="locked-6-12" />
                                     <label class="radio-button__label" for="locked-6-12-months">Locked 6-12
                                         Months</label>
-                                </div>
-
-                            </div>
-
+                                </li>
+                            </ul>
                         </fieldset>
 
-
-          
                         <button class="btn-base btn-base-lg btn-outline-blue text-capitalize" type="submit"
-                            name="button">submit application</button>
+                            name="button">
+                            submit application
+                        </button>
                     </form>
                 </div>
             </div>
-
         </div>
-
+ 
+ 
     </section>
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"

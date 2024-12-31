@@ -1245,8 +1245,13 @@ img {
 }
 
 .form.eth-staking {
-  width: 100%;
   margin-bottom: 0;
+}
+
+.form.eth-staking,
+.form.eth-staking .inner,
+.form.eth-staking .inner .input {
+  width: 100%;
 }
 
 .form.eth-staking > .inner,
@@ -1299,11 +1304,6 @@ img {
   display: none;
 }
 
-.form.eth-staking .inner,
-.form.eth-staking .inner .input {
-  width: 100%;
-}
-
 .form.eth-staking label {
   font-family: "Roboto-regular", sans-serif;
   font-weight: 400;
@@ -1336,38 +1336,94 @@ img {
   box-shadow: 18px 228px 64px 0px rgba(112, 112, 112, 0), 11px 146px 59px 0px rgba(112, 112, 112, 0.01), 6px 82px 49px 0px rgba(112, 112, 112, 0.05), 3px 37px 37px 0px rgba(112, 112, 112, 0.09), 1px 9px 20px 0px rgba(112, 112, 112, 0.1);
 }
 
-.dropdown.network-select .dropdown-menu,
-.dropdown.network-select > button {
+.dropdown.network-select .dropdown-menu {
   width: 100%;
 }
 
-.dropdown.network-select > button:active,
-.dropdown.network-select .dropdown-item:hover {
-  background: #f3faff;
+.dropdown.network-select .dropdown-menu {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 300px;
+}
+
+.dropdown.network-select .dropdown-menu::-webkit-scrollbar {
+  width: 0.5vw;
+  background: rgba(107, 124, 148, 0.2);
+  border-radius: 10px;
+}
+
+.dropdown.network-select .dropdown-menu::-webkit-scrollbar:hover {
+  background: rgba(107, 124, 148, 0.25);
+}
+
+.dropdown.network-select .dropdown-menu::-webkit-scrollbar-thumb {
+  background: #8da0b9;
+  border-radius: 10px;
+}
+
+.dropdown.network-select .dropdown-menu::-webkit-scrollbar-thumb:hover {
+  background: #6b7c94;
 }
 
 .dropdown.network-select .dropdown-item.border-bottom {
   border-bottom: 1px solid rgba(196, 203, 212, 0.34);
 }
 
-.dropdown.network-select .dropdown-item .link {
-  padding: 15px;
+.dropdown.network-select .dropdown-item .link:hover {
+  background: #f3faff;
 }
 
-.dropdown.network-select > button {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.dropdown.network-select .dropdown-item .link:focus {
+  outline-color: var(--blue500);
   border-radius: 7px;
-  border: 1px solid #6B7C94;
+}
+
+.dropdown.network-select .btn-default {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+  color: hsla(215, 16%, 50%, 0.4);
+  border-radius: 7px;
+  border: 1px solid transparent;
   background: transparent;
   padding: 12px 20px;
 }
 
-.dropdown.network-select > button:focus {
-  outline-offset: inherit;
-  outline-color: var(--blue500);
-  box-shadow: unset;
+.dropdown.network-select.open .dropdown-toggle.btn-default:hover,
+.dropdown.network-select.open .dropdown-toggle.btn-default:focus,
+.dropdown.network-select.open .dropdown-toggle.btn-default:active,
+.dropdown.network-select .btn-default:focus,
+.dropdown.network-select .btn-default:hover,
+.dropdown.network-select .btn-default:active {
+  color: hsla(215, 16%, 50%, 0.4);
+  border: 1px solid transparent;
+  outline: none;
+  background: none;
+  box-shadow: none;
+}
+
+.dropdown.network-select .link,
+.dropdown.network-select .dropdown-item .link {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 15px;
+  outline: 1px solid transparent;
+}
+
+.dropdown.network-select .link {
+  padding: 0;
+}
+
+.dropdown.network-select .dropdown-menu {
+  display: none;
+}
+
+.dropdown.network-select .dropdown-menu.is-open {
+  display: block;
 }
 
 input::-webkit-outer-spin-button,
@@ -1419,6 +1475,43 @@ input[type=number] {
     font-size: 13px;
   }
 }
+.dropdown.network-select .inner.search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.dropdown.network-select .inner.search label {
+  padding: 10px;
+  margin-bottom: 0;
+}
+
+.dropdown.network-select .inner.search input {
+  width: 100%;
+  padding: 12px 50px 12px 20px;
+  border: 1px solid transparent;
+}
+
+.dropdown.network-select .inner.search input:focus,
+.dropdown.network-select .inner.search input:hover {
+  background: none;
+  border: 1px solid transparent;
+  outline: none;
+}
+
+.dropdown.network-select {
+  display: flex;
+  align-items: flex-start;
+  border-radius: 7px;
+  border: 1px solid #6B7C94;
+  outline: 1px solid transparent;
+}
+
+.dropdown.network-select:focus-within {
+  border-color: var(--blue500);
+  outline-color: var(--blue500);
+}
+
 .grid.account-item, .list,
 .list-features {
   list-style: none;
