@@ -6,15 +6,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 200px;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
   border-radius: 12px;
   background: #F1F9FF;
 }
 
 .banner.eth-staking #staking-banner {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 @media (max-width: 575.98px) {
@@ -418,6 +420,84 @@ input[type=number] {
   }
   .list.radio-buttons .list__item {
     flex: 1 0 auto;
+  }
+}
+.eth-staking.thank-you-page {
+  margin-bottom: 0;
+}
+
+.section-header.eth-staking.thank-you-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 7.813vw;
+}
+
+.section-header.eth-staking.thank-you-page .section-header__text {
+  max-width: 500px;
+  margin-bottom: 2.083vw;
+}
+
+.section-header.eth-staking.thank-you-page .section-header__text + button {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.section-header.eth-staking + .link {
+  color: var(--blue500);
+  text-decoration: underline;
+}
+
+.section-header.eth-staking + .link:hover {
+  color: var(--blue700);
+}
+
+.section-header.eth-staking + .link:visited {
+  color: var(--blue900);
+}
+
+.success-sircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #EBFFF1;
+  margin-inline: auto;
+  margin-bottom: 2.604vw;
+  animation-name: scale;
+  animation-duration: 0.7s;
+  animation-timing-function: var(--ease-in-out-smooth);
+}
+
+.success-sircle svg {
+  fill: var(--darkgreen);
+}
+
+@media (max-width: 575.98px) {
+  .success-sircle {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 30px;
+  }
+  .success-sircle svg {
+    width: 40px;
+    height: 40px;
+  }
+  .section-header.eth-staking.thank-you-page {
+    margin-bottom: 50px;
+  }
+  .section-header.eth-staking.thank-you-page .section-header__title {
+    font-size: 24px;
+  }
+  .section-header.eth-staking.thank-you-page .section-header__title,
+  .section-header.eth-staking.thank-you-page .section-header__text {
+    margin-bottom: 12px;
+  }
+  .section-header.eth-staking.thank-you-page .section-header__text + button {
+    font-size: 13px;
   }
 }
 .eth-staking {

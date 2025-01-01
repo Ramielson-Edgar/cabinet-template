@@ -502,7 +502,7 @@ img {
 .btn-blue:focus,
 .btn-blue:hover {
   color: var(--white);
-  background: var(--green-500);
+  background: var(--red500);
 }
 
 .btn-outline-blue {
